@@ -1,3 +1,73 @@
-.navbar-nav
-  float: none
-  margin: 0 auto
+@import 'mixin'
+
+text-color = #636466
+gray-light = #CCCECF
+gray-dark = #B1B4B6
+pink = #EF2D61
+green = #95CE92
+
+*
+  box-sizing border-box
+
+html, body
+  direction rtl
+
+body
+  font-size 16px
+  color text-color
+
+a, a:hover
+  color pink
+  text-decoration none !important
+
+header p
+  padding: 30px 0
+
+.container
+  width 100%
+  max-width 980px
+  min-width 320px
+  margin 0 auto
+
+nav
+  background gray-light
+  a
+    display inline-block
+    padding 10px 20px
+    color text-color
+    &.active
+      background pink
+      color white
+    &:hover
+      background gray-dark
+      color white
+
+section
+  padding 30px 0
+
+#quote
+  background text-color
+  color white
+  blockquote
+  .big-quote
+    text-align center
+    fon 40px center
+    small
+      display block
+      font-size 18px
+
+#features
+  background green
+  text-align center
+  li
+    display inline-block
+    width 33%
+  h2
+    color white
+  .plus
+    display block
+    width 1em
+    margin: 0 auto
+    background pink
+    fon 28px 1em white bold
+    border-radius 50%

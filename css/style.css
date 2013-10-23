@@ -1,4 +1,81 @@
-.navbar-nav {
-  float: none;
+* {
+  box-sizing: border-box;
+}
+html,
+body {
+  direction: rtl;
+}
+body {
+  font-size: 16px;
+  color: #636466;
+}
+a,
+a:hover {
+  color: #ef2d61;
+  text-decoration: none !important;
+}
+header p {
+  padding: 30px 0;
+}
+.container {
+  width: 100%;
+  max-width: 980px;
+  min-width: 320px;
   margin: 0 auto;
+}
+nav {
+  background: #cccecf;
+}
+nav a {
+  display: inline-block;
+  padding: 10px 20px;
+  color: #636466;
+}
+nav a.active {
+  background: #ef2d61;
+  color: #fff;
+}
+nav a:hover {
+  background: #b1b4b6;
+  color: #fff;
+}
+section {
+  padding: 30px 0;
+}
+#quote {
+  background: #636466;
+  color: #fff;
+}
+#quote blockquote,
+#quote .big-quote {
+  text-align: center;
+  font-size: 40px;
+  text-align: center;
+}
+#quote blockquote small,
+#quote .big-quote small {
+  display: block;
+  font-size: 18px;
+}
+#features {
+  background: #95ce92;
+  text-align: center;
+}
+#features li {
+  display: inline-block;
+  width: 33%;
+}
+#features h2 {
+  color: #fff;
+}
+#features .plus {
+  display: block;
+  width: 1em;
+  margin: 0 auto;
+  background: #ef2d61;
+  font-size: 28px;
+  line-height: 1em;
+  color: #fff;
+  font-weight: bold;
+  border-radius: 50%;
 }
