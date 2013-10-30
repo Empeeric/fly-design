@@ -3,7 +3,7 @@ size(w, h = w)
   height h
 
 alignment = left center right justify start end
-fon()
+text()
   sized = false
   for arg in arguments
     if arg is a 'color'
@@ -18,3 +18,10 @@ fon()
       text-align arg
     else
       font-weight arg
+
+col(count)
+  float right
+  width (100% / count)
+
+.clear
+  clear both

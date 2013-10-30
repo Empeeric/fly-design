@@ -2,12 +2,15 @@
 
 text-color = #636466
 gray-light = #CCCECF
+gray-lighter = #E0E1E2
 gray-dark = #B1B4B6
 pink = #EF2D61
 green = #95CE92
+green-light = #CFE9CE
 
-*
-  box-sizing border-box
+colors = 0 green #0084B6 #BC1A5E pink #F98813 #FDB128
+
+width-max = 972px
 
 html, body
   direction rtl
@@ -16,18 +19,38 @@ body
   font-size 16px
   color text-color
 
+body, h1, h2, h3, h4, h5, input, textarea, button
+  font-family 'MeodedPashut', 'Merriweather Sans', arial, sans-serif
+
+h2
+  text center
+
 a, a:hover
   color pink
   text-decoration none !important
 
-header p
-  padding: 30px 0
+img.cover
+  width 100%
+
+header
+  h1 a
+    display block
+    background url(../img/logo.png)
+    size 193px 50px
+    font-size 0
+  p
+    padding 30px 0 20px
+    font-size 30px
+
 
 .container
   width 100%
-  max-width 980px
+  max-width width-max
   min-width 320px
   margin 0 auto
+  ul&
+    padding 0
+    list-style none
 
 nav
   background gray-light
@@ -44,30 +67,165 @@ nav
 
 section
   padding 30px 0
+  position relative
+  &:before
+    $size = 12px
+    position absolute
+    z-index 10
+    top 100%
+    right 50%
+    display block
+    size 0
+    margin-right - $size
+    border $size solid transparent
+    border-bottom-width 0
+    border-top-color white
 
-#quote
+triangle()
+  &:before
+    content ''
+    border-top-color @background || white
+
+.big-quote
+  direction ltr
+  text 40px 40px center
+  margin-bottom 25px
+  font-weight 300
+  strong
+    font-size 38px
+    font-weight 400
+  small
+    display block
+    font-size 22px
+  &:before
+    content ''
+    display block
+    margin 10px auto
+    background url(../img/quote.png) center
+    size 52px 40px
+
+.plus
+  display block
+  background url(../img/plus.png)
+  size 30px 29px
+  margin: 10px auto
+  font-size 0
+
+#quote, #how
   background text-color
   color white
-  blockquote
-  .big-quote
-    text-align center
-    fon 40px center
-    small
-      display block
-      font-size 18px
+  triangle()
+  .about strong
+    color green
 
 #features
   background green
+  triangle()
   text-align center
   li
-    display inline-block
-    width 33%
+    col(3)
+    padding 0 15px
+  h2
+    text bold white
+
+#how
+  text center
+  h2
+    margin 0
+    font-size 250%
+    strong
+      color green
+
+#steps
+  background gray-lighter
+  triangle()
+  li
+    col(6)
+    margin 30px 0
+    padding 0 15px
+    h3
+      text 20px bold
+    .number
+      text 150px 100px
+    for color, i in colors
+      &:nth-child({i})
+        .number
+          color color
+  .line
+    padding 0 0 30px 40px
+    position relative
+    &:before
+      content ''
+      position absolute
+      right 0
+      top 0
+      z-index 10
+      size 0
+      border 25px solid transparent
+      border-left-width 0
+      border-right-color gray-lighter
+  .line span
+    col(6)
+    height 50px
+    position relative
+    &:after
+      content ''
+      position absolute
+      right 100%
+      top 0
+      z-index 10
+      size 0
+      border 25px solid transparent
+      border-left-width 0
+    for color, i in colors
+      &:nth-child({i})
+        background color
+        &:after
+          border-right-color color
+
+
+#we
+  padding-top 0
+  text center
+  triangle()
   h2
     color white
-  .plus
+    text 100px 100px bold
+    margin-top -86px
+  .container
+    width 600px
+
+#contact
+  font-size 18px
+  background green
+  box-shadow 0 3px 5px #ccc
+  margin-bottom 30px
+  h2
+    margin 10px 0
+    text 50px text-color right
+  form
+    float right
+    width 40%
+    padding-left 30px
+  input, textarea
     display block
-    width 1em
-    margin: 0 auto
-    background pink
-    fon 28px 1em white bold
-    border-radius 50%
+    width 100%
+    text text-color
+    margin-bottom 6px
+    padding 8px 15px
+    background green-light
+    border 0
+  textarea
+    height 100px
+    padding 15px
+  .col
+    width 60%
+    float right
+  .map
+    float right
+    margin 0 0 15px 15px
+    border 1px solid text-color
+  strong
+    text bold white
+  .bottom
+    float right
