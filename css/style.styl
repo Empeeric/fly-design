@@ -18,6 +18,7 @@ html, body
 body
   font-size 16px
   color text-color
+  -webkit-font-smoothing antialiased
 
 body, h1, h2, h3, h4, h5, input, textarea, button
   font-family 'MeodedPashut', 'Merriweather Sans', arial, sans-serif
@@ -29,15 +30,17 @@ a, a:hover
   color pink
   text-decoration none !important
 
-img.cover
+img.cover, .bx-wrapper img
   width 100%
 
 header
-  h1 a
-    display block
-    background url(../img/logo.png)
-    size 193px 50px
-    font-size 0
+  h1
+    float left
+    a
+      display block
+      background url(../img/logo.png)
+      size 193px 50px
+      font-size 0
   p
     padding 30px 0 20px
     font-size 30px
@@ -66,10 +69,12 @@ nav
       color white
 
 section
+  @extend .cf
   padding 30px 0
   position relative
   &:before
     $size = 12px
+    content none
     position absolute
     z-index 10
     top 100%
@@ -104,12 +109,22 @@ triangle()
     background url(../img/quote.png) center
     size 52px 40px
 
-.plus
+.icon-plus
   display block
-  background url(../img/plus.png)
-  size 30px 29px
-  margin: 10px auto
-  font-size 0
+  size 30px
+  margin 10px auto
+  background pink
+  text 30px 30px white
+  border-radius 50%
+  &:before
+    margin 0
+  &:hover
+    background white
+    color pink
+
+#slider
+  direction ltr
+  triangle()
 
 #quote, #how
   background text-color
@@ -191,15 +206,16 @@ triangle()
   h2
     color white
     text 100px 100px bold
-    margin-top -86px
+    margin -86px 0 10px 0
   .container
-    width 600px
+    max-width 600px
+  .icon-plus:hover
+    background gray-light
 
 #contact
   font-size 18px
   background green
   box-shadow 0 3px 5px #ccc
-  margin-bottom 30px
   h2
     margin 10px 0
     text 50px text-color right
@@ -210,7 +226,7 @@ triangle()
   input, textarea
     display block
     width 100%
-    text text-color
+    text 18px text-color
     margin-bottom 6px
     padding 8px 15px
     background green-light
@@ -218,6 +234,27 @@ triangle()
   textarea
     height 100px
     padding 15px
+  button
+    float left
+    margin-top 10px
+    text 24px text-color
+    background transparent
+    border none
+    .icon-left
+      display inline-block
+      background text-color
+      color green
+      border-radius 50%
+      &:before
+        margin 0 0.1em
+    &:hover, &:active
+      .icon-left
+        color text-color
+        background white
+    &:active
+      color white
+      .icon-left
+        color green
   .col
     width 60%
     float right
@@ -229,3 +266,22 @@ triangle()
     text bold white
   .bottom
     float right
+    font-size 16px
+
+footer
+  padding 30px 0 20px 0
+  a
+    display inline-block
+    padding-left 5px
+    color pink
+    line-height 31px
+    &:hover .icon-up
+      background gray-light
+      color pink
+    .icon-up
+      margin-left 5px
+      background pink
+      text 25px white
+      &:before
+        size 30px
+        margin 0

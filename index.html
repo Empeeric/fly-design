@@ -7,14 +7,17 @@
     <title>Fly Design</title>
 
     <link rel="stylesheet" href="http://fonts.googleapis.com/css?family=Merriweather+Sans:400,300" />
-    <link rel="stylesheet" href="components/bootstrap/dist/css/bootstrap.css"/>
     <link rel="stylesheet" href="css/fonts/fonts.css"/>
+    <link rel="stylesheet" href="css/fonts/css/fontello.css"/>
+
+    <link rel="stylesheet" href="components/normalize-css/normalize.css"/>
+    <link rel="stylesheet" href="components/bxslider-4/jquery.bxslider.css"/>
     <link rel="stylesheet" href="css/style.css"/>
 </head>
 <body>
 
 <header class="container">
-    <h1 class="pull-left">
+    <h1>
         <a href="#">Fly Design</a>
     </h1>
     <p>description</p>
@@ -29,8 +32,13 @@
     </div>
 </nav>
 
-<section class="container">
-    SLIDER
+<section id="slider">
+    <ul class="slider">
+        <li><img src="img/slides/1.jpg" /></li>
+        <li><img src="img/slides/2.jpg" /></li>
+        <li><img src="img/slides/5.jpg" /></li>
+        <li><img src="img/slides/7.jpg" /></li>
+    </ul>
 </section>
 
 <section id="quote">
@@ -58,7 +66,7 @@
                 החברה אצל קהל היעד. לוגו טוב מתמצת
                 ומעביר בצורה ויזואלית.
             </p>
-            <span class="plus">+</span>
+            <a href="#" class="icon-plus"></a>
         </li>
         <li>
             <h2>מיתוג</h2>
@@ -68,7 +76,7 @@
                 החברה אצל קהל היעד. לוגו טוב מתמצת
                 ומעביר בצורה ויזואלית.
             </p>
-            <span class="plus">+</span>
+            <a href="#" class="icon-plus"></a>
         </li>
         <li>
             <h2>עיצוב אתרים</h2>
@@ -78,7 +86,7 @@
                 החברה אצל קהל היעד. לוגו טוב מתמצת
                 ומעביר בצורה ויזואלית.
             </p>
-            <span class="plus">+</span>
+            <a href="#" class="icon-plus"></a>
         </li>
     </ul>
 </section>
@@ -219,7 +227,7 @@
             ייחודית ומרהיבה, וליצור עבורכם מותג חזק ונכון
         </p>
     </div>
-    <a href="#" class="plus">+</a>
+    <a href="#" class="icon-plus"></a>
 </section>
 
 <section id="contact">
@@ -234,6 +242,10 @@
             <input type="text" name="phone" placeholder="טלפון"/>
             <input type="text" name="email" placeholder="דוא&quot;ל"/>
             <textarea name="massage" placeholder="הודעה"></textarea>
+            <button type="submit">
+שלח
+                <i class="icon-left"></i>
+            </button>
         </form>
         <div class="col">
             <img src="img/map.png" class="map" />
@@ -250,6 +262,23 @@
         </div>
     </div>
 </section>
+
+<footer class="container">
+    <a href="#">
+        <i class="icon-up"></i>
+חזרה לראש העמוד
+    </a>
+</footer>
+
+
+<!-- scripts -->
+<script src="components/jquery/jquery.min.js"></script>
+<script src="components/bxslider-4/jquery.bxslider.min.js"></script>
+<script>
+    $('.slider').bxSlider({
+        mode: 'fade'
+    });
+</script>
 
 </body>
 </html>
