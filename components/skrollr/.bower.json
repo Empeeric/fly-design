@@ -1,0 +1,15 @@
+{
+  "name": "skrollr",
+  "homepage": "https://github.com/Prinzhorn/skrollr",
+  "version": "0.6.17",
+  "_release": "0.6.17",
+  "_resolution": {
+    "type": "version",
+    "tag": "0.6.17",
+    "commit": "374b3d655a2aa474d70dbea8b9e5a044c7a77bc2"
+  },
+  "_source": "https://github.com/Prinzhorn/skrollr.git",
+  "_target": "~0.6.17",
+  "_originalSource": "https://github.com/Prinzhorn/skrollr.git",
+  "_direct": true
+}
