@@ -1,55 +1,6 @@
-<!DOCTYPE html>
-<html>
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+{>layout/}
 
-    <title>Fly Design</title>
-
-    <link rel="stylesheet" href="http://fonts.googleapis.com/css?family=Merriweather+Sans:400,300"/>
-    <link rel="stylesheet" href="../public/css/fonts/fonts.css"/>
-    <link rel="stylesheet" href="../public/css/fonts/css/fontello.css"/>
-
-    <link rel="stylesheet" href="../public/components/normalize-css/normalize.css"/>
-    <link rel="stylesheet" href="../public/components/resp-slides/responsiveslides.css"/>
-    <link rel="stylesheet" href="../public/css/style.css"/>
-</head>
-<body>
-
-<header class="cf">
-    <div class="container">
-        <h1>
-            <a href="#">Fly Design</a>
-        </h1>
-
-        <p>
-            לפרטים ולפגישת ייעוץ התקשרו 03-6210900, לפניה במייל
-            <i class="icon-left"></i>
-        </p>
-    </div>
-    <nav>
-        <div class="container">
-            <a href="#">ראשי</a>
-            <a href="#">על הסטודיו</a>
-            <a href="#">לקוחות</a>
-            <a href="#" class="active">פרוייקטים</a>
-            <a href="#">צור קשר</a>
-        </div>
-    </nav>
-    <nav class="second">
-        <div class="container">
-            <a href="#">item</a>
-            <a href="#">item</a>
-            <a href="#" class="active">item</a>
-            <a href="#">item</a>
-            <a href="#">item</a>
-            <a href="#">item</a>
-        </div>
-    </nav>
-</header>
-
-
-
+{<content}
 <div id="body">
 
     <section id="slider" class="container">
@@ -60,26 +11,26 @@
                 <h3>
                     צומחים לאט אבל בטוח
                 </h3>
-                <img src="../public/img/slides/1.jpg"/>
+                <img src="/img/slides/1.jpg"/>
             </li>
             <li>
                 <h3>
                     אפשר לבנות עלינו
                 </h3>
-                <img src="../public/img/slides/2.jpg"/>
+                <img src="/img/slides/2.jpg"/>
             </li>
             <li>
                 <h3>
                     עמוקים כמו היבשה
                 </h3>
-                <img src="../public/img/slides/5.jpg"/>
+                <img src="/img/slides/5.jpg"/>
             </li>
             <li>
 
                 <h3>
                     גם יותר ארוך וגם יותר ירוק!
                 </h3>
-                <img src="../public/img/slides/7.jpg"/>
+                <img src="/img/slides/7.jpg"/>
             </li>
         </ul>
         <nav>
@@ -154,14 +105,14 @@
 
     <section id="pictures">
         <ul class="inline">
-            <li><img src="../public/img/pictures/1.png"/></li>
-            <li><img src="../public/img/pictures/2.png"/></li>
-            <li><img src="../public/img/pictures/3.png"/></li>
-            <li><img src="../public/img/pictures/4.png"/></li>
-            <li><img src="../public/img/pictures/5.png"/></li>
-            <li><img src="../public/img/pictures/6.png"/></li>
-            <li><img src="../public/img/pictures/7.png"/></li>
-            <li><img src="../public/img/pictures/3.png"/></li>
+            <li><img src="/img/pictures/1.png"/></li>
+            <li><img src="/img/pictures/2.png"/></li>
+            <li><img src="/img/pictures/3.png"/></li>
+            <li><img src="/img/pictures/4.png"/></li>
+            <li><img src="/img/pictures/5.png"/></li>
+            <li><img src="/img/pictures/6.png"/></li>
+            <li><img src="/img/pictures/7.png"/></li>
+            <li><img src="/img/pictures/3.png"/></li>
         </ul>
     </section>
 
@@ -297,7 +248,7 @@
     </section>
 
     <section id="we">
-        <img src="../public/img/we.png" class="cover"/>
+        <img src="/img/we.png" class="cover"/>
         <h2 data--20p-bottom="transform:translateY(100px)"
             data--30p-bottom="transform:translateY(0px)">
             אנחנו
@@ -338,7 +289,7 @@
                 </button>
             </form>
             <div class="col">
-                <img src="../public/img/map.png" class="map"/>
+                <img src="/img/map.png" class="map"/>
 
                 <p>
                     לקביעת פגישת היכרות ללא התחייבות,
@@ -367,10 +318,11 @@
     </div>
 </footer>
 
-<!-- scripts -->
-<script src="../public/components/jquery/jquery.min.js"></script>
-<script src="../public/components/resp-slides/responsiveslides.js"></script>
-<script src="../public/components/skrollr/dist/skrollr.min.js"></script>
+<div class="footer-padding"></div>
+{/content}
+
+{<scripts}
+<script src="/components/skrollr/dist/skrollr.min.js"></script>
 <script>
     $('.slider').responsiveSlides({
         prev: $('#slider .prev'),
@@ -389,13 +341,13 @@
     };
 
     var files = [
-        'img/pictures/1.png',
-        'img/pictures/2.png',
-        'img/pictures/3.png',
-        'img/pictures/4.png',
-        'img/pictures/5.png',
-        'img/pictures/6.png',
-        'img/pictures/7.png'
+        '/img/pictures/1.png',
+        '/img/pictures/2.png',
+        '/img/pictures/3.png',
+        '/img/pictures/4.png',
+        '/img/pictures/5.png',
+        '/img/pictures/6.png',
+        '/img/pictures/7.png'
     ],
         pics = [],
         i;
@@ -409,6 +361,4 @@
         pics.pop().src = files[--i];
     }, 2000);
 </script>
-
-</body>
-</html>
+{/scripts}

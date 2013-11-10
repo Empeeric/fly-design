@@ -1,0 +1,30 @@
+{>layout/}
+
+{<content}
+<section id="items" class="container">
+    <h1>
+        עיצוב אריזות
+    </h1>
+
+    <article style="background-image: url(img/pictures/1.png)">
+        <h2>Xpret</h2>
+        <p>
+            מיתוג לאריזות תאורה
+            <i class="icon-left"></i>
+        </p>
+        <i class="icon-left big"></i>
+    </article>
+
+    <article class="left" style="background-image: url(img/pictures/4.png)">
+        <h2>Xpret</h2>
+        <p>
+            מיתוג לאריזות תאורה
+            <i class="icon-left"></i>
+        </p>
+        <i class="icon-left big"></i>
+    </article>
+</section>
+{/content}
+
+{<scripts}
+{/scripts}

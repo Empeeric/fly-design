@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>Fly Design</title>
+
+    <link rel="stylesheet" href="http://fonts.googleapis.com/css?family=Merriweather+Sans:400,300"/>
+    <link rel="stylesheet" href="/css/fonts/fonts.css"/>
+    <link rel="stylesheet" href="/css/fonts/css/fontello.css"/>
+
+    <link rel="stylesheet" href="/components/normalize-css/normalize.css"/>
+    <link rel="stylesheet" href="/components/resp-slides/responsiveslides.css"/>
+    <link rel="stylesheet" href="/css/style.css"/>
+</head>
+<body>
+
+<header class="cf">
+    <div class="container">
+        <h1>
+            <a href="/">Fly Design</a>
+        </h1>
+
+        <p>
+            לפרטים ולפגישת ייעוץ התקשרו 03-6210900, לפניה במייל
+            <i class="icon-left"></i>
+        </p>
+    </div>
+    <nav>
+        <div class="container">
+            <a href="#">ראשי</a>
+            <a href="#">על הסטודיו</a>
+            <a href="#">לקוחות</a>
+            <a href="#" class="active">פרוייקטים</a>
+            <a href="#">צור קשר</a>
+        </div>
+    </nav>
+    <nav class="second">
+        <div class="container">
+            <a href="#">item</a>
+            <a href="#">item</a>
+            <a href="#" class="active">item</a>
+            <a href="#">item</a>
+            <a href="#">item</a>
+            <a href="#">item</a>
+        </div>
+    </nav>
+</header>
+
+{+content/}
+
+<!-- scripts -->
+<script src="/components/jquery/jquery.min.js"></script>
+<script src="/components/resp-slides/responsiveslides.js"></script>
+
+{+scripts/}
+
+</body>
+</html>
