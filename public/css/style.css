@@ -312,6 +312,9 @@ section:before {
   content: '';
   border-top-color: #e0e1e2;
 }
+#steps ul {
+  overflow: hidden;
+}
 #steps li {
   float: right;
   width: 16.666666666666668%;
@@ -570,13 +573,8 @@ footer a.up .icon-up:before {
   padding: 0;
   position: relative;
 }
-#pictures li {
-  float: right;
-  width: 16.666666666666668%;
-  height: 16.666666666666668%;
-  overflow: hidden;
-}
 #pictures img {
-  width: 100%;
-  height: 100%;
+  float: right;
+  width: 25%;
+  overflow: hidden;
 }
