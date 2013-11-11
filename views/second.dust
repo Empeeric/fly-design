@@ -6,25 +6,70 @@
         עיצוב אריזות
     </h1>
 
-    <article style="background-image: url(img/pictures/1.png)">
-        <h2>Xpret</h2>
-        <p>
-            מיתוג לאריזות תאורה
-            <i class="icon-left"></i>
-        </p>
-        <i class="icon-left big"></i>
+    <article class="expand">
+        <section class="title" style="background-image: url(img/pictures/1.png)">
+            <h2>Xpret</h2>
+            <p>
+                מיתוג לאריזות תאורה
+                <i class="icon-left"></i>
+            </p>
+            <i class="icon-left big"></i>
+        </section>
+        <div class="content">
+            <div class="slider">
+                <ul>
+                    <li><img src="/img/slides/1.jpg"/></li>
+                    <li><img src="/img/slides/2.jpg"/></li>
+                    <li><img src="/img/slides/3.jpg"/></li>
+                    <li><img src="/img/slides/4.gif"/></li>
+                </ul>
+            </div>
+            <h3>הלקוח</h3>
+<p>
+    ‘אמה לורה’ הינה חברה המייצרת סבונים
+    איכותיים מחומרים טבעיים ובעיקר מתמונהמה
+</p>
+        </div>
     </article>
 
-    <article class="left" style="background-image: url(img/pictures/4.png)">
-        <h2>Xpret</h2>
-        <p>
-            מיתוג לאריזות תאורה
-            <i class="icon-left"></i>
-        </p>
-        <i class="icon-left big"></i>
+    <article class="left">
+        <div class="title" style="background-image: url(img/pictures/4.png)">
+            <h2>Xpret</h2>
+            <p>
+                מיתוג לאריזות תאורה
+                <i class="icon-left"></i>
+            </p>
+            <i class="icon-left big"></i>
+        </div>
+        <div class="content">
+
+        </div>
     </article>
+</section>
+
+<section class="container">
+    <a href="#" class="up">
+        <i class="icon-up"></i>
+            <span>
+                חזרה לראש העמוד
+            </span>
+    </a>
 </section>
 {/content}
 
 {<scripts}
+<script>
+    $('article .title').click(function() {
+        $(this).parent().toggleClass('expand').siblings().removeClass('expand');
+    }).one(function() {
+        $(this);
+    });
+
+    $('.slider ul').responsiveSlides({
+        nav: true,
+        pager: true,
+        nextText: '<i class="icon-left" />',
+        prevText: '<i class="icon-right" />'
+    });
+</script>
 {/scripts}

@@ -42,6 +42,7 @@ ul.inline
   margin 0
   padding 0
   li
+    display inline
     padding 0
 
 .container
@@ -113,10 +114,10 @@ section
     border-bottom-width 0
     border-top-color white
 
-triangle()
+triangle(bg = @background || white)
   &:before
     content ''
-    border-top-color @background || white
+    border-top-color bg
 
 .big-quote
   direction ltr
@@ -364,30 +365,33 @@ footer
   bottom 0
   right 0
   padding 30px 0 20px 0
-  a.up
-    margin-top 20px
-    display inline-block
-    padding-left 5px
-    color pink
-    line-height 31px
-    span
-      display none
-    &:hover
-      span
-        display inline
-      .icon-up
-        background gray-light
-        color pink
-    .icon-up
-      margin-left 5px
-      background pink
-      text 25px white
-      &:before
-        size 30px
-        margin 0
+
 
 .footer-padding
   height 580px
+
+a.up
+  margin-top 20px
+  display inline-block
+  padding-left 5px
+  color pink
+  line-height 31px
+  span
+    display none
+  &:hover
+    span
+      display inline
+    .icon-up
+      background gray-light
+      color pink
+  .icon-up
+    margin-left 5px
+    background pink
+    text 25px white
+    &:before
+      size 30px
+      margin 0
+
 
 #pictures
   padding 0
@@ -401,31 +405,86 @@ footer
     color pink
   article
     margin-top 30px
-    padding 30px
     height 130px
     border 1px solid gray-dark
-    background left top no-repeat
     overflow hidden
     position relative
-    h2, p
-      margin 0
-    h2
-      text 40px right normal
-    &.left
+    -webkit-transition height .5s
+    .title
+      padding 30px
+      cursor pointer
+      background left top no-repeat
+      -webkit-transition padding .35s
+      triangle(text-color)
+      &:before
+        right 80%
+      h2, p
+        margin 0
+      h2
+        text 40px right normal
+      .big.icon-left
+        position absolute
+        left 0
+        top 10px
+        font-size 100px
+        -webkit-transform translateX(-100px)
+        -webkit-transition -webkit-transform .35s
+    &.left .title
       padding-right 70%
       background right top no-repeat
-    .big.icon-left
-      position absolute
-      left 0
-      top 10px
-      font-size 100px
-      -webkit-transform translateX(-100px)
-      -webkit-transition -webkit-transform .4s
-    &:hover
-      border-color text-color
-      background text-color !important
-      color white
-      p .icon-left
-        display none
+    &:hover, &.expand
+      .title
+        border-color text-color
+        background text-color !important
+        color white
+        p .icon-left
+          display none
       .big.icon-left
         -webkit-transform translateX(0)
+    &.expand
+      height 600px
+      .title
+        padding-right 30px
+      .big.icon-left
+        -webkit-transform translateX(-100px)
+  .content
+    height 472px
+    padding 30px
+  .slider
+    float right
+    size 70% 100%
+    margin-left 30px
+    border 1px solid gray-dark
+    position relative
+    img
+      height 412px
+    .next, .prev
+      position absolute
+      top 50%
+      right 0
+      z-index 10
+      size 38px
+      margin-top - (@height / 2)
+      background text-color
+      text 30px 40px white center
+      &:hover
+        background pink
+    .next
+      right auto
+      left 0
+    .rslides_tabs
+      position absolute
+      right 15px
+      bottom @right
+      z-index 10
+      @extend ul.inline
+      a
+        display inline-block
+        size 12px
+        background gray-light
+        text 0
+        margin-left 8px
+        &:hover
+          background pink
+    .rslides_here a
+      background text-color
