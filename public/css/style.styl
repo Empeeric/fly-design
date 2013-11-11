@@ -283,7 +283,6 @@ triangle(bg = @background || white)
         &:after
           border-right-color color
 
-
 #we
   padding-top 0
   text center
@@ -366,9 +365,11 @@ footer
   right 0
   padding 30px 0 20px 0
 
-
 .footer-padding
   height 580px
+.footer
+  margin-top -30px
+  padding-top 0
 
 a.up
   margin-top 20px
@@ -392,7 +393,6 @@ a.up
       size 30px
       margin 0
 
-
 #pictures
   padding 0
   position relative
@@ -400,15 +400,17 @@ a.up
     col(4)
     overflow hidden
 
+article
+  margin-top 30px
+  border 1px solid gray-dark
+  overflow hidden
+  position relative
+
 #items
   h1
     color pink
   article
-    margin-top 30px
     height 130px
-    border 1px solid gray-dark
-    overflow hidden
-    position relative
     -webkit-transition height .5s
     .title
       padding 30px
@@ -488,3 +490,39 @@ a.up
           background pink
     .rslides_here a
       background text-color
+
+#thumbs
+  h1
+    color pink
+  article
+    float right
+    size 304px 170px
+    text center
+    margin 0 0 30px 30px
+    &:nth-child(3n+1)
+      margin-left 0
+    h2
+      position absolute
+      left 0
+      right 0
+      bottom 0
+      margin 0
+      padding 5px 15px 5px 10px
+      background text-color
+      text white normal right
+      -webkit-transform translateY(40px)
+      -webkit-transition -webkit-transform .2s
+      i
+        float left
+        -webkit-transform rotateZ(0)
+        -webkit-transition -webkit-transform .2s
+    &:hover, &.expand
+      h2
+        -webkit-transform translateY(0)
+    &.expand
+      i
+        -webkit-transform rotateZ(-90deg)
+  .content
+    width 100%
+    height 500px
+    background text-color
