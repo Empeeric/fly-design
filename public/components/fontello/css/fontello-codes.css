@@ -1,5 +1,6 @@
 
 .icon-fb:before { content: '\e800'; } /* '' */
+.icon-close:before { content: '\e801'; } /* '' */
 .icon-plus:before { content: '\e809'; } /* '' */
 .icon-down:before { content: '\e805'; } /* '' */
 .icon-left:before { content: '\e806'; } /* '' */

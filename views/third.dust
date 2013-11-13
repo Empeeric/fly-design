@@ -1,100 +1,126 @@
 {>layout/}
 
 {<content}
-<section id="thumbs" class="container">
+<div id="items" class="container">
     <h1>
         לקוחות
     </h1>
 
-    <article>
+    <div class="thumb">
         <img src="img/clients/1.png" alt="CLIENT" />
         <h2>
             Xpert
             <i class="icon-left"></i>
         </h2>
-    </article>
 
-    <article>
+        <article class="expand">
+            <section class="title">
+                <h2>Xpret</h2>
+                <p>
+                    מיתוג לאריזות תאורה
+                    <i class="icon-left"></i>
+                </p>
+                <a href="#" class="icon-close"></a>
+            </section>
+            <div class="content">
+                <div class="slider">
+                    <ul>
+                        <li><img src="/img/slides/1.jpg"/></li>
+                        <li><img src="/img/slides/2.jpg"/></li>
+                        <li><img src="/img/slides/3.jpg"/></li>
+                        <li><img src="/img/slides/4.gif"/></li>
+                    </ul>
+                </div>
+                <h3>הלקוח</h3>
+                <p>
+                    ‘אמה לורה’ הינה חברה המייצרת סבונים
+                    איכותיים מחומרים טבעיים ובעיקר מתמונהמה
+                </p>
+            </div>
+        </article>
+    </div>
+
+    <div class="thumb">
         <img src="img/clients/2.png" alt="CLIENT" />
         <h2>
             Xpert
             <i class="icon-left"></i>
         </h2>
-    </article>
+    </div>
 
-    <article>
+    <div class="thumb">
         <img src="img/clients/3.png" alt="CLIENT" />
         <h2>
             Xpert
             <i class="icon-left"></i>
         </h2>
-    </article>
+    </div>
 
-    <article>
+    <div class="thumb">
         <img src="img/clients/1.png" alt="CLIENT" />
         <h2>
             Xpert
             <i class="icon-left"></i>
         </h2>
-    </article>
+    </div>
 
-    <article>
+    <div class="thumb">
         <img src="img/clients/2.png" alt="CLIENT" />
         <h2>
             Xpert
             <i class="icon-left"></i>
         </h2>
-    </article>
+    </div>
 
-    <article>
+    <div class="thumb">
         <img src="img/clients/3.png" alt="CLIENT" />
         <h2>
             Xpert
             <i class="icon-left"></i>
         </h2>
-    </article>
+    </div>
 
-    <article>
+    <div class="thumb">
         <img src="img/clients/1.png" alt="CLIENT" />
         <h2>
             Xpert
             <i class="icon-left"></i>
         </h2>
-    </article>
+    </div>
 
-    <article>
+    <div class="thumb">
         <img src="img/clients/2.png" alt="CLIENT" />
         <h2>
             Xpert
             <i class="icon-left"></i>
         </h2>
-    </article>
+    </div>
 
-    <article>
+    <div class="thumb">
         <img src="img/clients/3.png" alt="CLIENT" />
         <h2>
             Xpert
             <i class="icon-left"></i>
         </h2>
-    </article>
+    </div>
 
-</section>
+</div>
 
-<section class="container footer">
+<div class="container footer">
     <a href="#" class="up">
         <i class="icon-up"></i>
             <span>
                 חזרה לראש העמוד
             </span>
     </a>
-</section>
+</div>
 {/content}
 
 {<scripts}
 <script>
-    $('article').click(function() {
+    $('.thumb').click(function() {
         $(this).toggleClass('expand').siblings().removeClass('expand');
-    });
+    }).find('h2, .close')
 
     $('.slider ul').responsiveSlides({
         nav: true,

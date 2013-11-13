@@ -368,7 +368,6 @@ footer
 .footer-padding
   height 580px
 .footer
-  margin-top -30px
   padding-top 0
 
 a.up
@@ -400,16 +399,15 @@ a.up
     col(4)
     overflow hidden
 
-article
-  margin-top 30px
-  border 1px solid gray-dark
-  overflow hidden
-  position relative
 
 #items
   h1
     color pink
   article
+    margin-top 30px
+    border 1px solid gray-dark
+    overflow hidden
+    position relative
     height 130px
     -webkit-transition height .5s
     .title
@@ -418,6 +416,13 @@ article
       background left top no-repeat
       -webkit-transition padding .35s
       triangle(text-color)
+      .icon-close
+        position absolute
+        left 5px
+        top @left
+        text 25px white
+        -webkit-transform translateX(-100px)
+        -webkit-transition -webkit-transform .35s
       &:before
         right 80%
       h2, p
@@ -449,9 +454,12 @@ article
         padding-right 30px
       .big.icon-left
         -webkit-transform translateX(-100px)
+      .icon-close
+        -webkit-transform translateX(0)
   .content
     height 472px
     padding 30px
+    position relative
   .slider
     float right
     size 70% 100%
@@ -486,19 +494,17 @@ article
         background gray-light
         text 0
         margin-left 8px
-        &:hover
-          background pink
+      &:hover
+        background pink
     .rslides_here a
       background text-color
-
-#thumbs
-  h1
-    color pink
-  article
+  .thumb
     float right
     size 304px 170px
     text center
     margin 0 0 30px 30px
+    border 1px solid gray-dark
+    position relative
     &:nth-child(3n+1)
       margin-left 0
     h2
@@ -510,7 +516,8 @@ article
       padding 5px 15px 5px 10px
       background text-color
       text white normal right
-      -webkit-transform translateY(40px)
+      -webkit-transform rotateX(90deg)
+      -webkit-transform-origin bottom left
       -webkit-transition -webkit-transform .2s
       i
         float left
@@ -518,11 +525,15 @@ article
         -webkit-transition -webkit-transform .2s
     &:hover, &.expand
       h2
-        -webkit-transform translateY(0)
+        -webkit-transform rotateX(0deg)
     &.expand
       i
         -webkit-transform rotateZ(-90deg)
-  .content
-    width 100%
-    height 500px
-    background text-color
+      article
+        height 600px
+    article
+      height 0
+      -webkit-transition height .5s
+      width 972px
+      z-index 20
+      background white

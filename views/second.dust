@@ -14,6 +14,7 @@
                 <i class="icon-left"></i>
             </p>
             <i class="icon-left big"></i>
+            <a href="#" class="icon-close"></a>
         </section>
         <div class="content">
             <div class="slider">
@@ -33,14 +34,14 @@
     </article>
 
     <article class="left">
-        <div class="title" style="background-image: url(img/pictures/4.png)">
+        <section class="title" style="background-image: url(img/pictures/4.png)">
             <h2>Xpret</h2>
             <p>
                 מיתוג לאריזות תאורה
                 <i class="icon-left"></i>
             </p>
             <i class="icon-left big"></i>
-        </div>
+        </section>
         <div class="content">
 
         </div>
