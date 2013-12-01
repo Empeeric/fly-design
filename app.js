@@ -4,7 +4,7 @@ var express = require('express'),
 
 require('./dust');
 
-var app = express();
+var app = module.exports = express();
 
 app.set('site', 'Fly Design');
 app.set('port', process.env.PORT || 80);
@@ -26,15 +26,7 @@ if ('development' == app.get('env')) {
 }
 
 // routes
-app.get('/', function(req, res) {
-    res.render('index');
-});
-app.get('/second', function(req, res) {
-    res.render('second');
-});
-app.get('/third', function(req, res) {
-    res.render('third');
-});
+require('./routes');
 
 http.createServer(app).listen(app.get('port'), function(){
   console.log('Express server listening on port ' + app.get('port'));

@@ -68,7 +68,9 @@
     <section id="features">
         <ul class="container">
             <li>
-                <h2>עיצוב לוגו</h2>
+                <a href="#" class="key">
+                    <h2>עיצוב לוגו</h2>
+                </a>
 
                 <p>
                     עיצוב לוגו נכון הינו משמעותי בהגדרת
@@ -79,7 +81,9 @@
                 <a href="#" class="icon-plus"></a>
             </li>
             <li>
-                <h2>מיתוג</h2>
+                <a href="#" class="eye">
+                    <h2>מיתוג</h2>
+                </a>
 
                 <p>
                     עיצוב לוגו נכון הינו משמעותי בהגדרת
@@ -90,7 +94,9 @@
                 <a href="#" class="icon-plus"></a>
             </li>
             <li>
-                <h2>עיצוב אתרים</h2>
+                <a href="#" class="hand">
+                    <h2>עיצוב אתרים</h2>
+                </a>
 
                 <p>
                     עיצוב לוגו נכון הינו משמעותי בהגדרת
@@ -126,7 +132,7 @@
 
     <section id="steps">
         <ul class="container"
-            data-10p-bottom="height:220px"
+            data-10p-bottom="height:210px"
             data--20p-bottom="height:468px">
             <li>
                 <span class="number">1</span>
@@ -150,7 +156,7 @@
                 <span class="number">2</span>
 
                 <h3>
-                    חיבור ואסטרטגיה
+                    המחקר הויזואלי
                 </h3>
 
                 <p>
@@ -168,7 +174,7 @@
                 <span class="number">3</span>
 
                 <h3>
-                    חיבור ואסטרטגיה
+                    תהליך העיצוב
                 </h3>
 
                 <p>
@@ -186,7 +192,7 @@
                 <span class="number">4</span>
 
                 <h3>
-                    חיבור ואסטרטגיה
+                    הפרזנטציה
                 </h3>
 
                 <p>
@@ -204,7 +210,7 @@
                 <span class="number">5</span>
 
                 <h3>
-                    חיבור ואסטרטגיה
+                    הבחירה שלך
                 </h3>
 
                 <p>
@@ -222,7 +228,7 @@
                 <span class="number">6</span>
 
                 <h3>
-                    חיבור ואסטרטגיה
+                    הטמעה וליווי
                 </h3>
 
                 <p>

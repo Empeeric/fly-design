@@ -76,6 +76,9 @@ ul.container {
   padding: 0;
   list-style: none;
 }
+img.container {
+  display: block;
+}
 #body {
   background: #fff;
   position: relative;
@@ -132,8 +135,8 @@ header nav.second a {
   color: #fff;
 }
 section {
-  padding: 30px 0;
   position: relative;
+  padding: 30px 0;
   background: #fff;
 }
 section:before {
@@ -301,6 +304,36 @@ section:before {
   font-weight: bold;
   color: #fff;
 }
+#features a.key {
+  display: inline-block;
+  width: 198px;
+  height: 198px;
+  padding-top: 198px;
+  background: url("/img/icons/key.png");
+}
+#features a.key:hover {
+  background: url("/img/icons/key-hover.png");
+}
+#features a.eye {
+  display: inline-block;
+  width: 198px;
+  height: 198px;
+  padding-top: 198px;
+  background: url("/img/icons/eye.png");
+}
+#features a.eye:hover {
+  background: url("/img/icons/eye-hover.png");
+}
+#features a.hand {
+  display: inline-block;
+  width: 198px;
+  height: 198px;
+  padding-top: 198px;
+  background: url("/img/icons/hand.png");
+}
+#features a.hand:hover {
+  background: url("/img/icons/hand-hover.png");
+}
 #how {
   padding: 0;
   text-align: center;
@@ -331,8 +364,9 @@ section:before {
   padding: 0 15px;
 }
 #steps li h3 {
-  font-size: 20px;
+  font-size: 16px;
   font-weight: bold;
+  height: 50px;
 }
 #steps li .number {
   font-size: 150px;
@@ -771,24 +805,67 @@ a.up .icon-up:before {
 }
 #items.third article {
   height: 0;
-  border-width: 0;
+  border-color: transparent;
   -webkit-transition: height 1s;
 }
+#items.third article .title {
+  background: #636466;
+  color: #fff;
+}
 #items.third article.expand {
-  border-width: 1px;
+  border-color: #b1b4b6;
   height: 600px;
 }
-/*
-&.expand
-      i
-        -webkit-transform rotateZ(-90deg)
-      article
-        height 600px
-      article
-        height 0
-        -webkit-transition height .5s
-        width 972px
-        z-index 20
-        background white
-
-*/
+#about h1 {
+  color: #95ce92;
+}
+#about hr {
+  height: 3px;
+  margin-bottom: 40px;
+  border: none;
+  background: #8a8c8e;
+  position: relative;
+}
+#about hr:before {
+  content: none;
+  position: absolute;
+  top: 100%;
+  right: 50%;
+  z-index: 10;
+  display: block;
+  width: 0;
+  height: 0;
+  margin-right: -12px;
+  border: 12px solid transparent;
+  border-bottom-width: 0;
+  border-top-color: #fff;
+}
+#about hr:before {
+  content: '';
+  border-top-color: #8a8c8e;
+}
+#about .col {
+  float: right;
+  width: 50%;
+}
+#about .col:first-child {
+  padding-left: 20px;
+}
+#about .col:last-child {
+  padding-right: 20px;
+}
+#about h3 {
+  margin: 0;
+  color: #95ce92;
+  font-size: 16px;
+}
+#about .chess li {
+  float: right;
+  width: 25%;
+  height: 25%;
+  padding: 20px;
+  background: #cccecf;
+}
+#about .chess li:nth-child(2n+5n) {
+  background: #e0e1e2;
+}
