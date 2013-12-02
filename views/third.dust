@@ -58,14 +58,6 @@
 
 </div>
 
-<div class="container footer">
-    <a href="#" class="up">
-        <i class="icon-up"></i>
-            <span>
-                חזרה לראש העמוד
-            </span>
-    </a>
-</div>
 {/content}
 
 {<scripts}

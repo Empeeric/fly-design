@@ -582,13 +582,13 @@ footer {
   padding: 30px 0 20px 0;
 }
 .footer-padding {
-  height: 580px;
+  height: 600px;
 }
 .footer {
   padding-top: 0;
 }
 a.up {
-  margin-top: 20px;
+  margin: 20px 0;
   display: inline-block;
   padding-left: 5px;
   color: #ef2d61;
@@ -859,13 +859,27 @@ a.up .icon-up:before {
   color: #95ce92;
   font-size: 16px;
 }
+#about .chess {
+  padding: 0;
+  list-style: none;
+}
 #about .chess li {
   float: right;
   width: 25%;
   height: 25%;
   padding: 20px;
-  background: #cccecf;
+  background: #e4e5e6;
 }
-#about .chess li:nth-child(2n+5n) {
-  background: #e0e1e2;
+#about .chess li:nth-child(2n) {
+  background: #f0f0f1;
+}
+#about .chess li:nth-child(n+5) {
+  background: #e4e5e6;
+}
+#about .chess li:nth-child(2n+5) {
+  background: #f0f0f1;
+}
+#about .chess h3 {
+  font-size: 35px;
+  color: #636466;
 }

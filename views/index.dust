@@ -122,8 +122,8 @@
         </ul>
     </section>
 
-    <section id="how" data-bottom="height:20px"
-            data--20p-bottom="height:123px">
+    <section id="how" data-20p-bottom="height:20px"
+            data--40p-bottom="height:123px">
         <h2>
             אז איך זה בדיוק עובד
             <strong>?</strong>
@@ -326,6 +326,8 @@
 
 <div class="footer-padding"></div>
 {/content}
+
+{<footer}{/footer}
 
 {<scripts}
 <script src="/components/skrollr/dist/skrollr.min.js"></script>

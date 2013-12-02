@@ -366,12 +366,12 @@ footer
   padding 30px 0 20px 0
 
 .footer-padding
-  height 580px
+  height 600px
 .footer
   padding-top 0
 
 a.up
-  margin-top 20px
+  margin 20px 0
   display inline-block
   padding-left 5px
   color pink
@@ -553,10 +553,18 @@ a.up
     color green
     text 16px
   .chess
+    padding 0
+    list-style none
     li
       col(4)
       height @width
       padding 20px
-      background gray-light
-      &:nth-child(2n+5n)
-        background gray-lighter
+      background #E4E5E6
+      &:nth-child(2n)
+        background #F0F0F1
+      &:nth-child(n+5)
+        background #E4E5E6
+      &:nth-child(2n+5)
+        background #F0F0F1
+    h3
+      text 35px text-color

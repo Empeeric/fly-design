@@ -50,6 +50,17 @@
 
 {+content/}
 
+{+footer}
+<div class="container">
+    <a href="#" class="up">
+        <i class="icon-up"></i>
+            <span>
+                חזרה לראש העמוד
+            </span>
+    </a>
+</div>
+{/footer}
+
 <!-- scripts -->
 <script src="/components/jquery/jquery.min.js"></script>
 <script src="/components/resp-slides/responsiveslides.js"></script>
