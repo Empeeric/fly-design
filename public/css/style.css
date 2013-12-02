@@ -98,7 +98,7 @@ header {
 }
 header h1 {
   float: left;
-  margin-left: 10px;
+  margin: 15px 10px 0;
 }
 header h1 a {
   display: block;
@@ -254,7 +254,7 @@ section:before {
   width: 110px;
   height: 110px;
   position: absolute;
-  left: -15px;
+  left: 15px;
   top: 40px;
   z-index: 30;
   padding: 20px;
@@ -304,35 +304,31 @@ section:before {
   font-weight: bold;
   color: #fff;
 }
-#features a.key {
+#features a.big {
   display: inline-block;
   width: 198px;
   height: 198px;
   padding-top: 198px;
-  background: url("/img/icons/key.png");
+  background: no-repeat;
+  background-size: contain;
+}
+#features a.key {
+  background-image: url("/img/icons/key.png");
 }
 #features a.key:hover {
-  background: url("/img/icons/key-hover.png");
+  background-image: url("/img/icons/key-hover.png");
 }
 #features a.eye {
-  display: inline-block;
-  width: 198px;
-  height: 198px;
-  padding-top: 198px;
-  background: url("/img/icons/eye.png");
+  background-image: url("/img/icons/eye.png");
 }
 #features a.eye:hover {
-  background: url("/img/icons/eye-hover.png");
+  background-image: url("/img/icons/eye-hover.png");
 }
 #features a.hand {
-  display: inline-block;
-  width: 198px;
-  height: 198px;
-  padding-top: 198px;
-  background: url("/img/icons/hand.png");
+  background-image: url("/img/icons/hand.png");
 }
 #features a.hand:hover {
-  background: url("/img/icons/hand-hover.png");
+  background-image: url("/img/icons/hand-hover.png");
 }
 #how {
   padding: 0;

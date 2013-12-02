@@ -69,7 +69,7 @@ header
   background white
   h1
     float left
-    margin-left 10px
+    margin 15px 10px 0
     a
       display block
       background url(../img/logo.png)
@@ -188,7 +188,7 @@ section
         line-height 40px
   .banner
     size 110px
-    absolute left -15px top 40px
+    absolute left 15px top 40px
     z-index 30
     padding 20px
     background green
@@ -217,16 +217,19 @@ section
     padding 0 15px
   h2
     text bold white
+  a.big
+    display inline-block
+    size 198px
+    padding-top @height
+    background no-repeat
+    background-size contain
   for noun in key eye hand
     image = '/img/icons/'+ noun +'.png'
     hover = '/img/icons/'+ noun +'-hover.png'
     a.{noun}
-      display inline-block
-      size 198px
-      padding-top @height
-      background url(image)
+      background-image url(image)
       &:hover
-        background url(hover)
+        background-image url(hover)
 
 
 #how

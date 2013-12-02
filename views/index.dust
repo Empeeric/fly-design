@@ -68,7 +68,7 @@
     <section id="features">
         <ul class="container">
             <li>
-                <a href="#" class="key">
+                <a href="#" class="big key">
                     <h2>עיצוב לוגו</h2>
                 </a>
 
@@ -81,7 +81,7 @@
                 <a href="#" class="icon-plus"></a>
             </li>
             <li>
-                <a href="#" class="eye">
+                <a href="#" class="big eye">
                     <h2>מיתוג</h2>
                 </a>
 
@@ -94,7 +94,7 @@
                 <a href="#" class="icon-plus"></a>
             </li>
             <li>
-                <a href="#" class="hand">
+                <a href="#" class="big hand">
                     <h2>עיצוב אתרים</h2>
                 </a>
 
