@@ -1,0 +1,28 @@
+* {
+  box-sizing: border-box;
+}
+.cf {
+  zoom: 1;
+}
+.cf:before,
+.cf:after {
+  content: '';
+  display: table;
+}
+.cf:after {
+  clear: both;
+}
+@media (max-width: 650px) {
+  #quote {
+    padding-left: 15%;
+    padding-right: 15%;
+  }
+  #features a.big {
+    width: 100%;
+    padding-top: 100%;
+  }
+  #steps li {
+    float: right;
+    width: 33.333333333333336%;
+  }
+}

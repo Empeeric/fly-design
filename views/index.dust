@@ -9,28 +9,19 @@
         <ul class="slider">
             <li>
                 <h3>
-                    צומחים לאט אבל בטוח
+                    עיצוב מחדש של
+                    <br/>
+                    השק המיתולוגי.
+                    <br/>
+                    נשר תעשיות מלט
                 </h3>
                 <img src="/img/slides/1.jpg"/>
             </li>
             <li>
                 <h3>
-                    אפשר לבנות עלינו
+                    לורם איפסום
                 </h3>
                 <img src="/img/slides/2.jpg"/>
-            </li>
-            <li>
-                <h3>
-                    עמוקים כמו היבשה
-                </h3>
-                <img src="/img/slides/5.jpg"/>
-            </li>
-            <li>
-
-                <h3>
-                    גם יותר ארוך וגם יותר ירוק!
-                </h3>
-                <img src="/img/slides/7.jpg"/>
             </li>
         </ul>
         <nav>
@@ -367,6 +358,6 @@
             i = files.length;
 
         pics.pop().src = files[--i];
-    }, 2000);
+    }, 1000);
 </script>
 {/scripts}

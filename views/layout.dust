@@ -18,26 +18,32 @@
 <body>
 
 <header class="cf">
-    <div class="container">
+    <div class="top container cf">
         <h1>
             <a href="/">Fly Design</a>
         </h1>
 
         <p>
-            לפרטים ולפגישת ייעוץ התקשרו 03-6210900, לפניה במייל
-            <i class="icon-left"></i>
+            לפרטים ופגישת ייעוץ
+            <strong>
+                התקשרו 03-6210900,
+            </strong>
+            לפניה
+            <strong>
+                במייל<i class="icon-left-dir"></i>
+            </strong>
         </p>
     </div>
     <nav>
         <div class="container">
-            <a href="#">ראשי</a>
+            <a href="#" class="active">ראשי</a>
             <a href="#">על הסטודיו</a>
             <a href="#">לקוחות</a>
-            <a href="#" class="active">פרוייקטים</a>
+            <a href="#" class="projects">פרוייקטים</a>
             <a href="#">צור קשר</a>
         </div>
     </nav>
-    <nav class="second">
+    <nav class="second hide">
         <div class="container">
             <a href="#">item</a>
             <a href="#">item</a>
@@ -65,7 +71,11 @@
 <!-- scripts -->
 <script src="/components/jquery/jquery.min.js"></script>
 <script src="/components/resp-slides/responsiveslides.js"></script>
-
+<script>
+    var projects = $('nav.second');
+    $('a.projects').click(projects.toggleClass.bind(projects, 'hide'))
+        .on('mouseenter', projects.removeClass.bind(projects, 'hide'));
+</script>
 {+scripts/}
 
 </body>

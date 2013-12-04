@@ -34,6 +34,9 @@ a, a:hover
   color pink
   text-decoration none !important
 
+.hide
+  display none !important
+
 img.cover
   width 100%
 
@@ -67,6 +70,8 @@ header
     fixed top right
     z-index 100
   background white
+  .top
+    padding 10px
   h1
     float left
     margin 15px 10px 0
@@ -78,23 +83,26 @@ header
   p
     margin 0
     padding 30px 0
-    font-size 16px
+    font-size 18px
+    strong
+      font-size 16px
   nav
     background gray-light
     a
       display inline-block
       padding 10px 20px
+      line-height 20px
       color text-color
-      &.active
-        background pink
-        color white
-      &:hover
-        background gray-dark
-        color white
+      &.active, &:hover
+        text bold pink
     &.second
       background text-color
       a
+        line-height 13px
         color white
+        &.active, &:hover
+          background pink
+          text normal
 
 triangle-setup()
   position relative
@@ -188,7 +196,7 @@ section
         line-height 40px
   .banner
     size 110px
-    absolute left 15px top 40px
+    absolute left 40px top 40px
     z-index 30
     padding 20px
     background green
@@ -309,7 +317,7 @@ section
   /*box-shadow 0 3px 5px #ccc*/
   h2
     margin 10px 0
-    text 50px text-color right
+    text 60px normal text-color right
   form
     float right
     width 40%
@@ -337,7 +345,7 @@ section
       color green
       border-radius 50%
       &:before
-        margin 0 0.1em
+        margin 0.14em 0.14em 0
     &:hover, &:active
       .icon-left
         color text-color
@@ -349,6 +357,8 @@ section
   .col
     width 60%
     float right
+    p
+      margin 0
   .map
     float right
     margin 0 0 15px 15px
@@ -425,12 +435,13 @@ a.up
         -webkit-transform translateX(-100px)
         -webkit-transition -webkit-transform .35s
       &:before
-        right 80%
+        right 95%
+        border-width 20px
       h2, p
         margin 0
       h2
         text 40px right normal
-      .big.icon-left
+      .big.icon-left-dir
         absolute left top 10px
         font-size 100px
         -webkit-transform translateX(-100px)
@@ -443,28 +454,31 @@ a.up
         border-color text-color
         background text-color !important
         color white
-        p .icon-left
+        p .icon-left-dir
           display none
-      .big.icon-left
+      .big.icon-left-dir
         -webkit-transform translateX(0)
     &.expand
       height 600px
       .title
         padding-right 30px
-      .big.icon-left
+      .big.icon-left-dir
         -webkit-transform translateX(-100px)
       .icon-close
         -webkit-transform translateX(0)
   .content
     height 472px
-    padding 30px
+    padding 20px
     position relative
+    .inner
+      absolute bottom 10px right 71%
   .slider
     float right
     size 70% 100%
     margin-left 30px
     border 1px solid gray-dark
     position relative
+    overflow hidden
     img
       height 412px
     .next, .prev
@@ -489,8 +503,8 @@ a.up
         background gray-light
         text 0
         margin-left 8px
-      &:hover
-        background pink
+        &:hover
+          background pink
     .rslides_here a
       background text-color
 
@@ -536,6 +550,7 @@ a.up
         height 600px
 
 #about
+  padding-top 10px
   h1
     color green
   hr
@@ -569,5 +584,12 @@ a.up
         background #E4E5E6
       &:nth-child(2n+5)
         background #F0F0F1
+      -webkit-transition: background .3s
+      -moz-transition: background .3s
+      -ms-transition: background .3s
+      -o-transition: background .3s
+      transition: background .3s
+      &:hover
+        background white
     h3
       text 35px text-color

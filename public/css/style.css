@@ -52,6 +52,9 @@ a:hover {
   color: #ef2d61;
   text-decoration: none !important;
 }
+.hide {
+  display: none !important;
+}
 img.cover {
   width: 100%;
 }
@@ -96,6 +99,9 @@ header {
     z-index: 100;
   }
 }
+header .top {
+  padding: 10px;
+}
 header h1 {
   float: left;
   margin: 15px 10px 0;
@@ -110,6 +116,9 @@ header h1 a {
 header p {
   margin: 0;
   padding: 30px 0;
+  font-size: 18px;
+}
+header p strong {
   font-size: 16px;
 }
 header nav {
@@ -118,21 +127,25 @@ header nav {
 header nav a {
   display: inline-block;
   padding: 10px 20px;
+  line-height: 20px;
   color: #636466;
 }
-header nav a.active {
-  background: #ef2d61;
-  color: #fff;
-}
+header nav a.active,
 header nav a:hover {
-  background: #b1b4b6;
-  color: #fff;
+  font-weight: bold;
+  color: #ef2d61;
 }
 header nav.second {
   background: #636466;
 }
 header nav.second a {
+  line-height: 13px;
   color: #fff;
+}
+header nav.second a.active,
+header nav.second a:hover {
+  background: #ef2d61;
+  font-weight: normal;
 }
 section {
   position: relative;
@@ -254,7 +267,7 @@ section:before {
   width: 110px;
   height: 110px;
   position: absolute;
-  left: 15px;
+  left: 40px;
   top: 40px;
   z-index: 30;
   padding: 20px;
@@ -494,7 +507,8 @@ section:before {
 }
 #contact h2 {
   margin: 10px 0;
-  font-size: 50px;
+  font-size: 60px;
+  font-weight: normal;
   color: #636466;
   text-align: right;
 }
@@ -533,7 +547,7 @@ section:before {
   border-radius: 50%;
 }
 #contact button .icon-left:before {
-  margin: 0 0.1em;
+  margin: 0.14em 0.14em 0;
 }
 #contact button:hover .icon-left,
 #contact button:active .icon-left {
@@ -549,6 +563,9 @@ section:before {
 #contact .col {
   width: 60%;
   float: right;
+}
+#contact .col p {
+  margin: 0;
 }
 #contact .map {
   float: right;
@@ -651,7 +668,8 @@ a.up .icon-up:before {
   -webkit-transition: -webkit-transform 0.35s;
 }
 #items article .title:before {
-  right: 80%;
+  right: 95%;
+  border-width: 20px;
 }
 #items article .title h2,
 #items article .title p {
@@ -662,7 +680,7 @@ a.up .icon-up:before {
   text-align: right;
   font-weight: normal;
 }
-#items article .title .big.icon-left {
+#items article .title .big.icon-left-dir {
   position: absolute;
   left: 0;
   top: 10px;
@@ -680,12 +698,12 @@ a.up .icon-up:before {
   background: #636466 !important;
   color: #fff;
 }
-#items article:hover .title p .icon-left,
-#items article.expand .title p .icon-left {
+#items article:hover .title p .icon-left-dir,
+#items article.expand .title p .icon-left-dir {
   display: none;
 }
-#items article:hover .big.icon-left,
-#items article.expand .big.icon-left {
+#items article:hover .big.icon-left-dir,
+#items article.expand .big.icon-left-dir {
   -webkit-transform: translateX(0);
 }
 #items article.expand {
@@ -694,7 +712,7 @@ a.up .icon-up:before {
 #items article.expand .title {
   padding-right: 30px;
 }
-#items article.expand .big.icon-left {
+#items article.expand .big.icon-left-dir {
   -webkit-transform: translateX(-100px);
 }
 #items article.expand .icon-close {
@@ -702,8 +720,13 @@ a.up .icon-up:before {
 }
 #items .content {
   height: 472px;
-  padding: 30px;
+  padding: 20px;
   position: relative;
+}
+#items .content .inner {
+  position: absolute;
+  bottom: 10px;
+  right: 71%;
 }
 #items .slider {
   float: right;
@@ -712,6 +735,7 @@ a.up .icon-up:before {
   margin-left: 30px;
   border: 1px solid #b1b4b6;
   position: relative;
+  overflow: hidden;
 }
 #items .slider img {
   height: 412px;
@@ -753,7 +777,7 @@ a.up .icon-up:before {
   font-size: 0;
   margin-left: 8px;
 }
-#items .slider .rslides_tabs:hover {
+#items .slider .rslides_tabs a:hover {
   background: #ef2d61;
 }
 #items .slider .rslides_here a {
@@ -812,6 +836,9 @@ a.up .icon-up:before {
   border-color: #b1b4b6;
   height: 600px;
 }
+#about {
+  padding-top: 10px;
+}
 #about h1 {
   color: #95ce92;
 }
@@ -865,6 +892,11 @@ a.up .icon-up:before {
   height: 25%;
   padding: 20px;
   background: #e4e5e6;
+  -webkit-transition: background 0.3s;
+  -moz-transition: background 0.3s;
+  -ms-transition: background 0.3s;
+  -o-transition: background 0.3s;
+  transition: background 0.3s;
 }
 #about .chess li:nth-child(2n) {
   background: #f0f0f1;
@@ -874,6 +906,9 @@ a.up .icon-up:before {
 }
 #about .chess li:nth-child(2n+5) {
   background: #f0f0f1;
+}
+#about .chess li:hover {
+  background: #fff;
 }
 #about .chess h3 {
   font-size: 35px;

@@ -2,18 +2,14 @@
 
 {<content}
 <section id="items" class="container">
-    <h1>
-        עיצוב אריזות
-    </h1>
-
     <article>
         <section class="title" style="background-image: url(img/pictures/1.png)">
             <h2>Xpret</h2>
             <p>
                 מיתוג לאריזות תאורה
-                <i class="icon-left"></i>
+                <i class="icon-left-dir"></i>
             </p>
-            <i class="icon-left big"></i>
+            <i class="icon-left-dir big"></i>
             <a href="#" class="icon-close"></a>
         </section>
         <div class="content">
@@ -21,15 +17,15 @@
                 <ul>
                     <li><img src="/img/slides/1.jpg"/></li>
                     <li><img src="/img/slides/2.jpg"/></li>
-                    <li><img src="/img/slides/3.jpg"/></li>
-                    <li><img src="/img/slides/4.gif"/></li>
                 </ul>
             </div>
-            <h3>הלקוח</h3>
-<p>
-    ‘אמה לורה’ הינה חברה המייצרת סבונים
-    איכותיים מחומרים טבעיים ובעיקר מתמונהמה
-</p>
+            <div class="inner">
+                <h3>הלקוח</h3>
+                <p>
+        אמה לורה’ הינה חברה המייצרת סבונים
+        איכותיים מחומרים טבעיים ובעיקר מתמונהמה
+                </p>
+            </div>
         </div>
     </article>
 
@@ -38,9 +34,9 @@
             <h2>Xpret</h2>
             <p>
                 מיתוג לאריזות תאורה
-                <i class="icon-left"></i>
+                <i class="icon-left-dir"></i>
             </p>
-            <i class="icon-left big"></i>
+            <i class="icon-left-dir big"></i>
         </section>
         <div class="content">
 
