@@ -12,7 +12,30 @@
 .cf:after {
   clear: both;
 }
+@media (min-height: 700px) {
+  header {
+    position: fixed;
+    top: 0;
+    right: 0;
+    z-index: 100;
+  }
+}
+@media (max-width: 900px) {
+  #steps li {
+    float: right;
+    width: 33.333333333333336%;
+  }
+}
 @media (max-width: 650px) {
+  header p {
+    font-size: 14px;
+  }
+  header p strong {
+    font-size: 12px;
+  }
+  #slider img {
+    max-width: 70%;
+  }
   #quote {
     padding-left: 15%;
     padding-right: 15%;
@@ -20,9 +43,5 @@
   #features a.big {
     width: 100%;
     padding-top: 100%;
-  }
-  #steps li {
-    float: right;
-    width: 33.333333333333336%;
   }
 }

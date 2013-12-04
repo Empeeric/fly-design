@@ -91,14 +91,6 @@ header {
   width: 100%;
   background: #fff;
 }
-@media (min-height: 700px) {
-  header {
-    position: fixed;
-    top: 0;
-    right: 0;
-    z-index: 100;
-  }
-}
 header .top {
   padding: 10px;
 }
@@ -114,6 +106,7 @@ header h1 a {
   font-size: 0;
 }
 header p {
+  height: 80px;
   margin: 0;
   padding: 30px 0;
   font-size: 18px;
@@ -161,8 +154,8 @@ section:before {
   display: block;
   width: 0;
   height: 0;
-  margin-right: -12px;
-  border: 12px solid transparent;
+  margin-right: -18px;
+  border: 18px solid transparent;
   border-bottom-width: 0;
   border-top-color: #fff;
 }
@@ -369,13 +362,12 @@ section:before {
 #steps li {
   float: right;
   width: 16.666666666666668%;
-  margin: 30px 0;
+  margin: 30px 0 0;
   padding: 0 15px;
 }
 #steps li h3 {
   font-size: 16px;
   font-weight: bold;
-  height: 50px;
 }
 #steps li .number {
   font-size: 150px;
@@ -403,6 +395,7 @@ section:before {
   color: #fdb128;
 }
 #steps .line {
+  margin-top: 30px;
   padding: 0 0 30px 40px;
   position: relative;
 }
@@ -491,6 +484,10 @@ section:before {
   line-height: 100px;
   font-weight: bold;
   margin: -86px 0 10px 0;
+}
+#we h3 {
+  font-size: 24px;
+  font-weight: normal;
 }
 #we .container {
   z-index: 4;
@@ -793,7 +790,7 @@ a.up .icon-up:before {
   position: relative;
   overflow: hidden;
 }
-#items.third .thumb:nth-child(3n+1) {
+#items.third .thumb:nth-child(3n) {
   margin-left: 0;
 }
 #items.third .thumb h2 {
@@ -858,8 +855,8 @@ a.up .icon-up:before {
   display: block;
   width: 0;
   height: 0;
-  margin-right: -12px;
-  border: 12px solid transparent;
+  margin-right: -18px;
+  border: 18px solid transparent;
   border-bottom-width: 0;
   border-top-color: #fff;
 }

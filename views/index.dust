@@ -122,9 +122,7 @@
     </section>
 
     <section id="steps">
-        <ul class="container"
-            data-10p-bottom="height:210px"
-            data--20p-bottom="height:468px">
+        <ul class="container">
             <li>
                 <span class="number">1</span>
 
@@ -246,7 +244,7 @@
 
     <section id="we">
         <img src="/img/we.png" class="cover"/>
-        <h2 data--20p-bottom="transform:translateY(100px)"
+        <h2 data--10p-bottom="transform:translateY(100px)"
             data--30p-bottom="transform:translateY(0px)">
             אנחנו
         </h2>
@@ -323,20 +321,30 @@
 {<scripts}
 <script src="/components/skrollr/dist/skrollr.min.js"></script>
 <script>
+    /*
+        Slider
+     */
     $('.slider').responsiveSlides({
         prev: $('#slider .prev'),
         next: $('#slider .next')
     });
+
+    /*
+        Scrolling effects
+     */
     var s = skrollr.init({
         smoothScrolling: false,
         forceHeight: false
     });
 
+    /*
+        Shuffle pictures
+     */
     //+ Jonas Raoni Soares Silva
-    //@ http://jsfromhell.com/array/shuffle [v1.0]
-    var shuffle = function (o) {
-        for (var j, x, i = o.length; i; j = Math.floor(Math.random() * i), x = o[--i], o[i] = o[j], o[j] = x);
-        return o;
+    //@ http://jsfromhell.com/array/shuffle [rev. #1]
+    var shuffle = function(v){
+        for (var j, x, i = v.length; i; j = parseInt(Math.random() * i), x = v[--i], v[i] = v[j], v[j] = x);
+        return v;
     };
 
     var files = [

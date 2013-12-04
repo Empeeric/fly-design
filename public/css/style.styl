@@ -66,9 +66,7 @@ ul.inline
 
 header
   width 100%
-  @media (min-height: 700px)
-    fixed top right
-    z-index 100
+
   background white
   .top
     padding 10px
@@ -81,6 +79,7 @@ header
       size 193px 50px
       font-size 0
   p
+    height 80px
     margin 0
     padding 30px 0
     font-size 18px
@@ -107,7 +106,7 @@ header
 triangle-setup()
   position relative
   &:before
-    $size = 12px
+    $size = 18px
     content none
     absolute top 100% right 50%
     z-index 10
@@ -257,11 +256,10 @@ section
     overflow hidden
   li
     col(6)
-    margin 30px 0
+    margin 30px 0 0
     padding 0 15px
     h3
       text 16px bold
-      height 50px
     .number
       text 150px 100px
     for color, i in colors
@@ -269,6 +267,7 @@ section
         .number
           color color
   .line
+    margin-top 30px
     padding 0 0 30px 40px
     position relative
     &:before
@@ -304,6 +303,8 @@ section
     color white
     text 100px 100px bold
     margin -86px 0 10px 0
+  h3
+    text 24px normal
   .container
     z-index 4
     position relative
@@ -517,7 +518,7 @@ a.up
       border 1px solid gray-dark
       position relative
       overflow hidden
-      &:nth-child(3n+1)
+      &:nth-child(3n)
         margin-left 0
       h2
         absolute left right bottom

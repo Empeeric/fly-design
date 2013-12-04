@@ -2,9 +2,6 @@
 
 {<content}
 <div id="items" class="third container">
-    <h1>
-        לקוחות
-    </h1>
 
     <a href="#1" class="thumb">
         <img src="img/clients/1.png" alt="CLIENT" />

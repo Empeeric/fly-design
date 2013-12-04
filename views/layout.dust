@@ -71,10 +71,25 @@
 <!-- scripts -->
 <script src="/components/jquery/jquery.min.js"></script>
 <script src="/components/resp-slides/responsiveslides.js"></script>
+<script src="/js/jquery.scrll.js"></script>
 <script>
+    /*
+        Projects sub-menu
+     */
     var projects = $('nav.second');
-    $('a.projects').click(projects.toggleClass.bind(projects, 'hide'))
+    $('a.projects').click(function(e) {
+        e.preventDefault();
+        projects.toggleClass('hide');
+    })
         .on('mouseenter', projects.removeClass.bind(projects, 'hide'));
+
+    /*
+        Animated jump upward
+     */
+    $('a.up').click(function(e) {
+        e.preventDefault();
+        $.scrll(document.body);
+    });
 </script>
 {+scripts/}
 
