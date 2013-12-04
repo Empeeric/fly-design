@@ -27,11 +27,6 @@ body {
   color: #636466;
   -webkit-font-smoothing: antialiased;
 }
-@media (min-height: 700px) {
-  body {
-    padding-top: 163px;
-  }
-}
 body,
 h1,
 h2,
@@ -90,13 +85,16 @@ img.container {
 header {
   width: 100%;
   background: #fff;
+  position: relative;
+  z-index: 40;
 }
 header .top {
+  height: 100px;
   padding: 10px;
 }
 header h1 {
   float: left;
-  margin: 15px 10px 0;
+  margin: 15px;
 }
 header h1 a {
   display: block;
@@ -106,9 +104,8 @@ header h1 a {
   font-size: 0;
 }
 header p {
-  height: 80px;
   margin: 0;
-  padding: 30px 0;
+  padding: 30px 0 10px;
   font-size: 18px;
 }
 header p strong {
@@ -116,6 +113,9 @@ header p strong {
 }
 header nav {
   background: #cccecf;
+}
+header nav .icon-left-dir {
+  display: none;
 }
 header nav a {
   display: inline-block;
@@ -159,30 +159,6 @@ section:before {
   border-bottom-width: 0;
   border-top-color: #fff;
 }
-.big-quote {
-  direction: ltr;
-  font-size: 40px;
-  line-height: 40px;
-  text-align: center;
-  margin-bottom: 25px;
-  font-weight: 300;
-}
-.big-quote strong {
-  font-size: 38px;
-  font-weight: 400;
-}
-.big-quote small {
-  display: block;
-  font-size: 22px;
-}
-.big-quote:before {
-  content: '';
-  display: block;
-  margin: 10px auto;
-  background: url("../img/quote.png") center;
-  width: 52px;
-  height: 40px;
-}
 .icon-plus {
   display: block;
   width: 30px;
@@ -224,16 +200,6 @@ section:before {
 }
 #slider .slider li.rslides1_on h3 {
   opacity: 1;
-}
-@media (max-width: 600px) {
-  #slider h3,
-  #slider .banner {
-    display: none;
-  }
-  #slider .slider li img {
-    width: 100%;
-    max-height: none;
-  }
 }
 #slider nav {
   position: absolute;
@@ -293,6 +259,30 @@ section:before {
 #how .about strong {
   color: #95ce92;
 }
+.big-quote {
+  direction: ltr;
+  font-size: 40px;
+  line-height: 40px;
+  text-align: center;
+  margin-bottom: 25px;
+  font-weight: 300;
+}
+.big-quote strong {
+  font-size: 38px;
+  font-weight: 400;
+}
+.big-quote small {
+  display: block;
+  font-size: 22px;
+}
+.big-quote:before {
+  content: '';
+  display: block;
+  margin: 10px auto;
+  background: url("../img/quote.png") center;
+  width: 52px;
+  height: 40px;
+}
 #features {
   background: #95ce92;
   text-align: center;
@@ -310,31 +300,39 @@ section:before {
   font-weight: bold;
   color: #fff;
 }
-#features a.big {
+#features .big {
   display: inline-block;
   width: 198px;
   height: 198px;
-  padding-top: 198px;
   background: no-repeat;
   background-size: contain;
 }
-#features a.key {
+#features .key {
   background-image: url("/img/icons/key.png");
 }
-#features a.key:hover {
+#features .key:hover {
   background-image: url("/img/icons/key-hover.png");
 }
-#features a.eye {
+#features .eye {
   background-image: url("/img/icons/eye.png");
 }
-#features a.eye:hover {
+#features .eye:hover {
   background-image: url("/img/icons/eye-hover.png");
 }
-#features a.hand {
+#features .hand {
   background-image: url("/img/icons/hand.png");
 }
-#features a.hand:hover {
+#features .hand:hover {
   background-image: url("/img/icons/hand-hover.png");
+}
+#pictures {
+  padding: 0;
+  position: relative;
+}
+#pictures img {
+  float: right;
+  width: 25%;
+  overflow: hidden;
 }
 #how {
   padding: 0;
@@ -471,7 +469,7 @@ section:before {
   border-right-color: #fdb128;
 }
 #we {
-  padding-top: 0;
+  padding: 0 10px 30px;
   text-align: center;
 }
 #we:before {
@@ -624,15 +622,6 @@ a.up .icon-up:before {
   width: 30px;
   height: 30px;
   margin: 0;
-}
-#pictures {
-  padding: 0;
-  position: relative;
-}
-#pictures img {
-  float: right;
-  width: 25%;
-  overflow: hidden;
 }
 #items h1 {
   color: #ef2d61;

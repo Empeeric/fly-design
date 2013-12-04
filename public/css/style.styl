@@ -21,8 +21,6 @@ body
   font-size 16px
   color text-color
   -webkit-font-smoothing antialiased
-  @media (min-height: 700px)
-    padding-top 163px
 
 body, h1, h2, h3, h4, h5, input, textarea, button
   font-family 'MeodedPashut', 'Merriweather Sans', arial, sans-serif
@@ -66,27 +64,30 @@ ul.inline
 
 header
   width 100%
-
   background white
+  position relative
+  z-index 40
   .top
+    height 100px
     padding 10px
   h1
     float left
-    margin 15px 10px 0
+    margin 15px
     a
       display block
       background url(../img/logo.png)
       size 193px 50px
       font-size 0
   p
-    height 80px
     margin 0
-    padding 30px 0
+    padding 30px 0 10px
     font-size 18px
     strong
       font-size 16px
   nav
     background gray-light
+    .icon-left-dir
+      display none
     a
       display inline-block
       padding 10px 20px
@@ -128,24 +129,6 @@ section
   padding 30px 0
   background white
 
-.big-quote
-  direction ltr
-  text 40px 40px center
-  margin-bottom 25px
-  font-weight 300
-  strong
-    font-size 38px
-    font-weight 400
-  small
-    display block
-    font-size 22px
-  &:before
-    content ''
-    display block
-    margin 10px auto
-    background url(../img/quote.png) center
-    size 52px 40px
-
 .icon-plus
   display block
   size 30px
@@ -175,12 +158,6 @@ section
     &.rslides1_on
       h3
         opacity 1
-  @media (max-width: 600px)
-    h3, .banner
-      display none
-    .slider li img
-      width 100%
-      max-height none
   nav
     absolute right bottom 30px
     z-index 40
@@ -207,13 +184,30 @@ section
     .icon-plus
       absolute top 15px left -10px
 
-
 #quote, #how
   background text-color
   color white
   triangle()
   .about strong
     color green
+
+.big-quote
+  direction ltr
+  text 40px 40px center
+  margin-bottom 25px
+  font-weight 300
+  strong
+    font-size 38px
+    font-weight 400
+  small
+    display block
+    font-size 22px
+  &:before
+    content ''
+    display block
+    margin 10px auto
+    background url(../img/quote.png) center
+    size 52px 40px
 
 #features
   background green
@@ -224,20 +218,25 @@ section
     padding 0 15px
   h2
     text bold white
-  a.big
+  .big
     display inline-block
     size 198px
-    padding-top @height
     background no-repeat
     background-size contain
   for noun in key eye hand
     image = '/img/icons/'+ noun +'.png'
     hover = '/img/icons/'+ noun +'-hover.png'
-    a.{noun}
+    .{noun}
       background-image url(image)
       &:hover
         background-image url(hover)
 
+#pictures
+  padding 0
+  position relative
+  img
+    col(4)
+    overflow hidden
 
 #how
   padding 0
@@ -296,7 +295,7 @@ section
           border-right-color color
 
 #we
-  padding-top 0
+  padding 0 10px 30px
   text center
   triangle()
   h2
@@ -405,14 +404,6 @@ a.up
     &:before
       size 30px
       margin 0
-
-#pictures
-  padding 0
-  position relative
-  img
-    col(4)
-    overflow hidden
-
 
 #items
   h1

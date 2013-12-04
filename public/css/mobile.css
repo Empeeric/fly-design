@@ -12,7 +12,10 @@
 .cf:after {
   clear: both;
 }
-@media (min-height: 700px) {
+@media (min-height: 700px) and (min-width: 500px) {
+  body {
+    padding-top: 163px;
+  }
   header {
     position: fixed;
     top: 0;
@@ -37,11 +40,123 @@
     max-width: 70%;
   }
   #quote {
-    padding-left: 15%;
-    padding-right: 15%;
+    padding: 30px 15%;
   }
-  #features a.big {
+  #features .big {
     width: 100%;
+    height: auto;
     padding-top: 100%;
+  }
+}
+@media (max-width: 600px) {
+  #slider h3,
+  #slider .banner {
+    display: none;
+  }
+  #slider .slider img {
+    width: 100%;
+    max-width: 100%;
+    max-height: none;
+  }
+}
+@media (max-width: 500px) {
+  header {
+    margin-bottom: 50px;
+  }
+  header .top {
+    height: auto;
+  }
+  header p {
+    padding: 0;
+    clear: both;
+  }
+  header .navs {
+    width: 100%;
+    position: absolute;
+    right: 0;
+    top: 100%;
+  }
+  header nav a {
+    display: none;
+  }
+  header nav a.active,
+  header nav:hover a {
+    display: block;
+  }
+  header nav .icon-left-dir {
+    display: block;
+    position: absolute;
+    left: 3px;
+    top: 3px;
+    font-size: 30px;
+    -webkit-transform: rotate(-90deg);
+  }
+  #quote {
+    padding: 20px;
+  }
+  #quote .big-quote {
+    display: none;
+  }
+  #features {
+    padding-bottom: 0;
+  }
+  #features li {
+    display: block;
+    width: 100%;
+    margin-bottom: 30px;
+    padding-right: 130px;
+    position: relative;
+  }
+  #features li .big {
+    position: absolute;
+    top: 0;
+    right: 10px;
+    width: 100px;
+    height: 100px;
+    padding: 0;
+  }
+  #features h2,
+  #features p,
+  #features .icon-plus {
+    margin: 0 0 10px;
+    text-align: right;
+  }
+  #pictures li:nth-child(n+5) {
+    display: none;
+  }
+  #pictures img {
+    float: right;
+    width: 50%;
+  }
+  #how h2 {
+    font-size: 220%;
+  }
+  #steps li {
+    width: 100%;
+  }
+  #steps li .number {
+    float: right;
+    width: 100px;
+    height: 100%;
+    text-align: center;
+  }
+  #steps li h3 {
+    margin-top: 0;
+  }
+  footer {
+    position: static;
+    padding: 0;
+  }
+  .footer-padding {
+    display: none;
+  }
+  #contact h2,
+  #contact form,
+  #contact .col {
+    width: 100%;
+    padding: 10px;
+  }
+  #contact .map {
+    display: none;
   }
 }

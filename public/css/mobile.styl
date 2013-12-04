@@ -1,6 +1,8 @@
 @import 'mixin'
 
-@media (min-height: 700px)
+@media (min-height: 700px) and (min-width: 500px)
+  body
+    padding-top 163px
   header
     fixed top right
     z-index 100
@@ -17,8 +19,84 @@
   #slider img
     max-width 70%
   #quote
-    padding-left 15%
-    padding-right 15%
-  #features a.big
-    width 100%
+    padding 30px 15%
+  #features .big
+    size 100% auto
     padding-top @width
+
+@media (max-width: 600px)
+  #slider
+    h3, .banner
+      display none
+    .slider img
+      width 100%
+      max-width 100%
+      max-height none
+
+@media (max-width: 500px)
+  header
+    margin-bottom 50px
+    .top
+      height auto
+    p
+      padding 0
+      clear both
+    .navs
+      width 100%
+      absolute right top 100%
+    nav
+      a
+        display none
+      a.active, &:hover a
+        display block
+      .icon-left-dir
+        display block
+        absolute left 3px top 3px
+        text 30px
+        -webkit-transform rotate(-90deg)
+  #quote
+    padding 20px
+    .big-quote
+      display none
+  #features
+    padding-bottom 0
+    li
+      display block
+      width 100%
+      margin-bottom 30px
+      padding-right 130px
+      position relative
+      .big
+        absolute top right 10px
+        size 100px
+        padding 0
+    h2, p, .icon-plus
+      margin 0 0 10px
+      text right
+  #pictures
+    li:nth-child(n+5)
+      display none
+    img
+      col(2)
+  #how h2
+    text 220%
+  #steps
+    li
+      width 100%
+      .number
+        float right
+        size 100px 100%
+        text center
+      h3
+        margin-top 0
+  footer
+    position static
+    padding 0
+  .footer-padding
+    display none
+  #contact
+    h2, form, .col
+      width 100%
+      padding 10px
+    .map
+      display none

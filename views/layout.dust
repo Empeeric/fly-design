@@ -18,7 +18,7 @@
 <body>
 
 <header class="cf">
-    <div class="top container cf">
+    <div class="top container">
         <h1>
             <a href="/">Fly Design</a>
         </h1>
@@ -34,25 +34,28 @@
             </strong>
         </p>
     </div>
-    <nav>
-        <div class="container">
-            <a href="#" class="active">ראשי</a>
-            <a href="#">על הסטודיו</a>
-            <a href="#">לקוחות</a>
-            <a href="#" class="projects">פרוייקטים</a>
-            <a href="#">צור קשר</a>
-        </div>
-    </nav>
-    <nav class="second hide">
-        <div class="container">
-            <a href="#">item</a>
-            <a href="#">item</a>
-            <a href="#" class="active">item</a>
-            <a href="#">item</a>
-            <a href="#">item</a>
-            <a href="#">item</a>
-        </div>
-    </nav>
+    <div class="navs">
+        <nav>
+            <div class="container">
+                <i class="icon-left-dir"></i>
+                <a href="#" class="active">ראשי</a>
+                <a href="#">על הסטודיו</a>
+                <a href="#">לקוחות</a>
+                <a href="#" class="projects">פרוייקטים</a>
+                <a href="#">צור קשר</a>
+            </div>
+        </nav>
+        <nav class="second hide">
+            <div class="container">
+                <a href="#">item</a>
+                <a href="#">item</a>
+                <a href="#" class="active">item</a>
+                <a href="#">item</a>
+                <a href="#">item</a>
+                <a href="#">item</a>
+            </div>
+        </nav>
+    </div>
 </header>
 
 {+content/}
@@ -73,6 +76,9 @@
 <script src="/components/resp-slides/responsiveslides.js"></script>
 <script src="/js/jquery.scrll.js"></script>
 <script>
+    $(window).on('resize', function() {
+    });
+
     /*
         Projects sub-menu
      */
