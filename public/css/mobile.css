@@ -146,6 +146,7 @@
     text-align: center;
   }
   #steps li h3 {
+    height: auto;
     margin-top: 0;
   }
   footer {

@@ -382,6 +382,7 @@ section:before {
 #steps li h3 {
   font-size: 16px;
   font-weight: bold;
+  height: 50px;
 }
 #steps li .number {
   font-size: 150px;
@@ -409,7 +410,7 @@ section:before {
   color: #fdb128;
 }
 #steps .line {
-  margin-top: 30px;
+  margin: 30px auto 50px;
   padding: 0 0 30px 40px;
   position: relative;
 }
