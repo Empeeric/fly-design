@@ -36,25 +36,28 @@
     </div>
     <div class="navs">
         <nav>
-            <div class="container">
-                <i class="icon-left-dir"></i>
-                <a href="#" class="active">ראשי</a>
-                <a href="#">על הסטודיו</a>
-                <a href="#">לקוחות</a>
-                <a href="#" class="projects">פרוייקטים</a>
-                <a href="#">צור קשר</a>
-            </div>
+            <ul class="container">
+                <li><i class="icon-left-dir"></i></li>
+                <li><a href="#" class="active">ראשי</a></li>
+                <li><a href="#">על הסטודיו</a></li>
+                <li><a href="#">לקוחות</a></li>
+                <li class="projects">
+                    <a href="#">פרוייקטים</a>
+                    <nav class="second hide">
+                        <div class="container">
+                            <a href="#">item</a>
+                            <a href="#">item</a>
+                            <a href="#" class="active">item</a>
+                            <a href="#">item</a>
+                            <a href="#">item</a>
+                            <a href="#">item</a>
+                        </div>
+                    </nav>
+                </li>
+                <li><a href="#">צור קשר</a></li>
+            </ul>
         </nav>
-        <nav class="second hide">
-            <div class="container">
-                <a href="#">item</a>
-                <a href="#">item</a>
-                <a href="#" class="active">item</a>
-                <a href="#">item</a>
-                <a href="#">item</a>
-                <a href="#">item</a>
-            </div>
-        </nav>
+
     </div>
 </header>
 
@@ -76,18 +79,14 @@
 <script src="/components/resp-slides/responsiveslides.js"></script>
 <script src="/js/jquery.scrll.js"></script>
 <script>
-    $(window).on('resize', function() {
-    });
+    /*$(window).on('resize', function() {});*/
 
     /*
         Projects sub-menu
      */
     var projects = $('nav.second');
-    $('a.projects').click(function(e) {
-        e.preventDefault();
-        projects.toggleClass('hide');
-    })
-        .on('mouseenter', projects.removeClass.bind(projects, 'hide'));
+    if (projects.hasClass('hide'))
+        $('header .projects').hover(projects.toggleClass.bind(projects, 'hide'));
 
     /*
         Animated jump upward

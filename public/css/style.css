@@ -113,9 +113,17 @@ header p strong {
 }
 header nav {
   background: #cccecf;
+  position: relative;
 }
 header nav .icon-left-dir {
   display: none;
+}
+header nav ul {
+  padding: 0;
+  list-style: none;
+}
+header nav li {
+  display: inline;
 }
 header nav a {
   display: inline-block;
@@ -125,10 +133,16 @@ header nav a {
 }
 header nav a.active,
 header nav a:hover {
+  font-size: 12px;
+  line-height: 20px;
   font-weight: bold;
   color: #ef2d61;
 }
 header nav.second {
+  position: absolute;
+  top: 100%;
+  right: 0;
+  left: 0;
   background: #636466;
 }
 header nav.second a {
@@ -138,6 +152,7 @@ header nav.second a {
 header nav.second a.active,
 header nav.second a:hover {
   background: #ef2d61;
+  font-size: 16px;
   font-weight: normal;
 }
 section {
@@ -284,8 +299,9 @@ section:before {
   height: 40px;
 }
 #features {
-  background: #95ce92;
+  padding-top: 50px;
   text-align: center;
+  background: #95ce92;
 }
 #features:before {
   content: '';

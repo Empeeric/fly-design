@@ -86,23 +86,30 @@ header
       font-size 16px
   nav
     background gray-light
+    position relative
     .icon-left-dir
       display none
+    ul
+      padding 0
+      list-style none
+    li
+      display inline
     a
       display inline-block
       padding 10px 20px
       line-height 20px
       color text-color
       &.active, &:hover
-        text bold pink
+        text 12px 20px bold pink
     &.second
+      absolute top 100% right left
       background text-color
       a
         line-height 13px
         color white
         &.active, &:hover
           background pink
-          text normal
+          text 16px normal
 
 triangle-setup()
   position relative
@@ -210,9 +217,10 @@ section
     size 52px 40px
 
 #features
+  padding-top 50px
+  text-align center
   background green
   triangle()
-  text-align center
   li
     col(3)
     padding 0 15px
