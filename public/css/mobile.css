@@ -96,6 +96,9 @@
     font-size: 30px;
     -webkit-transform: rotate(-90deg);
   }
+  header nav.second {
+    position: static;
+  }
   #quote {
     padding: 20px;
   }

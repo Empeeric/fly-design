@@ -102,7 +102,8 @@ header
       &.active, &:hover
         text 12px 20px bold pink
     &.second
-      absolute top 100% right left
+      @media (min-width: 500px)
+        absolute top 100% right left
       background text-color
       a
         line-height 13px
@@ -414,11 +415,17 @@ a.up
       size 30px
       margin 0
 
-#items
+.head-box
+  margin 40px auto 20px
   h1
-    color pink
+    margin 0
+    text 30px right
+  p
+    margin 0
+
+#items
   article
-    margin-top 30px
+    margin-bottom 30px
     border 1px solid gray-dark
     overflow hidden
     position relative
@@ -510,6 +517,7 @@ a.up
       background text-color
 
   &.third
+    padding-top 20px
     .thumb
       float right
       size 304px 170px

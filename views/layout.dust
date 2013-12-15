@@ -43,7 +43,7 @@
                 <li><a href="#">לקוחות</a></li>
                 <li class="projects">
                     <a href="#">פרוייקטים</a>
-                    <nav class="second hide">
+                    <nav class="second {+projects_menu_class}hide{/projects_menu_class}">
                         <div class="container">
                             <a href="#">item</a>
                             <a href="#">item</a>

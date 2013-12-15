@@ -139,11 +139,15 @@ header nav a:hover {
   color: #ef2d61;
 }
 header nav.second {
-  position: absolute;
-  top: 100%;
-  right: 0;
-  left: 0;
   background: #636466;
+}
+@media (min-width: 500px) {
+  header nav.second {
+    position: absolute;
+    top: 100%;
+    right: 0;
+    left: 0;
+  }
 }
 header nav.second a {
   line-height: 13px;
@@ -640,11 +644,19 @@ a.up .icon-up:before {
   height: 30px;
   margin: 0;
 }
-#items h1 {
-  color: #ef2d61;
+.head-box {
+  margin: 40px auto 20px;
+}
+.head-box h1 {
+  margin: 0;
+  font-size: 30px;
+  text-align: right;
+}
+.head-box p {
+  margin: 0;
 }
 #items article {
-  margin-top: 30px;
+  margin-bottom: 30px;
   border: 1px solid #b1b4b6;
   overflow: hidden;
   position: relative;
@@ -785,6 +797,9 @@ a.up .icon-up:before {
 }
 #items .slider .rslides_here a {
   background: #636466;
+}
+#items.third {
+  padding-top: 20px;
 }
 #items.third .thumb {
   float: right;
