@@ -33,6 +33,10 @@
     float: right;
     width: 33.333333333333336%;
   }
+  .container {
+    padding-left: 20px;
+    padding-right: 20px;
+  }
 }
 @media (max-width: 650px) {
   header p {
@@ -66,7 +70,7 @@
 }
 @media (max-width: 500px) {
   header {
-    margin-bottom: 50px;
+    margin-bottom: 100px;
   }
   header .top {
     height: auto;
@@ -98,6 +102,9 @@
   }
   header nav.second {
     position: static;
+  }
+  header nav.second .container {
+    padding: 0;
   }
   #quote {
     padding: 20px;
@@ -167,5 +174,29 @@
   }
   #contact .map {
     display: none;
+  }
+  #items article .title {
+    padding-right: 30px !important;
+    background-size: cover !important;
+  }
+  #items article .title h2,
+  #items article .title p {
+    visibility: hidden;
+  }
+  #items article:hover .title h2,
+  #items article.expand .title h2,
+  #items article:hover .title p,
+  #items article.expand .title p {
+    visibility: visible;
+  }
+  #items article .content {
+    height: auto;
+  }
+  #items article .content .slider {
+    float: none;
+    width: 100%;
+  }
+  #items article .content .inner {
+    position: static;
   }
 }

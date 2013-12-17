@@ -429,8 +429,10 @@ a.up
     border 1px solid gray-dark
     overflow hidden
     position relative
-    height 130px
-    -webkit-transition height .5s
+    max-height 130px
+    -webkit-transition max-height .5s
+    &:last-child
+      margin-bottom 0
     .title
       padding 30px
       cursor pointer
@@ -467,7 +469,7 @@ a.up
       .big.icon-left-dir
         -webkit-transform translateX(0)
     &.expand
-      height 600px
+      max-height 600px
       .title
         padding-right 30px
       .big.icon-left-dir
@@ -475,20 +477,17 @@ a.up
       .icon-close
         -webkit-transform translateX(0)
   .content
-    height 472px
     padding 20px
     position relative
     .inner
       absolute bottom 10px right 71%
   .slider
     float right
-    size 70% 100%
+    width 70%
     margin-left 30px
     border 1px solid gray-dark
     position relative
     overflow hidden
-    img
-      height 412px
     .next, .prev
       absolute top 50% right
       z-index 10

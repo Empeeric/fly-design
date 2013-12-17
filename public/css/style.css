@@ -660,8 +660,11 @@ a.up .icon-up:before {
   border: 1px solid #b1b4b6;
   overflow: hidden;
   position: relative;
-  height: 130px;
-  -webkit-transition: height 0.5s;
+  max-height: 130px;
+  -webkit-transition: max-height 0.5s;
+}
+#items article:last-child {
+  margin-bottom: 0;
 }
 #items article .title {
   padding: 30px;
@@ -722,7 +725,7 @@ a.up .icon-up:before {
   -webkit-transform: translateX(0);
 }
 #items article.expand {
-  height: 600px;
+  max-height: 600px;
 }
 #items article.expand .title {
   padding-right: 30px;
@@ -734,7 +737,6 @@ a.up .icon-up:before {
   -webkit-transform: translateX(0);
 }
 #items .content {
-  height: 472px;
   padding: 20px;
   position: relative;
 }
@@ -746,14 +748,10 @@ a.up .icon-up:before {
 #items .slider {
   float: right;
   width: 70%;
-  height: 100%;
   margin-left: 30px;
   border: 1px solid #b1b4b6;
   position: relative;
   overflow: hidden;
-}
-#items .slider img {
-  height: 412px;
 }
 #items .slider .next,
 #items .slider .prev {

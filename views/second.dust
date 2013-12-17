@@ -23,7 +23,7 @@
             <i class="icon-left-dir big"></i>
             <a href="#" class="icon-close"></a>
         </section>
-        <div class="content">
+        <div class="content cf">
             <div class="slider">
                 <ul>
                     <li><img src="/img/slides/1.jpg"/></li>

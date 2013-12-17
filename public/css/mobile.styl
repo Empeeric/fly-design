@@ -14,6 +14,9 @@
 @media (max-width: 800px)
   #steps li
     col(3)
+  .container
+    padding-left 20px
+    padding-right 20px
 
 @media (max-width: 650px)
   header p
@@ -39,7 +42,7 @@
 
 @media (max-width: 500px)
   header
-    margin-bottom 50px
+    margin-bottom 100px
     .top
       height auto
     p
@@ -60,6 +63,8 @@
         -webkit-transform rotate(-90deg)
     nav.second
       position static
+      .container
+        padding 0
   #quote
     padding 20px
     .big-quote
@@ -107,3 +112,21 @@
       padding 10px
     .map
       display none
+  #items
+    article
+      .title
+        padding-right 30px !important
+        background-size cover !important
+        h2, p
+          visibility hidden
+      &:hover, &.expand
+        .title
+          h2, p
+            visibility visible
+      .content
+        height auto
+        .slider
+          float none
+          width 100%
+        .inner
+          position static
