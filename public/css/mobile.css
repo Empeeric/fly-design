@@ -208,4 +208,7 @@
   #items article .content .inner {
     position: static;
   }
+  #about {
+    margin-top: -50px;
+  }
 }
