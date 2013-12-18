@@ -588,10 +588,11 @@ a.up
       background #E4E5E6
       &:nth-child(2n)
         background #F0F0F1
-      &:nth-child(n+5)
-        background #E4E5E6
-      &:nth-child(2n+5)
-        background #F0F0F1
+      @media (min-width: 650px)
+        &:nth-child(n+5)
+          background #E4E5E6
+        &:nth-child(2n+5)
+          background #F0F0F1
       -webkit-transition: background .3s
       -moz-transition: background .3s
       -ms-transition: background .3s

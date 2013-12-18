@@ -917,11 +917,13 @@ a.up .icon-up:before {
 #about .chess li:nth-child(2n) {
   background: #f0f0f1;
 }
-#about .chess li:nth-child(n+5) {
-  background: #e4e5e6;
-}
-#about .chess li:nth-child(2n+5) {
-  background: #f0f0f1;
+@media (min-width: 650px) {
+  #about .chess li:nth-child(n+5) {
+    background: #e4e5e6;
+  }
+  #about .chess li:nth-child(2n+5) {
+    background: #f0f0f1;
+  }
 }
 #about .chess li:hover {
   background: #fff;
