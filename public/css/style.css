@@ -50,6 +50,9 @@ a:hover {
 .hide {
   display: none !important;
 }
+.clear {
+  clear: both;
+}
 img.cover {
   width: 100%;
 }
@@ -801,13 +804,16 @@ a.up .icon-up:before {
 }
 #items.third .thumb {
   float: right;
-  width: 304px;
+  width: 30.333333333333332%;
+  margin-left: 3%;
   height: 170px;
   text-align: center;
-  margin: 0 0 30px 30px;
   border: 1px solid #b1b4b6;
   position: relative;
   overflow: hidden;
+}
+#items.third .thumb:nth-child(3n) {
+  margin-left: 0;
 }
 #items.third .thumb:nth-child(3n) {
   margin-left: 0;

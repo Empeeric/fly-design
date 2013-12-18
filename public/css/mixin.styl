@@ -23,9 +23,15 @@ text()
       font-weight arg
 
 // Easy RTL columns
-col(count)
+col(count, gutter = false)
   float right
-  width (100% / count)
+  if gutter
+    width ((100% - (count * gutter)) / count)
+    margin-left gutter
+    &:nth-child({count}n)
+      margin-left 0
+  else
+    width (100% / count)
 
 // Micro-Clearfix
 // http://nicolasgallagher.com/micro-clearfix-hack/

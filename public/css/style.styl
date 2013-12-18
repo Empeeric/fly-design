@@ -35,6 +35,9 @@ a, a:hover
 .hide
   display none !important
 
+.clear
+  clear both
+
 img.cover
   width 100%
 
@@ -518,10 +521,9 @@ a.up
   &.third
     padding-top 20px
     .thumb
-      float right
-      size 304px 170px
+      col(3, 3%)
+      height 170px
       text center
-      margin 0 0 30px 30px
       border 1px solid gray-dark
       position relative
       overflow hidden
