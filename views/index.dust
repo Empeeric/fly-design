@@ -116,8 +116,7 @@
         </ul>
     </section>
 
-    <section id="how" data-bottom="height:20px"
-            data--40p-bottom="height:123px">
+    <section id="how">
         <h2>
             אז איך זה בדיוק עובד
             <strong>?</strong>
@@ -246,7 +245,7 @@
     </section>
 
     <section id="we">
-        <img src="/img/we.png" class="cover"/>
+        <img src="/img/we.jpg" class="cover"/>
         <h2 data--10p-bottom="transform:translateY(100px)"
             data--30p-bottom="transform:translateY(0px)">
             אנחנו
