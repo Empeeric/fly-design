@@ -283,19 +283,20 @@ section:before {
 }
 .big-quote {
   direction: ltr;
-  font-size: 40px;
+  font-size: 30px;
   line-height: 40px;
   text-align: center;
   margin-bottom: 25px;
   font-weight: 300;
+  font-family: 'Merriweather Sans', sans;
 }
 .big-quote strong {
-  font-size: 38px;
+  font-size: 30px;
   font-weight: 400;
 }
 .big-quote small {
   display: block;
-  font-size: 22px;
+  font-size: 16px;
 }
 .big-quote:before {
   content: '';
@@ -493,7 +494,7 @@ section:before {
   border-right-color: #fdb128;
 }
 #we {
-  padding: 0 10px 30px;
+  padding: 0 0 30px;
   text-align: center;
 }
 #we:before {
@@ -606,6 +607,9 @@ section:before {
 #contact a.icon-fb:hover {
   color: #fff;
 }
+#contact a.icon-fb:before {
+  margin: 0;
+}
 footer {
   width: 100%;
   position: fixed;
@@ -648,7 +652,7 @@ a.up .icon-up:before {
   margin: 0;
 }
 .head-box {
-  margin: 40px auto 20px;
+  margin: 32px auto 0px;
 }
 .head-box h1 {
   margin: 0;
@@ -801,21 +805,20 @@ a.up .icon-up:before {
 }
 #items.third {
   padding-top: 20px;
+  text-align: center;
 }
 #items.third .thumb {
-  float: right;
-  width: 30.333333333333332%;
-  margin-left: 3%;
+  display: inline-block;
+  width: 300px;
   height: 170px;
+  margin-bottom: 31px;
+  margin-left: 31px;
   text-align: center;
   border: 1px solid #b1b4b6;
   position: relative;
   overflow: hidden;
 }
-#items.third .thumb:nth-child(3n) {
-  margin-left: 0;
-}
-#items.third .thumb:nth-child(3n) {
+#items.third .thumb.last {
   margin-left: 0;
 }
 #items.third .thumb h2 {
@@ -846,15 +849,34 @@ a.up .icon-up:before {
   -webkit-transform: rotateZ(-90deg);
 }
 #items.third article {
+  max-height: 0;
+  margin-bottom: 0;
+  border-color: transparent;
+  border-left-color: #b1b4b6;
+  border-right-color: #b1b4b6;
+  -webkit-transition: margin-bottom 1s, max-height 1s;
+}
+#items.third article .title {
+  color: #fff;
+  text-align: right;
+  background: #636466 !important;
+}
+#items.third article.expand {
+  margin-bottom: 30px;
+  max-height: 600px;
+  border-color: #b1b4b6;
+}
+#items.third article.what {
   height: 0;
   border-color: transparent;
   -webkit-transition: height 1s;
+  clear: both;
 }
-#items.third article .title {
+#items.third article.what .title {
   background: #636466;
   color: #fff;
 }
-#items.third article.expand {
+#items.third article.what.expand {
   border-color: #b1b4b6;
   height: 600px;
 }

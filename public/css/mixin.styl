@@ -26,7 +26,7 @@ text()
 col(count, gutter = false)
   float right
   if gutter
-    width ((100% - (count * gutter)) / count)
+    width ((100% - ((count - 1) * gutter)) / count)
     margin-left gutter
     &:nth-child({count}n)
       margin-left 0

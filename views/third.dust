@@ -15,7 +15,7 @@
 
 <div id="items" class="third container">
 
-    <a href="#1" class="thumb">
+    <a class="thumb" href="#1" >
         <img src="img/clients/1.png" alt="CLIENT" />
         <h2>
             Xpert
@@ -31,7 +31,7 @@
         </h2>
     </a>
 
-    <a class="thumb">
+    <a class="thumb last">
         <img src="img/clients/3.png" alt="CLIENT" />
         <h2>
             Xpert
@@ -40,14 +40,14 @@
     </a>
 
     <article id="1">
-        <section class="title">
+        <section class="title" style="background-image: url(img/pictures/1.png)">
             <h2>Xpret</h2>
             <p>
                 מיתוג לאריזות תאורה
             </p>
             <a href="#" class="icon-close"></a>
         </section>
-        <div class="content">
+        <div class="content cf">
             <div class="slider">
                 <ul>
                     <li><img src="/img/slides/1.jpg"/></li>
@@ -57,12 +57,36 @@
             <div class="inner">
                 <h3>הלקוח</h3>
                 <p>
-                    ‘אמה לורה’ הינה חברה המייצרת סבונים
+                    אמה לורה’ הינה חברה המייצרת סבונים
                     איכותיים מחומרים טבעיים ובעיקר מתמונהמה
                 </p>
             </div>
         </div>
     </article>
+
+    <a class="thumb" href="#1" >
+        <img src="img/clients/1.png" alt="CLIENT" />
+        <h2>
+            Xpert
+            <i class="icon-left-dir"></i>
+        </h2>
+    </a>
+
+    <a class="thumb">
+        <img src="img/clients/2.png" alt="CLIENT" />
+        <h2>
+            Xpert
+            <i class="icon-left-dir"></i>
+        </h2>
+    </a>
+
+    <a class="thumb last">
+        <img src="img/clients/3.png" alt="CLIENT" />
+        <h2>
+            Xpert
+            <i class="icon-left-dir"></i>
+        </h2>
+    </a>
 
 </div>
 <br class="clear"/>

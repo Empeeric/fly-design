@@ -204,15 +204,16 @@ section
 
 .big-quote
   direction ltr
-  text 40px 40px center
+  text 30px 40px center
   margin-bottom 25px
   font-weight 300
+  font-family 'Merriweather Sans', sans
   strong
-    font-size 38px
+    font-size 30px
     font-weight 400
   small
     display block
-    font-size 22px
+    font-size 16px
   &:before
     content ''
     display block
@@ -308,7 +309,7 @@ section
           border-right-color color
 
 #we
-  padding 0 10px 30px
+  padding 0 0 30px
   text center
   triangle()
   h2
@@ -385,6 +386,8 @@ section
     text 28px text-color
     &:hover
       text white
+    &:before
+      margin 0
 
 footer
   width 100%
@@ -419,7 +422,7 @@ a.up
       margin 0
 
 .head-box
-  margin 40px auto 20px
+  margin 32px auto 0px
   h1
     margin 0
     text 30px right
@@ -520,14 +523,17 @@ a.up
 
   &.third
     padding-top 20px
+    text center
     .thumb
-      col(3, 3%)
-      height 170px
+      display inline-block
+      size 300px 170px
+      margin-bottom 31px
+      margin-left 31px
       text center
       border 1px solid gray-dark
       position relative
       overflow hidden
-      &:nth-child(3n)
+      &.last
         margin-left 0
       h2
         absolute left right bottom
@@ -549,9 +555,24 @@ a.up
         h2 i
           -webkit-transform rotateZ(-90deg)
     article
+      max-height 0
+      margin-bottom 0
+      border-color transparent
+      border-left-color gray-dark
+      border-right-color gray-dark
+      -webkit-transition margin-bottom 1s, max-height 1s
+      .title
+        text white right
+        background text-color !important
+      &.expand
+        margin-bottom 30px
+        max-height 600px
+        border-color gray-dark
+    article.what
       height 0
       border-color transparent
       -webkit-transition height 1s
+      clear both
       .title
         background text-color
         color white
