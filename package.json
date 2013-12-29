@@ -1,14 +1,25 @@
 {
-  "name": "fly-design",
-  "version": "0.0.1",
+  "name": "shadow",
+  "version": "0.1.4",
   "private": true,
-  "scripts": {
-    "start": "node app"
-  },
   "dependencies": {
-    "express": "3.4.4",
-    "consolidate": "",
+    "express": "",
+    "mongoose": "",
     "dustjs-linkedin": "",
-    "dustjs-helpers": ""
+    "dustjs-helpers": "",
+    "cloudinary": "",
+    "nodemailer": "",
+    "consolidate": "",
+    "async": "",
+    "formage": "",
+    "lodash": "",
+    "lodash-contrib": "",
+    "nodestrum": "",
+    "sugar": "~1.4.1"
+  },
+  "scripts": {
+    "start": "node server/app.js",
+    "test": "node ./node_modules/mocha/bin/_mocha",
+    "cover": "istanbul cover ./node_modules/mocha/bin/_mocha -x generated/**"
   }
 }

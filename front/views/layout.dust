@@ -4,7 +4,19 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
-    <title>Fly Design</title>
+    <title>{config.site.name} - {page.title}</title>
+
+    {#page.meta}
+        <meta name="{name}" content="{content}"/>
+    {/page.meta}
+
+    {#config.site.icon}
+        <link rel="icon" type="image/png" href="{@picture width="16" height="16" fit="crop"/}">
+        <link rel="apple-touch-icon" href="{@picture width="57" height="57" fit="crop"/}">
+        <link rel="apple-touch-icon" sizes="114x114" href="{@picture width="114" height="114" fit="crop"/}">
+        <link rel="apple-touch-icon" sizes="72x72" href="{@picture width="72" height="72" fit="crop"/}">
+        <link rel="apple-touch-icon" sizes="144x144" href="{@picture width="144" height="144" fit="crop"/}">
+    {/config.site.icon}
 
     <link rel="stylesheet" href="http://fonts.googleapis.com/css?family=Merriweather+Sans:400,300"/>
     <link rel="stylesheet" href="/css/fonts/fonts.css"/>
@@ -20,13 +32,13 @@
 <header class="cf">
     <div class="top container">
         <h1>
-            <a href="/">Fly Design</a>
+            <a href="/">{#config.site.logo}<img src="{@picture width="193" height="50" fit="crop" /}" alt="{config.site.name}"/>{/config.site.logo}</a>
         </h1>
 
         <p>
             לפרטים ופגישת ייעוץ
             <strong>
-                התקשרו 03-6210900,
+                התקשרו {config.contact.phone},
             </strong>
             לפניה
             <strong>
@@ -38,23 +50,8 @@
         <nav>
             <ul class="container">
                 <li><i class="icon-left-dir"></i></li>
-                <li><a href="#" class="active">ראשי</a></li>
-                <li><a href="#">על הסטודיו</a></li>
-                <li><a href="#">לקוחות</a></li>
-                <li class="projects">
-                    <a href="#">פרוייקטים</a>
-                    <nav class="second {+projects_menu_class}hide{/projects_menu_class}">
-                        <div class="container">
-                            <a href="#">item</a>
-                            <a href="#">item</a>
-                            <a href="#" class="active">item</a>
-                            <a href="#">item</a>
-                            <a href="#">item</a>
-                            <a href="#">item</a>
-                        </div>
-                    </nav>
-                </li>
-                <li><a href="#">צור קשר</a></li>
+                {>"partials/menu.dust"/}
+                <li><a href="/#צור-קשר">צור קשר</a></li>
             </ul>
         </nav>
 
@@ -95,6 +92,9 @@
         e.preventDefault();
         $.scrll(document.body);
     });
+
+    var p = {page|js|s};
+
 </script>
 {+scripts/}
 

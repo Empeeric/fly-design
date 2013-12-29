@@ -1,0 +1,7 @@
+{#menu}
+    {#items}
+    <li>
+        <a href="{url}"class="{?dock}active{/dock}">{title}</a>
+    </li>
+    {/items}
+{/menu}
