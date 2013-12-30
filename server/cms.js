@@ -68,7 +68,7 @@ var pageModels = function(req, res, next){
 
     if(page) {
         switch(page.template){
-            case 'homepage':
+            case 'index':
                 arr.push(models.homepage.fetch());
                 break;
             case 'posts':
@@ -82,6 +82,8 @@ var pageModels = function(req, res, next){
                 arr.push(models.customers.byNavigationId());
                 arr.push(models.content.byNavigationId());
                 break;
+            case 'about':
+                arr.push(models.about.byNavigationId());
             default:
                 arr.push(models.content.byNavigationId());
         }

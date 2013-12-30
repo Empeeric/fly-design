@@ -5,7 +5,7 @@ var mongoose = require('mongoose'),
 var schema = new Schema({
     navigation: { type: Types.ObjectId, ref: 'navigation' },
     name: { type: String },
-    description: { type: Types.Text },
+    description: { type: String },
     picture: {type: Types.Filepicker, widget: 'FilepickerPictureWidget'},
     slides: [{type: Types.Filepicker, widget: 'FilepickerPictureWidget'}],
     title: { type: String },

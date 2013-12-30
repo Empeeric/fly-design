@@ -1,68 +1,57 @@
 {>layout/}
 
-{<projects_menu_class}{/projects_menu_class}
-
 {<content}
 
 <div class="head-box container">
-    <h1>
-        כותרת
-    </h1>
-    <p>
-        מונים מעוצמיוחון שלב המסמך, הענים אם לכלוחדש יעיצירות השר ביטה שתר אב עוצבות שלמללה ובעצמים לשמעוצבות התוכנה ובעותיכה. חופוגרפיה. הדפיסו לל אם במיו שתמוס. צרו אצבעצמהר משמאל, היות הר מכים לדפיה. ואיניתניקו מכים לשליטה מה. תאפקטיפ וסריכם תוכליעילוחון עם לשמעות אצבוד המסמכיוחורך
-    </p>
+    {#page.contents.items}
+        <h1>
+            {title}
+        </h1>
+        <p>
+            {text|s}
+        </p>
+    {/page.contents.items}
 </div>
 
 <div id="items" class="third container">
-
-    <a class="thumb" href="#1" >
-        <img src="img/clients/1.png" alt="CLIENT" />
+    {#page.customers}
+    {#items}
+    <a class="thumb" href="#{$idx}" >
+        <img src="{@picture width="287" height="161" fit="crop"/}" alt="CLIENT" />
         <h2>
-            Xpert
+            {name}
             <i class="icon-left-dir"></i>
         </h2>
     </a>
+    {/items}
 
-    <a class="thumb">
-        <img src="img/clients/2.png" alt="CLIENT" />
-        <h2>
-            Xpert
-            <i class="icon-left-dir"></i>
-        </h2>
-    </a>
-
-    <a class="thumb last">
-        <img src="img/clients/3.png" alt="CLIENT" />
-        <h2>
-            Xpert
-            <i class="icon-left-dir"></i>
-        </h2>
-    </a>
-
-    <article id="1">
-        <section class="title" style="background-image: url(img/pictures/1.png)">
-            <h2>Xpret</h2>
+    {#items}
+    <article id="{$idx}" class="{@if cond="({$idx} + 1) % 2 == 0"}left{/if}">
+        <section class="title">
+            <h2>{name}</h2>
             <p>
-                מיתוג לאריזות תאורה
+                {description}
+                <i class="icon-left-dir"></i>
             </p>
+            <i class="icon-left-dir big"></i>
             <a href="#" class="icon-close"></a>
         </section>
         <div class="content cf">
             <div class="slider">
                 <ul>
-                    <li><img src="/img/slides/1.jpg"/></li>
-                    <li><img src="/img/slides/2.jpg"/></li>
+                    {#slides}
+                        <li><img src="{@picture width="649" height="398" fit="crop"/}"/></li>
+                    {/slides}
                 </ul>
             </div>
             <div class="inner">
-                <h3>הלקוח</h3>
-                <p>
-                    אמה לורה’ הינה חברה המייצרת סבונים
-                    איכותיים מחומרים טבעיים ובעיקר מתמונהמה
-                </p>
+                <h3>{title}</h3>
+                {text|s}
             </div>
         </div>
     </article>
+    {/items}
+    {/page.customers}
 
 </div>
 <br class="clear"/>
@@ -70,6 +59,21 @@
 
 {<scripts}
 <script>
+    var mql = window.matchMedia("(min-width: 480px)");
+
+
+
+    var handleMediaChange = function (mediaQueryList) {
+        console.log(mediaQueryList)
+        if (mediaQueryList.matches) {
+        }
+        else {
+        }
+    };
+
+    mql.addListener(handleMediaChange);
+    handleMediaChange(mql);
+
     $('.thumb').click(function(e) {
         e.preventDefault();
         $(this).toggleClass('selected').siblings().removeClass('selected');
@@ -87,5 +91,7 @@
         nextText: '<i class="icon-left" />',
         prevText: '<i class="icon-right" />'
     });
+
+    $('a.thumb:last').addClass('last');
 </script>
 {/scripts}

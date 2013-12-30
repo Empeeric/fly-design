@@ -19,8 +19,11 @@ dust.helpers.picture = function (chunk, ctx, bodies, params) {
     if (!ctx || !ctx.url)
         return chunk;
 
+    var format = ctx.mimetype.split('/')[1] == 'png' ? 'png' : 'jpg';
+
     var filepicker_url = ctx.url + '/convert?';
     var sizeparams = [];
+    sizeparams.push('format=' + format);
     if (params.width) sizeparams.push('w=' + params.width);
     if (params.height) sizeparams.push('h=' + params.height);
     if (params.fit) sizeparams.push('fit=' + params.fit);

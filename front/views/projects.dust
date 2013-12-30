@@ -4,20 +4,24 @@
 
 {<content}
 <div class="head-box container">
+    {#page.contents.items}
         <h1>
-            כותרת
+            {title}
         </h1>
         <p>
-            מונים מעוצמיוחון שלב המסמך, הענים אם לכלוחדש יעיצירות השר ביטה שתר אב עוצבות שלמללה ובעצמים לשמעוצבות התוכנה ובעותיכה. חופוגרפיה. הדפיסו לל אם במיו שתמוס. צרו אצבעצמהר משמאל, היות הר מכים לדפיה. ואיניתניקו מכים לשליטה מה. תאפקטיפ וסריכם תוכליעילוחון עם לשמעות אצבוד המסמכיוחורך
+            {text|s}
         </p>
+    {/page.contents.items}
 </div>
 
+{#page.projects}
 <section id="items" class="container">
-    <article>
-        <section class="title" style="background-image: url(img/pictures/1.png)">
-            <h2>Xpret</h2>
+    {#items}
+    <article class="{@if cond="({$idx} + 1) % 2 == 0"}left{/if}">
+        <section class="title" style="background-image: url({@picture width="300" height="128" fit="crop"/})">
+            <h2>{name}</h2>
             <p>
-                מיתוג לאריזות תאורה
+                {description}
                 <i class="icon-left-dir"></i>
             </p>
             <i class="icon-left-dir big"></i>
@@ -26,35 +30,20 @@
         <div class="content cf">
             <div class="slider">
                 <ul>
-                    <li><img src="/img/slides/1.jpg"/></li>
-                    <li><img src="/img/slides/2.jpg"/></li>
+                    {#slides}
+                    <li><img src="{@picture width="649" height="398" fit="crop"/}"/></li>
+                    {/slides}
                 </ul>
             </div>
             <div class="inner">
-                <h3>הלקוח</h3>
-                <p>
-        אמה לורה’ הינה חברה המייצרת סבונים
-        איכותיים מחומרים טבעיים ובעיקר מתמונהמה
-                </p>
+                <h3>{title}</h3>
+                {text|s}
             </div>
         </div>
     </article>
-
-    <article class="left">
-        <section class="title" style="background-image: url(img/pictures/4.png)">
-            <h2>Xpret</h2>
-            <p>
-                מיתוג לאריזות תאורה
-                <i class="icon-left-dir"></i>
-            </p>
-            <i class="icon-left-dir big"></i>
-        </section>
-        <div class="content">
-
-        </div>
-    </article>
+    {/items}
 </section>
-
+{/page.projects}
 {/content}
 
 {<scripts}

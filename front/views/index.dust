@@ -1,279 +1,143 @@
 {>layout/}
 
 {<content}
+{#page.homepage}
 <div id="body">
-
+    {#slider}
     <section id="slider" class="container">
         <!--data-0="transform:translateZ(0px)"-->
         <!--data-500="transform:translateZ(500px)">-->
         <ul class="slider">
+            {#banners}
+
             <li>
                 <h3>
-                    עיצוב מחדש של
-                    <br/>
-                    השק המיתולוגי.
-                    <br/>
-                    נשר תעשיות מלט
+                    {description|br|s}
                 </h3>
-                <img src="/img/slides/1.jpg"/>
+                <img src="{@picture width="652" height="400" fit="crop" /}"/>
             </li>
-            <li>
-                <h3>
-                    לורם איפסום
-                </h3>
-                <img src="/img/slides/2.jpg"/>
-            </li>
+            {/banners}
         </ul>
         <nav>
             <a class="prev icon-right" href="#"></a>
             <a class="next icon-left" href="#"></a>
         </nav>
+
+        {?title}
         <div class="banner">
             <h4>
-                עציץ כלשהו
+                {title}
             </h4>
 
-            <p>משהו כזה</p>
-            <a href="#" class="icon-plus"></a>
+            <p>{lead}</p>
+            <a href="{url}" class="icon-plus"></a>
         </div>
+        {/title}
     </section>
+    {/slider}
 
+    {#about}
     <section id="quote">
         <div class="container">
             <p class="big-quote">
-                DESIGN CAN BE ART. DESIGN CAN BE AESTHETICS.<br/>
-                DESIGN IS SO SIMPLE, <strong>THAT’S WHY IT IS SO COMPLICATED</strong>.
-                <small>Paul Rand, 1997</small>
+                {quote|br|s}
+                <small>{signature}</small>
             </p>
-            <p class="about">
-                <strong>Fly Design</strong> הינה חברה למיתוג, עיצוב גרפי ובניית תדמית, המציעה מגוון פתרונות ושירותים לחברות
-                ולעסקים: מיתוג, מיתוג עסקי, עיצוב
-                לוגו, עיצוב קטלוגים, עיצוב אריזות, עיצוב ובניית אתרים, מיתוג לאינטרנט,עיצוב גרפי מקצועי ויצירתי. החברה הוקמה
-                בינואר 2007 ע"י ענת
-                בכר-ויידן וקרן פוקס, שתיהן בוגרות שנקר במחלקה לעיצוב גרפי. מאז שנוסד עוסק הסטודיו במיתוג ברמה גבוהה של מגוון
-                גופים וחברות.
-            </p>
+            <div class="about">
+                {text|s}
+            </div>
         </div>
     </section>
+    {/about}
 
     <section id="features">
         <ul class="container">
+            {#boxes}
             <li>
                 <a href="#">
-                    <span class="big key"></span>
-                    <h2>עיצוב לוגו</h2>
+                    <span class="big {icon}"></span>
+                    <h2>{title}</h2>
                 </a>
 
                 <p>
-                    עיצוב לוגו נכון הינו משמעותי בהגדרת
-                    הזהות המותגית של העסק ובהטמעת ערכי
-                    החברה אצל קהל היעד. לוגו טוב מתמצת
-                    ומעביר בצורה ויזואלית.
+                    {text}
                 </p>
-                <a href="#" class="icon-plus"></a>
+                <a href="{url}" class="icon-plus"></a>
             </li>
-            <li>
-                <a href="#">
-                    <span class="big eye"></span>
-                    <h2>מיתוג</h2>
-                </a>
-
-                <p>
-                    עיצוב לוגו נכון הינו משמעותי בהגדרת
-                    הזהות המותגית של העסק ובהטמעת ערכי
-                    החברה אצל קהל היעד. לוגו טוב מתמצת
-                    ומעביר בצורה ויזואלית.
-                </p>
-                <a href="#" class="icon-plus"></a>
-            </li>
-            <li>
-                <a href="#">
-                    <span class="big hand"></span>
-                    <h2>עיצוב אתרים</h2>
-                </a>
-
-                <p>
-                    עיצוב לוגו נכון הינו משמעותי בהגדרת
-                    הזהות המותגית של העסק ובהטמעת ערכי
-                    החברה אצל קהל היעד. לוגו טוב מתמצת
-                    ומעביר בצורה ויזואלית.
-                </p>
-                <a href="#" class="icon-plus"></a>
-            </li>
+            {/boxes}
         </ul>
     </section>
 
     <section id="pictures">
         <ul class="inline">
-            <li><img src="/img/pictures/1.png"/></li>
-            <li><img src="/img/pictures/2.png"/></li>
-            <li><img src="/img/pictures/3.png"/></li>
-            <li><img src="/img/pictures/4.png"/></li>
-            <li><img src="/img/pictures/5.png"/></li>
-            <li><img src="/img/pictures/6.png"/></li>
-            <li><img src="/img/pictures/7.png"/></li>
-            <li><img src="/img/pictures/3.png"/></li>
+            {#customers_pictures}
+            <li><img src="{@picture width="395" height="259" fit="crop" /}"/></li>
+            {/customers_pictures}
         </ul>
     </section>
 
+    {#how_it_works}
     <section id="how">
         <h2>
-            אז איך זה בדיוק עובד
+            {title}
             <strong>?</strong>
         </h2>
     </section>
 
     <section id="steps">
         <ul class="container">
+            {#list}
             <li>
-                <span class="number">1</span>
+                <span class="number">{@math key="{$idx}" method="add" operand="1" /}</span>
 
                 <h3>
-                    חיבור ואסטרטגיה
+                    {title}
                 </h3>
 
                 <p>
-                    לפני הכל אנחנו
-                    מקשיבות למטרות
-                    שלכם, החזון לעתיד
-                    העסק והערכים המזוהים
-                    עם החברה.
-                    במידת הצורך - נבנה
-                    עבורכם גם את
-                    אסטרטגיית המיתוג.
+                    {text}
                 </p>
             </li>
-            <li>
-                <span class="number">2</span>
-
-                <h3>
-                    המחקר הויזואלי
-                </h3>
-
-                <p>
-                    לפני הכל אנחנו
-                    מקשיבות למטרות
-                    שלכם, החזון לעתיד
-                    העסק והערכים המזוהים
-                    עם החברה.
-                    במידת הצורך - נבנה
-                    עבורכם גם את
-                    אסטרטגיית המיתוג.
-                </p>
-            </li>
-            <li>
-                <span class="number">3</span>
-
-                <h3>
-                    תהליך העיצוב
-                </h3>
-
-                <p>
-                    לפני הכל אנחנו
-                    מקשיבות למטרות
-                    שלכם, החזון לעתיד
-                    העסק והערכים המזוהים
-                    עם החברה.
-                    במידת הצורך - נבנה
-                    עבורכם גם את
-                    אסטרטגיית המיתוג.
-                </p>
-            </li>
-            <li>
-                <span class="number">4</span>
-
-                <h3>
-                    הפרזנטציה
-                </h3>
-
-                <p>
-                    לפני הכל אנחנו
-                    מקשיבות למטרות
-                    שלכם, החזון לעתיד
-                    העסק והערכים המזוהים
-                    עם החברה.
-                    במידת הצורך - נבנה
-                    עבורכם גם את
-                    אסטרטגיית המיתוג.
-                </p>
-            </li>
-            <li>
-                <span class="number">5</span>
-
-                <h3>
-                    הבחירה שלך
-                </h3>
-
-                <p>
-                    לפני הכל אנחנו
-                    מקשיבות למטרות
-                    שלכם, החזון לעתיד
-                    העסק והערכים המזוהים
-                    עם החברה.
-                    במידת הצורך - נבנה
-                    עבורכם גם את
-                    אסטרטגיית המיתוג.
-                </p>
-            </li>
-            <li>
-                <span class="number">6</span>
-
-                <h3>
-                    הטמעה וליווי
-                </h3>
-
-                <p>
-                    לפני הכל אנחנו
-                    מקשיבות למטרות
-                    שלכם, החזון לעתיד
-                    העסק והערכים המזוהים
-                    עם החברה.
-                    במידת הצורך - נבנה
-                    עבורכם גם את
-                    אסטרטגיית המיתוג.
-                </p>
-            </li>
+            {/list}
         </ul>
         <div class="line container">
+            {#list}
             <span></span>
-            <span></span>
-            <span></span>
-            <span></span>
-            <span></span>
-            <span></span>
+            {/list}
         </div>
     </section>
+    {/how_it_works}
 
+    {#us}
     <section id="we">
-        <img src="/img/we.jpg" class="cover"/>
+        <img src="{@picture width="1583" height="557" fit="crop" /}" class="cover"/>
         <h2 data--10p-bottom="transform:translateY(100px)"
             data--30p-bottom="transform:translateY(0px)">
-            אנחנו
+            {title}
         </h2>
         <div class="container">
             <h3>
-                מזמינות אתכם להתרווח ולתת לנו לנווט יחד איתכם
-                את המוצר שלכם ישירות אל ליבו של קהל היעד
+                {text}
             </h3>
 
             <p>
-                נסיון רב שנים ומגוון, יצירתיות ומקוריות, מסייעים לנו להבין
-                ולמקד, למנף ולתרגם את הרעיונות שלכם לשפה ויזואלית
-                ייחודית ומרהיבה, וליצור עבורכם מותג חזק ונכון
+                {sub_text}
             </p>
         </div>
-        <a href="#" class="icon-plus"></a>
+        <a href="{url}" class="icon-plus"></a>
     </section>
+    {/us}
 </div>
 
 <footer>
+    {#contact}
     <section id="contact">
         <div class="container">
             <h2>
-                צרו קשר.
+                {title}
             </h2>
 
-            <form action="#" method="post">
+            <form action="/thank-you" method="post">
                 <input type="text" name="name" placeholder="שם"/>
                 <input type="text" name="company" placeholder="חברה"/>
                 <input type="text" name="address" placeholder="כתובת"/>
@@ -286,27 +150,26 @@
                 </button>
             </form>
             <div class="col">
-                <img src="/img/map.png" class="map"/>
+                <img src="{@picture path="map" width="188" height="267" /}" class="map"/>
 
                 <p>
-                    לקביעת פגישת היכרות ללא התחייבות,
-                    ולכל שאלה ובקשה, אתם מוזמנים לפנות
-                    אלינו לטלפון:
-                    <strong>03-6210900</strong><br/>
-                    או למייל: yafit@flydesign.co.il
+                    {text}<br>
+                    טלפון: <strong>{phone}</strong><br/>
+                    או למייל: {email}
                     <br />
-                    <a href="#" class="icon-fb"></a>
+                    <a href="{facebook}" class="icon-fb"></a>
                 </p>
 
                 <p class="bottom">
-                    רח’ הארד 3, רמת החייל | 69710 תל אביב | טל: 03-6219000 | פקס: 03-621090
+                    {address}
                 </p>
             </div>
         </div>
     </section>
+    {/contact}
 
     <div class="container">
-        <a href="#" class="up">
+        <a href="javascript:;" class="up">
             <i class="icon-up"></i>
             <span>
                 חזרה לראש העמוד
@@ -316,6 +179,7 @@
 </footer>
 
 <div class="footer-padding"></div>
+{/page.homepage}
 {/content}
 
 {<footer}{/footer}
@@ -349,16 +213,13 @@
         return v;
     };
 
-    var files = [
-        '/img/pictures/1.png',
-        '/img/pictures/2.png',
-        '/img/pictures/3.png',
-        '/img/pictures/4.png',
-        '/img/pictures/5.png',
-        '/img/pictures/6.png',
-        '/img/pictures/7.png'
-    ],
-        pics = [],
+    var files = [];
+
+    $('#pictures ul li img').each(function(){
+        files.push($(this).attr('src'));
+    });
+
+    var pics = [],
         i;
     setInterval(function() {
         if (!pics.length)

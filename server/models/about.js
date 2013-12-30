@@ -10,7 +10,8 @@ var schema = new Schema({
     },
     text: {
         title: String,
-        text: { type: Types.Html }
+        text_col_1: { type: Types.Html },
+        text_col_2: { type: Types.Html }
     },
     list: {
         title: String,
@@ -30,20 +31,20 @@ schema.statics.byNavigationId = function(){
         var page = res.locals.page;
 
         about
-            .find()
+            .findOne()
             .where('navigation', page._id)
             .where('show', 1)
             .sort({'order': 1})
             .lean()
-            .exec(function(err, results){
-                if(results.length) res.locals.page.about = {items :results};
+            .exec(function(err, result){
+                if(result) res.locals.page.about = result;
                 cb(err);
             })
     }
 };
 
 schema.formage = {
-    list: ['navigation', 'title', 'text', 'show'],
+    list: ['navigation', 'show'],
     list_populate: ['navigation'],
     order_by: ['order'],
     sortable: 'order'
