@@ -42,7 +42,9 @@
             </strong>
             לפניה
             <strong>
+                <a href="/#mail">
                 במייל<i class="icon-left-dir"></i>
+                </a>
             </strong>
         </p>
     </div>
@@ -51,7 +53,7 @@
             <ul class="container">
                 <li><i class="icon-left-dir"></i></li>
                 {>"partials/menu.dust"/}
-                <li><a href="/#צור-קשר">צור קשר</a></li>
+                <li><a href="/#mail">צור קשר</a></li>
             </ul>
         </nav>
 

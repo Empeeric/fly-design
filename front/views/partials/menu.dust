@@ -1,7 +1,7 @@
 {#menu}
     {#items}
     <li>
-        <a href="{url}"class="{?dock}active{/dock}">{title}</a>
+        <a {?dock}class="active{:else}href="{url}"{/dock}">{title}</a>
     </li>
     {/items}
 {/menu}

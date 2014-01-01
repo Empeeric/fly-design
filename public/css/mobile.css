@@ -68,6 +68,9 @@
   #items.third .thumb {
     margin-left: 0;
   }
+  #items.third .thumb h2 {
+    -webkit-transform: translateY(0);
+  }
 }
 @media (max-width: 600px) {
   #slider h3,
@@ -82,7 +85,7 @@
 }
 @media (max-width: 500px) {
   header {
-    margin-bottom: 100px;
+    margin-bottom: 45px;
   }
   header .top {
     height: auto;
@@ -210,8 +213,5 @@
   }
   #items article .content .inner {
     position: static;
-  }
-  #about {
-    margin-top: -50px;
   }
 }

@@ -178,7 +178,7 @@
     </div>
 </footer>
 
-<div class="footer-padding"></div>
+<div class="footer-padding" id="mail"></div>
 {/page.homepage}
 {/content}
 

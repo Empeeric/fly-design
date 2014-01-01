@@ -7,5 +7,5 @@ var registry = module.exports = global.registry = {
     ADMIN: {user: process.env.ADMIN_USER || 'admin', password: process.env.ADMIN_PASSWORD || 'admin'},
     SOCKET_TRANSPORTS: process.env.SOCKET_TRANSPORTS && process.env.SOCKET_TRANSPORTS.split(',') || ['websocket', 'htmlfile', 'xhr-polling', 'jsonp-polling'],
     userSockets: {},
-    mongo_cfg: process.env.MONGOLAB_URI || 'mongodb://localhost/fly'
+    mongo_cfg: process.env.MONGOLAB_URI || 'mongodb://localhost/fly-design'
 };
