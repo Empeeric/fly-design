@@ -2,6 +2,15 @@
     {#items}
     <li>
         <a {?dock}class="active{:else}href="{url}"{/dock}">{title}</a>
+
+        {@if cond="'{template}' == 'projects' "}
+        <nav class="second {+projects_menu_class}hide{/projects_menu_class}">
+        <div class="container">
+            {#sub.items}
+                <a href="{url}" {?dock}class="active"{/dock}>{title}</a>
+            {/sub.items}
+        </div>
+        {/if}
     </li>
     {/items}
 {/menu}

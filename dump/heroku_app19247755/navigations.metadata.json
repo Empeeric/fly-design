@@ -1,1 +1,1 @@
-{ "indexes" : [ { "v" : 1, "key" : { "_id" : 1 }, "ns" : "fly.navigations", "name" : "_id_" }, { "v" : 1, "key" : { "url" : 1 }, "unique" : true, "ns" : "fly.navigations", "name" : "url_1", "background" : true, "safe" : null } ] }
+{ "indexes" : [ { "v" : 1, "key" : { "_id" : 1 }, "ns" : "heroku_app19247755.navigations", "name" : "_id_" }, { "v" : 1, "key" : { "url" : 1 }, "unique" : true, "ns" : "heroku_app19247755.navigations", "name" : "url_1", "background" : true, "safe" : null } ] }

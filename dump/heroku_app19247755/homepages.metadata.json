@@ -1,1 +1,1 @@
-{ "indexes" : [ { "v" : 1, "key" : { "_id" : 1 }, "ns" : "fly.homepages", "name" : "_id_" } ] }
+{ "indexes" : [ { "v" : 1, "key" : { "_id" : 1 }, "ns" : "heroku_app19247755.homepages", "name" : "_id_" } ] }

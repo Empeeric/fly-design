@@ -7,7 +7,7 @@ var _ = require('lodash'),
 
 
 var schema = new Schema({
-    parent: { type: Types.ObjectId, ref: 'navigation', editable: false },
+    parent: { type: Types.ObjectId, ref: 'navigation' },
     title: { type: String, required: true, trim: true },
     url: { type: String, trim: true, lowercase: true, unique: true },
     template: { type:  String, enum: views, default: 'index' },
@@ -26,7 +26,7 @@ schema.methods.toString = function(){
 
 schema.statics.findRecursive = function(cb) {
     this.find({ show: true, menu: true })
-        .select('order parent url title')
+        .select('order parent url title template')
         .sort({ parent: -1, order: 1 })
         .lean()
         .exec(function(err, items) {
@@ -92,9 +92,13 @@ schema.statics.menu = function(){
     return function(req, res, next) {
         var crumbs = res.locals.crumbs;
 
+        console.log();
         navigation.findRecursive(function(err, menu) {
             menu.forEach(function(item, i){
                 item.dock = (crumbs&&crumbs[0]&&crumbs[0]._id.toString() === item._id.toString());
+                item.sub.items.forEach(function(sub, index){
+                    sub.dock = (res.locals.page&&res.locals.page._id == sub._id.toString());
+                });
                 item.last = (i + 1 == menu.length);
             });
 
