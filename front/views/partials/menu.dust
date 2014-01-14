@@ -4,7 +4,7 @@
         <a {?dock}class="active{:else}href="{url}"{/dock}">{title}</a>
 
         {@if cond="'{template}' == 'projects' "}
-        <nav class="second {+projects_menu_class}hide{/projects_menu_class}">
+        <nav class="second {^dock}hide{/dock}">
         <div class="container">
             {#sub.items}
                 <a href="{url}" {?dock}class="active"{/dock}>{title}</a>

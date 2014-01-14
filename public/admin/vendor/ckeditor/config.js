@@ -13,6 +13,6 @@ CKEDITOR.editorConfig = function( config )
 	config.toolbar = [
    ['Source'],['Bold','Italic','Underline','StrikeThrough','-','Outdent','Indent','-','Blockquote'],
    ['NumberedList','BulletedList','-','BidiRtl','BidiLtr','-','JustifyRight','JustifyCenter','JustifyLeft','JustifyBlock'],
-   ['Link'],['Youtube'],['Format']
+   ['Link'],['Youtube'],[ 'Format', 'Font', 'FontSize' ]
 	] ;
 };

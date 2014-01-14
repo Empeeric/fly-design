@@ -1,7 +1,5 @@
 {>layout/}
 
-{<projects_menu_class}{/projects_menu_class}
-
 {<content}
 <div class="head-box container">
     {#page.contents.items}
