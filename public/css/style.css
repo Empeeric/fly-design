@@ -752,6 +752,11 @@ a.up .icon-up:before {
   bottom: 10px;
   right: 71%;
 }
+
+#items .content .inner p {
+    margin-left: 5px;
+}
+
 #items .slider {
   float: right;
   width: 70%;
