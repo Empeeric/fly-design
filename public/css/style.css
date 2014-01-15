@@ -134,8 +134,11 @@ header nav a {
   line-height: 20px;
   color: #636466;
 }
-header nav a.active,
 header nav a:hover {
+    color: #ef2d61;
+}
+
+header nav a.active {
   font-size: 12px;
   line-height: 20px;
   font-weight: bold;
