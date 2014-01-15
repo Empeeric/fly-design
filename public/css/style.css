@@ -749,7 +749,7 @@ a.up .icon-up:before {
 }
 #items .content .inner {
   position: absolute;
-  bottom: 10px;
+  bottom: 0px;
   right: 71%;
 }
 
