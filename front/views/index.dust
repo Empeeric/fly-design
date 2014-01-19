@@ -88,7 +88,11 @@
         <ul class="container">
             {#list}
             <li>
-                <span class="number">{@math key="{$idx}" method="add" operand="1" /}</span>
+                <span class="number"
+                    data--10p-bottom="transform:translateY(100px)"
+                    data--30p-bottom="transform:translateY(0px)">
+                    {@math key="{$idx}" method="add" operand="1" /}
+                </span>
 
                 <h3>
                     {title}

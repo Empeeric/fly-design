@@ -1,6 +1,6 @@
 /*
  scrll -- animated scroll to an element
- version 0.4
+ version 0.5
 
  like scrollTo, but smaller.
 

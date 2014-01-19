@@ -1,4 +1,4 @@
-var mobile = (/Android|iPhone|iPad|iPod|BlackBerry/i).test(navigator.userAgent || navigator.vendor || window.opera);
+//var mobile = (/Android|iPhone|iPad|iPod|BlackBerry/i).test(navigator.userAgent || navigator.vendor || window.opera);
 
 /*
  Slider
@@ -8,14 +8,17 @@ $('.slider').responsiveSlides({
     next: $('#slider .next')
 });
 
+
 /*
  Scrolling effects
  */
-if (!mobile)
-    var s = skrollr.init({
-        smoothScrolling: false,
-        forceHeight: false
-    });
+//if (!mobile) {
+//    var s = skrollr.init({
+//        smoothScrolling: false,
+//        forceHeight: false
+//    });
+//}
+
 
 /*
  Shuffle pictures
@@ -26,7 +29,6 @@ var shuffle = function(v){
     for (var j, x, i = v.length; i; j = parseInt(Math.random() * i), x = v[--i], v[i] = v[j], v[j] = x);
     return v;
 };
-
 var files = [],
     pics = [],
     i;
