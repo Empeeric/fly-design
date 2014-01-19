@@ -14,7 +14,7 @@
             cb = speed;
             speed = $.scrll.speed;
         }
-        $('html, body').animate({
+        $(document.documentElement).animate({
             scrollTop: $(selector).offset().top + $.scrll.offset
         }, speed, cb);
     };

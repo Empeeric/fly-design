@@ -106,8 +106,7 @@
   header nav a {
     display: none;
   }
-  header nav a.active,
-  header nav:hover a {
+  header nav a.active {
     display: block;
   }
   header nav .icon-left-dir {

@@ -1,5 +1,6 @@
 var stop = function(e) {
     e.preventDefault();
+    e.stopPropagation();
 };
 
 /*
@@ -18,10 +19,17 @@ $('a.up').on('click touchstart', function(e) {
 });
 
 /*
- Navigation
+ Mobile navigation
  */
-var nav = $('.nav');
-nav.find('a').on('touchstart', function(e) {
+var nav = $('.navs');
+nav.on('click touchstart', function(e) {
+    if (!$(e.target).is('.active'))
+        return;
+
     stop(e);
-    nav.addClass('open');
+    nav.toggleClass('open');
+});
+$(document).on('click touchstart', function(e) {
+    if (!nav.find(e.target).length)
+        nav.removeClass('open');
 });
