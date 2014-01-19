@@ -66,8 +66,8 @@ var pageModels = function(req, res, next){
 //    arr.push(models.instructions.latest());
 //    arr.push(models.side_text.fetch());
 
-    if(page) {
-        switch(page.template){
+    if (page) {
+        switch (page.template){
             case 'index':
                 arr.push(models.homepage.fetch());
                 break;
@@ -82,6 +82,9 @@ var pageModels = function(req, res, next){
                 arr.push(models.customers.byNavigationId());
                 arr.push(models.content.byNavigationId());
                 break;
+            case 'clients':
+                arr.push(models.clients.findAll());
+                break;
             case 'about':
                 arr.push(models.about.byNavigationId());
             default:
@@ -93,7 +96,7 @@ var pageModels = function(req, res, next){
         item(res, cb);
     }, function(err){
         next(err)
-    })
+    });
 };
 
 // CMS rule

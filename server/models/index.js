@@ -8,6 +8,5 @@ files.forEach(function(file) {
     if (name === 'index')
         return;
 
-
     module.exports[name] = mongoose.model(name, require('./' + name));
 });
