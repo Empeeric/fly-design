@@ -1,6 +1,6 @@
 [![Build Status](https://secure.travis-ci.org/Prinzhorn/skrollr.png)](http://travis-ci.org/Prinzhorn/skrollr)
 
-skrollr 0.6.17
+skrollr 0.6.21
 =====
 
 Stand-alone **parallax scrolling** JavaScript library for **mobile (Android, iOS, etc.) and desktop** in just over **9.6k** (minified) or **4.5k** (minified + gzipped).
@@ -226,6 +226,25 @@ skrollr.init({
 
 Valid characters for a constant are `[a-z0-9_]`.
 
+Dynamic constants
+-----------------
+
+Starting with skrollr `0.6.19` the word "constants" doesn't quite fit anymore, but who cares.
+
+You can now use functions and percentages as constants. They are automatically evaluated when the window is resized or if you call `refresh`.
+
+```js
+skrollr.init({
+	constants: {
+		foo: function() {
+			//Note: you can access the skrollr instance with `this` for things like `this.relativeToAbsolute`
+			return Math.random() * 100;//trolololol
+		},
+		vh: '100p'
+	}
+});
+```
+
 CSS classes
 -----
 
@@ -331,7 +350,7 @@ The default looks like this
 
 ```js
 function() {
-	return (/Android|iPhone|iPad|iPod|BlackBerry|Windows Phone/i).test(navigator.userAgent || navigator.vendor || window.opera);
+	return (/Android|iPhone|iPad|iPod|BlackBerry/i).test(navigator.userAgent || navigator.vendor || window.opera);
 }
 ```
 

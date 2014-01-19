@@ -1,3 +1,27 @@
+0.6.21 (2014-01-06)
+-------------------
+
+* Disabled mobile mode on Windows Phone, since it's not needed there (#408).
+
+0.6.20 (2014-01-03)
+-------------------
+
+* Fixed broken percentage constants.
+
+0.6.19 (2014-01-02)
+-------------------
+
+* Constants can now be defined as functions or percentage offsets (#148, #404).
+
+**breaking**: When using a constant of value `100` together with percentage offsets like `data-_foo-75p`,
+the value was implicitly handled as percentage value `100p`. Starting with this version you need to explcitly use `100p` if you want percentage constants.
+On the plus side, you can now mix an absolute constant with a percentage keyframe or a percentage constant with an absolute keyframe.
+
+0.6.18 (2013-12-18)
+-------------------
+
+* Fixed scrolling on input elements (#397).
+
 0.6.17 (2013-10-19)
 ------
 
