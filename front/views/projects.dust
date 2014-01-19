@@ -46,7 +46,8 @@
 
 {<scripts}
 <script>
-    $('article .title').click(function() {
+    $('article .title').on('click touchstart', function(e) {
+        stop(e);
         $(this).parent().toggleClass('expand').siblings().removeClass('expand');
     });
 

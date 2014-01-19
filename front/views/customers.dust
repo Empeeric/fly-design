@@ -74,13 +74,13 @@
     mql.addListener(handleMediaChange);
     handleMediaChange(mql);
 
-    $('.thumb').click(function(e) {
+    $('.thumb').on('click touchstart',function(e) {
         e.preventDefault();
         $(this).toggleClass('selected').siblings().removeClass('selected');
         $($(this).attr('href')).toggleClass('expand').siblings().removeClass('expand')
     });
 
-    $('article .icon-close').click(function() {
+    $('article .icon-close').on('click touchstart', function() {
         var id = $(this).closest('article').removeClass('expand').attr('id');
         $('a[href='+ id +']').removeClass('selected');
     });
