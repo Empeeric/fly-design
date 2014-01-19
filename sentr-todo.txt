@@ -1,0 +1,129 @@
+SENTR TODO                                                        done
+
+assistant views
+    list                                                          V
+        new, now, next                                            V
+        prioritized zone (9.2)
+        scrolling and collapsing (13)
+    calendar (46)
+        states: selected, hover, new-action, hard-scheduled
+    today
+        dragging between section (44)
+            updating start-time unless hard-scheduled (45)
+
+    search (15)
+        dropdown
+            3 recent searches
+            3 last calls
+        clear (49)
+        live search (50)
+        highlight search term (53)
+
+    save as template
+    browse templates
+        open as new
+        delete (?)
+
+actions
+    (prioritization ans sorting - external)
+
+    timers
+        new
+            time-to-act progress-bar (9.1)
+            prioritized zone (9.2),
+            out (9.3)
+        now
+            time-spent progress-bar (10)
+            add more tooltip (10.2)
+        action heat (12)
+
+    predefined what-how (19)
+        change labels
+        open related panels
+        unselect on closing related panels
+
+    tasks acl (25.6)
+
+    -> add
+        manual - editor
+        invited
+        automatic
+    -> edit (21.9)
+        admins only
+        - editor
+    -> delete (21.10)
+    -> send to back burner
+        admins only
+        move to intent panel (?)
+    -> mark as (not) done (21.7)
+        admins only
+        visible for all
+    -> move to next
+    -> select (14)
+        remove unread mark (11)
+        move new to now (.2)
+        toggle related panels (.3)
+    -> publish to profile (22)
+        share with contact / group
+        use contact sets view
+
+    invited tasks
+        RSVP (21.1)
+            -> accept - move to now / next (external algo), remove RSVP menu
+            -> decline - removed from assistant (show in history)
+            -> maybe -  move to next
+            publish user response (21.5)
+        -> leave and rejoin task (21.8)
+            remove from assistance (show in history)
+
+    time display (8)
+        time editing widget (23) on hover
+        fields: created, start, end, duration, buffer, repeat
+        click outside saves and closes (23.3)
+
+    cabinet editor (24)
+        display first cabinet
+        opens on hover
+        edit, add, delete
+        color
+        x, v (?)
+        + (?)
+
+    editor
+        preview
+
+        what (25.1)
+            new document
+            search people
+            search document
+        how (25.5)
+            select from predefined list (?)
+        who (25.6)
+            autocomplete contacts
+            -> permissions menu (tasks acl)
+                info tooltip
+            -> remove contact
+            -> add non-contact (25.8)
+        where (25.9)
+            free text or -> map
+        start, end (26)
+            calendar widget
+        duration (26)
+            10m, 20m... 2h
+            bind to end
+        buffer (28)
+            before & after (?) (29)
+        repeat (31)
+            daily / weekly / never
+            select days
+        cabinet
+            show first
+            show all on hover
+            opens cabinet editor (24)
+        related (tasks) (35)
+            show last 3 tasks
+            search within undone tasks, or from last two weeks (37)
+        attach (38)
+            browse file
+            show one file name, or "# attachments"
+            delete files (?)

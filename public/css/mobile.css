@@ -100,6 +100,9 @@
     right: 0;
     top: 100%;
   }
+  header .navs.open nav a {
+    display: block;
+  }
   header nav a {
     display: none;
   }
@@ -122,7 +125,7 @@
     padding: 0;
   }
   #quote {
-    padding: 20px;
+    padding: 10px 0;
   }
   #quote .big-quote {
     display: none;
@@ -213,5 +216,10 @@
   }
   #items article .content .inner {
     position: static;
+  }
+}
+@media (max-width: 350px) {
+  #how h2 {
+    font-size: 190%;
   }
 }

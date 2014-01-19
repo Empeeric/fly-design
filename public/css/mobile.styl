@@ -62,6 +62,8 @@
     .navs
       width 100%
       absolute right top 100%
+      &.open nav a
+        display block
     nav
       a
         display none
@@ -77,7 +79,7 @@
       .container
         padding 0
   #quote
-    padding 20px
+    padding 10px 0
     .big-quote
       display none
   #features
@@ -141,3 +143,7 @@
           width 100%
         .inner
           position static
+
+@media (max-width: 350px)
+  #how h2
+    font-size 190%

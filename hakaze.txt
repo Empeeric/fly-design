@@ -1,0 +1,37 @@
+users
+    login
+    fb connect
+    types [admin, producer, broadcaster, normal]
+    name, picture, text, links
+
+channels
+    name, day, permanent?, ::user (broadcaster)
+
+program
+    name, ::channel/s, start-time, end-time, archived-link, default picture
+    status
+        [draft, ready, on-air, archived]
+    items
+        name
+        text
+        link
+        timestamp
+        types
+
+player
+
+home
+    grid
+    events
+
+search
+personal area
+    favorites
+blog
+program page
+broadcast page
+
+google analytic
+
+# b plan
+store

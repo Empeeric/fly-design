@@ -76,27 +76,9 @@
 <script src="/components/jquery/jquery.min.js"></script>
 <script src="/components/resp-slides/responsiveslides.js"></script>
 <script src="/js/jquery.scrll.js"></script>
-<script>
-    /*$(window).on('resize', function() {});*/
+<script src="/js/main.js"></script>
+{! var p = {page|js|s}; !}
 
-    /*
-        Projects sub-menu
-     */
-    var projects = $('nav.second');
-    if (projects.hasClass('hide'))
-        $('header .projects').hover(projects.toggleClass.bind(projects, 'hide'));
-
-    /*
-        Animated jump upward
-     */
-    $('a.up').click(function(e) {
-        e.preventDefault();
-        $.scrll(document.body);
-    });
-
-    var p = {page|js|s};
-
-</script>
 {+scripts/}
 
 </body>
