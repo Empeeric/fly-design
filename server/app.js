@@ -11,7 +11,7 @@ var nodestrum = require('nodestrum'),
 
 require('sugar');
 
-//nodestrum.register_process_catcher();
+nodestrum.register_process_catcher();
 
 var app = module.exports.app = express();
 
@@ -20,7 +20,7 @@ app.engine('dust', consolidate.dust);
 app.set('view engine', 'dust');
 app.set('views', path.join(__dirname, '..', 'front', 'views'));
 
-//app.use(nodestrum.domain_wrapper_middleware);
+app.use(nodestrum.domain_wrapper_middleware);
 app.use(express.compress());
 app.use(express.json());
 app.use(express.urlencoded());
