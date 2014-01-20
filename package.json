@@ -5,7 +5,7 @@
   "dependencies": {
     "express": "",
     "mongoose": "",
-    "dustjs-linkedin": "2.2.2",
+    "dustjs-linkedin": "",
     "dustjs-helpers": "",
     "cloudinary": "",
     "nodemailer": "",
