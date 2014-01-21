@@ -42,7 +42,7 @@ formage.init(app, express, models, {
     username: registry.ADMIN.user,
     password: registry.ADMIN.password,
     //admin_users_gui: true,
-    default_section: 'Cms'
+    default_section: 'CMS'
 });
 
 app.use(app.router);
