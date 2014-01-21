@@ -5,8 +5,6 @@
 <div id="body">
     {#slider}
     <section id="slider" class="container">
-        <!--data-0="transform:translateZ(0px)"-->
-        <!--data-500="transform:translateZ(500px)">-->
         <ul class="slider">
             {#banners}
 
@@ -88,9 +86,7 @@
         <ul class="container">
             {#list}
             <li>
-                <span class="number"
-                    data--10p-bottom="transform:translateY(100px)"
-                    data--30p-bottom="transform:translateY(0px)">
+                <span class="number">
                     {@math key="{$idx}" method="add" operand="1" /}
                 </span>
 
@@ -115,8 +111,7 @@
     {#us}
     <section id="we">
         <img src="{@picture width="1583" height="557" fit="crop" /}" class="cover"/>
-        <h2 data--10p-bottom="transform:translateY(100px)"
-            data--30p-bottom="transform:translateY(0px)">
+        <h2>
             {title}
         </h2>
         <div class="container">
@@ -189,6 +184,6 @@
 {<footer}{/footer}
 
 {<scripts}
-    <script src="/components/skrollr/dist/skrollr.min.js"></script>
+    <script src="/js/elevator.js"></script>
     <script src="/js/index.js"></script>
 {/scripts}

@@ -363,8 +363,14 @@ section:before {
   overflow: hidden;
 }
 #how {
+  height: 123px;
   padding: 0;
   text-align: center;
+  -webkit-transition: height 0.1s;
+  -moz-transition: height 0.1s;
+  -ms-transition: height 0.1s;
+  -o-transition: height 0.1s;
+  transition: height 0.1s;
 }
 #how h2 {
   margin: 0;
@@ -399,6 +405,12 @@ section:before {
 #steps li .number {
   font-size: 150px;
   line-height: 100px;
+  position: relative;
+  -webkit-transition: top 0.1s;
+  -moz-transition: top 0.1s;
+  -ms-transition: top 0.1s;
+  -o-transition: top 0.1s;
+  transition: top 0.1s;
 }
 #steps li:nth-child(0) .number {
   color: 0;
@@ -511,6 +523,12 @@ section:before {
   line-height: 100px;
   font-weight: bold;
   margin: -86px 0 10px 0;
+  position: relative;
+  -webkit-transition: top 0.2s;
+  -moz-transition: top 0.2s;
+  -ms-transition: top 0.2s;
+  -o-transition: top 0.2s;
+  transition: top 0.2s;
 }
 #we h3 {
   font-size: 24px;
@@ -958,7 +976,7 @@ a.up .icon-up:before {
   text-align: center;
 }
 #about .clients img {
-  margin: 10px;
+  margin: 35px 20px;
   filter: url("data:image/svg+xml;utf8,<svg xmlns=\'http://www.w3.org/2000/svg\'><filter id=\'grayscale\'><feColorMatrix type=\'matrix\' values=\'0.3333 0.3333 0.3333 0 0 0.3333 0.3333 0.3333 0 0 0.3333 0.3333 0.3333 0 0 0 0 0 1 0\'/></filter></svg>#grayscale");
 /* Firefox 10+, Firefox on Android */
   filter: #808080;

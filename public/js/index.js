@@ -12,12 +12,25 @@ $('.slider').responsiveSlides({
 /*
  Scrolling effects
  */
-//if (!mobile) {
-//    var s = skrollr.init({
-//        smoothScrolling: false,
-//        forceHeight: false
-//    });
-//}
+$('#we h2').elevator('top',
+    { bottom: 50, val: 100 },
+    { bottom: 200, val: 0 }
+);
+var i = 1;
+$('span.number').each(function() {
+    var j = i++ * 40;
+    $(this).elevator('opacity',
+        { bottom: j + 100, val: 0 },
+        { bottom: j + 200, val: 1 }
+    ).elevator('top',
+        { bottom: j + 100, val: -100 },
+        { bottom: j + 200, val: 0 }
+    );
+});
+$('#how').elevator('height',
+    { bottom: 50, val: 20 },
+    { bottom: 300, val: 123 }
+);
 
 
 /*
