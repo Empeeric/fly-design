@@ -36,12 +36,23 @@
         return this;
     };
 
+    var num = function(num) {
+        return num.match(/-?\d+/);
+    };
+
     var animation = function(prop, start, end) {
         if (start.top > end.top || start.bottom < end.bottom) {
             var temp = start;
             start = end;
             end = temp;
         }
+
+//        var unit = '';
+//        if ('string' == typeof start.val) {
+//            unit = start.val.match(/\D+/);
+//            start.val = num(start.val);
+//            end.val = num(end.val);
+//        }
 
         return function(scroll_top, window_height) {
             var offset = this.offset().top,
@@ -61,7 +72,8 @@
                 c = (distance - start.top)
                     / (end.top - start.top)
                     * (end.val - start.val)
-                    +  start.val;
+                    + start.val;
+//                    + unit;
 
             this.css(prop, c);
         }

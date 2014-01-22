@@ -16,22 +16,26 @@ $('#we h2').elevator('top',
     { bottom: 50, val: 100 },
     { bottom: 200, val: 0 }
 );
-var i = 1;
-$('span.number').each(function() {
-    var j = i++ * 40;
-    $(this).elevator('opacity',
-        { bottom: j + 100, val: 0 },
-        { bottom: j + 200, val: 1 }
-    ).elevator('top',
-        { bottom: j + 100, val: -100 },
-        { bottom: j + 200, val: 0 }
-    );
+$('#steps li').each(function(i) {
+    var j = i * 50;
+    $(this)
+        .css({ opacity: 0, top: -100 })
+        .elevator('opacity',
+            { bottom: j + 100, val: 0 },
+            { bottom: j + 200, val: 1 }
+        ).elevator('top',
+            { bottom: j + 100, val: -100 },
+            { bottom: j + 200, val: 0 }
+        );
 });
 $('#how').elevator('height',
     { bottom: 50, val: 20 },
     { bottom: 300, val: 123 }
 );
-
+//$('.line').elevator('right',
+//    { bottom: 0, val: '-150%' },
+//    { bottom: 100, val: '0%' }
+//);
 
 /*
  Shuffle pictures
