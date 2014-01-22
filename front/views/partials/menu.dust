@@ -1,6 +1,6 @@
 {#menu}
     {#items}
-        <a {?dock}class="active{:else}href="{url}"{/dock}">{title}</a>
+        <a {?dock}class="active"{:else}href="{url}"{/dock}>{title}</a>
 
         {@if cond="'{template}' == 'projects' "}
         <nav class="second {^dock}hide{/dock}">

@@ -78,8 +78,8 @@ var pageModels = function(req, res, next){
                 arr.push(models.projects.byNavigationId());
                 arr.push(models.content.byNavigationId());
                 break;
-            case 'customers':
-                arr.push(models.customers.byNavigationId());
+            case 'projects2':
+                arr.push(models.projects.byNavigationId());
                 arr.push(models.content.byNavigationId());
                 break;
             case 'clients':
