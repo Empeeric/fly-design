@@ -137,6 +137,10 @@ header nav a.active {
 header nav a.hover {
   color: #ef2d61;
 }
+header nav a:hover + nav.second,
+header nav nav:hover {
+  display: block !important;
+}
 header nav.second {
   background: #636466;
 }

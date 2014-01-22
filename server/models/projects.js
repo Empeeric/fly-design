@@ -44,4 +44,3 @@ schema.formage = {
 };
 
 module.exports = schema;
-
