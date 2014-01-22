@@ -700,6 +700,8 @@ a.up .icon-up:before {
   cursor: pointer;
   background: #fff left top no-repeat;
   -webkit-transition: padding 0.35s;
+  position: relative;
+  z-index: 10;
 }
 #items article .title:before {
   content: '';
@@ -780,6 +782,7 @@ a.up .icon-up:before {
 #items .slider {
   float: right;
   width: 70%;
+  min-height: 100px;
   margin-left: 30px;
   border: 1px solid #b1b4b6;
   position: relative;
