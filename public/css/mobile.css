@@ -85,6 +85,9 @@
   }
 }
 @media (max-width: 500px) {
+  .head-box {
+    margin-top: 100px;
+  }
   header {
     margin-bottom: 45px;
   }
@@ -104,6 +107,9 @@
   header .navs.open nav a {
     display: block;
   }
+  header nav .container {
+    padding: 0;
+  }
   header nav a {
     display: none;
   }
@@ -121,8 +127,8 @@
   header nav.second {
     position: static;
   }
-  header nav.second .container {
-    padding: 0;
+  header nav.second a {
+    padding: 10px 20px;
   }
   #quote {
     padding: 10px 0;
@@ -197,15 +203,24 @@
     padding-right: 30px !important;
     background-size: cover !important;
   }
-  #items article .title h2,
   #items article .title p {
     visibility: hidden;
   }
-  #items article:hover .title h2,
-  #items article.expand .title h2,
-  #items article:hover .title p,
+  #items article .title h2 {
+    position: absolute;
+    bottom: 0;
+    right: 0;
+    left: 0;
+    padding: 10px 20px;
+    font-size: 18px;
+    color: #fff;
+    background: #636466;
+  }
+  #items article .title:before {
+    border-width: 0;
+  }
   #items article.expand .title p {
-    visibility: visible;
+    visibility: hidden;
   }
   #items article .content {
     height: auto;

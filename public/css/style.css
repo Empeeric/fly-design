@@ -122,13 +122,6 @@ header nav {
 header nav .icon-left-dir {
   display: none;
 }
-header nav ul {
-  padding: 0;
-  list-style: none;
-}
-header nav li {
-  display: inline;
-}
 header nav a {
   display: inline-block;
   padding: 10px 20px;
@@ -696,6 +689,7 @@ a.up .icon-up:before {
   margin-bottom: 0;
 }
 #items article .title {
+  height: 130px;
   padding: 30px;
   cursor: pointer;
   background: #fff left top no-repeat;
@@ -741,19 +735,21 @@ a.up .icon-up:before {
   padding-right: 60%;
   background: right top no-repeat;
 }
-#items article:hover .title,
-#items article.expand .title {
-  border-color: #636466;
-  background: #636466 !important;
-  color: #fff;
-}
-#items article:hover .title p .icon-left-dir,
-#items article.expand .title p .icon-left-dir {
-  display: none;
-}
-#items article:hover .big.icon-left-dir,
-#items article.expand .big.icon-left-dir {
-  -webkit-transform: translateX(0);
+@media (min-width: 500px) {
+  #items article:hover .title,
+  #items article.expand .title {
+    border-color: #636466;
+    background: #636466 !important;
+    color: #fff;
+  }
+  #items article:hover .title p .icon-left-dir,
+  #items article.expand .title p .icon-left-dir {
+    display: none;
+  }
+  #items article:hover .big.icon-left-dir,
+  #items article.expand .big.icon-left-dir {
+    -webkit-transform: translateX(0);
+  }
 }
 #items article.expand {
   max-height: 600px;

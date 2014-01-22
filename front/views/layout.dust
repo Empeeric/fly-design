@@ -50,11 +50,11 @@
     </div>
     <div class="navs">
         <nav>
-            <ul class="container">
-                <li><i class="icon-left-dir"></i></li>
+            <div class="container">
+                <i class="icon-left-dir"></i>
                 {>"partials/menu.dust"/}
-                <li><a href="/#mail">צור קשר</a></li>
-            </ul>
+                <a href="/#mail">צור קשר</a>
+            </div>
         </nav>
     </div>
 </header>

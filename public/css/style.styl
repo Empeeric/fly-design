@@ -93,11 +93,6 @@ header
     position relative
     .icon-left-dir
       display none
-    ul
-      padding 0
-      list-style none
-    li
-      display inline
     a
       display inline-block
       padding 10px 20px
@@ -462,6 +457,7 @@ a.up
     &:last-child
       margin-bottom 0
     .title
+      height 130px
       padding 30px
       cursor pointer
       background white left top no-repeat
@@ -489,15 +485,16 @@ a.up
     &.left .title
       padding-right 60%
       background right top no-repeat
-    &:hover, &.expand
-      .title
-        border-color text-color
-        background text-color !important
-        color white
-        p .icon-left-dir
-          display none
-      .big.icon-left-dir
-        -webkit-transform translateX(0)
+    @media (min-width: 500px)
+      &:hover, &.expand
+        .title
+          border-color text-color
+          background text-color !important
+          color white
+          p .icon-left-dir
+            display none
+        .big.icon-left-dir
+          -webkit-transform translateX(0)
     &.expand
       max-height 600px
       .title

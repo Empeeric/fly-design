@@ -53,6 +53,8 @@
       max-height none
 
 @media (max-width: 500px)
+  .head-box
+    margin-top 100px
   header
     margin-bottom 45px
     .top
@@ -66,6 +68,8 @@
       &.open nav a
         display block
     nav
+      .container
+        padding 0
       a
         display none
       a.active
@@ -77,8 +81,8 @@
         -webkit-transform rotate(-90deg)
     nav.second
       position static
-      .container
-        padding 0
+      a
+        padding 10px 20px
   #quote
     padding 10px 0
     .big-quote
@@ -131,12 +135,18 @@
       .title
         padding-right 30px !important
         background-size cover !important
-        h2, p
+        p
           visibility hidden
-      &:hover, &.expand
-        .title
-          h2, p
-            visibility visible
+        h2
+          absolute bottom right left
+          padding 10px 20px
+          text 18px white
+          background #636466
+        &:before
+          border-width: 0;
+      &.expand
+        .title p
+            visibility hidden
       .content
         height auto
         .slider
