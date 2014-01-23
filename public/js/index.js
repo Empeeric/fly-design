@@ -17,15 +17,15 @@ $('#we h2').elevator('top',
     { bottom: 200, val: 0 }
 );
 $('#steps li').each(function(i) {
-    i *= 50;
+    i *= 40;
     $(this)
         .css({ opacity: 0, top: -100 })
         .elevator('opacity',
-            { bottom: i + 100, val: 0 },
-            { bottom: i + 200, val: 1 }
+            { bottom: i + 160, val: 0 },
+            { bottom: i + 210, val: 1 }
         ).elevator('top',
-            { bottom: i + 100, val: -100 },
-            { bottom: i + 200, val: 0 }
+            { bottom: i + 160, val: -100 },
+            { bottom: i + 210, val: 0 }
         );
 });
 $('#how').elevator('height',
