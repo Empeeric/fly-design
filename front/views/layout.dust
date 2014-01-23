@@ -20,7 +20,7 @@
 
     <link rel="stylesheet" href="http://fonts.googleapis.com/css?family=Merriweather+Sans:400,300"/>
     <link rel="stylesheet" href="/css/fonts/fonts.css"/>
-    <link rel="stylesheet" href="/components/fontello/css/fontello.css"/>
+    <link rel="stylesheet" href="/components/fontello/css/fontello-embedded.css"/>
 
     <link rel="stylesheet" href="/components/normalize-css/normalize.css"/>
     <link rel="stylesheet" href="/components/resp-slides/responsiveslides.css"/>
