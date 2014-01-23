@@ -9,7 +9,7 @@
 
     <div class="clients container">
         {#clients}
-            <img src="{@picture width="250" height="150" fit="clip" /}" alt=""/>
+            <img src="{@picture width="195" height="140" fit="clip" /}" alt=""/>
         {/clients}
     </div>
 </section>

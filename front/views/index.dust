@@ -168,7 +168,7 @@
     {/contact}
 
     <div class="container">
-        <a href="javascript:;" class="up">
+        <a href="#" class="up">
             <i class="icon-up"></i>
             <span>
                 חזרה לראש העמוד

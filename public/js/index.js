@@ -1,4 +1,4 @@
-//var mobile = (/Android|iPhone|iPad|iPod|BlackBerry/i).test(navigator.userAgent || navigator.vendor || window.opera);
+var mobile = (/Android|iPhone|iPad|iPod|BlackBerry/i).test(navigator.userAgent || navigator.vendor || window.opera);
 
 /*
  Slider
@@ -17,7 +17,8 @@ $('#we h2').elevator('top',
     { bottom: 200, val: 0 }
 );
 $('#steps li').each(function(i) {
-    i *= 40;
+    if (!mobile)
+        i *= 40;
     $(this)
         .css({ opacity: 0, top: -100 })
         .elevator('opacity',
