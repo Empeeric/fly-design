@@ -729,6 +729,8 @@ a.up .icon-up:before {
 }
 #items article .title h2 i {
   display: none;
+  float: left;
+  margin-left: -10px;
 }
 #items article .title .big.icon-left-dir {
   position: absolute;
