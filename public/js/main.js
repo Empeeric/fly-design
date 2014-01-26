@@ -4,18 +4,11 @@ var stop = function(e) {
 };
 
 /*
- Projects sub-menu
- */
-var projects = $('nav.second');
-if (projects.hasClass('hide'))
-    $('header .projects').hover(projects.toggleClass.bind(projects, 'hide'));
-
-/*
  Animated jump upward
  */
 $('a.up').on('click touchstart', function(e) {
     stop(e);
-    $.scrll(document.body);
+    $.scrll(0);
 });
 
 /*

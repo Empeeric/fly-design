@@ -8,6 +8,15 @@ $('.slider').responsiveSlides({
     next: $('#slider .next')
 });
 
+/*
+ Contact links
+ */
+if (!mobile)
+    $('a[href$="#mail"]').on('click touched', function(e) {
+        stop(e);
+        $.scrll('#mail');
+    });
+
 
 /*
  Scrolling effects

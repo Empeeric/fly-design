@@ -1,6 +1,6 @@
 /*
  scrll -- animated scroll to an element
- version 0.5
+ version 0.6
 
  like scrollTo, but smaller.
 
@@ -9,13 +9,16 @@
  */
 
 (function($) {
-    $.scrll = function(selector, speed, cb) {
-        if (!cb && $.isFunction(speed)) {
-            cb = speed;
-            speed = $.scrll.speed;
-        }
-        $(document.documentElement).animate({
-            scrollTop: $(selector).offset().top + $.scrll.offset
+    var doc = $(document.documentElement);
+    $.scrll = function(to, speed, cb) {
+        if (!cb && $.isFunction(speed))
+            cb = speed, speed = $.scrll.speed;
+
+        if ('string' == typeof to)
+            to = $(to).offset().top;
+
+        doc.animate({
+            scrollTop: to + $.scrll.offset
         }, speed, cb);
     };
     $.scrll.speed = 500;
