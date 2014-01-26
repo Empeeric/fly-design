@@ -1,3 +1,5 @@
+var mobile = (/Android|iPhone|iPad|iPod|BlackBerry/i).test(navigator.userAgent || navigator.vendor || window.opera);
+
 var stop = function(e) {
     e.preventDefault();
     e.stopPropagation();
@@ -6,11 +8,12 @@ var stop = function(e) {
 /*
  Animated jump upward
  */
-if (!mobile)
+if (!mobile) {
     $('a.up').on('click touchstart touchend', function(e) {
         stop(e);
         $.scrll(0);
     });
+}
 
 /*
  Mobile navigation

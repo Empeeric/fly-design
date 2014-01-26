@@ -1,5 +1,3 @@
-var mobile = (/Android|iPhone|iPad|iPod|BlackBerry/i).test(navigator.userAgent || navigator.vendor || window.opera);
-
 /*
  Slider
  */
