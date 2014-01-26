@@ -11,7 +11,7 @@
 (function($) {
     var doc = $(document.documentElement);
     $.scrll = function(to, speed, cb) {
-        if (!cb && $.isFunction(speed))
+        if (!cb && 'function' == typeof speed)
             cb = speed, speed = $.scrll.speed;
 
         if ('string' == typeof to)

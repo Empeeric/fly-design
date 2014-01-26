@@ -11,11 +11,11 @@
     {/page.meta}
 
     {#config.site.icon}
-        <link rel="icon" type="image/png" href="{@picture width="16" height="16" fit="crop"/}">
-        <link rel="apple-touch-icon" href="{@picture width="57" height="57" fit="crop"/}">
-        <link rel="apple-touch-icon" sizes="114x114" href="{@picture width="114" height="114" fit="crop"/}">
-        <link rel="apple-touch-icon" sizes="72x72" href="{@picture width="72" height="72" fit="crop"/}">
-        <link rel="apple-touch-icon" sizes="144x144" href="{@picture width="144" height="144" fit="crop"/}">
+        <link rel="icon" type="image/png" href="{@picture width="16" height="16" fit="clip"/}">
+        <link rel="apple-touch-icon" href="{@picture width="57" height="57" fit="clip"/}">
+        <link rel="apple-touch-icon" sizes="114x114" href="{@picture width="114" height="114" fit="clip"/}">
+        <link rel="apple-touch-icon" sizes="72x72" href="{@picture width="72" height="72" fit="clip"/}">
+        <link rel="apple-touch-icon" sizes="144x144" href="{@picture width="144" height="144" fit="clip"/}">
     {/config.site.icon}
 
     <link rel="stylesheet" href="http://fonts.googleapis.com/css?family=Merriweather+Sans:400,300"/>

@@ -6,10 +6,11 @@ var stop = function(e) {
 /*
  Animated jump upward
  */
-$('a.up').on('click touchstart', function(e) {
-    stop(e);
-    $.scrll(0);
-});
+if (!mobile)
+    $('a.up').on('click touchstart touchend', function(e) {
+        stop(e);
+        $.scrll(0);
+    });
 
 /*
  Mobile navigation
