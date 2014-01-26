@@ -17,7 +17,10 @@
     {#items}
     <article class="{@if cond="({$idx} + 1) % 2 == 0"}left{/if}">
         <section class="title" style="background-image: url({@picture width="300" height="128" fit="crop"/})">
-            <h2>{name}</h2>
+            <h2>
+                {name}
+                <i class="icon-left-dir"></i>
+            </h2>
             <p>
                 {description}
                 <i class="icon-left-dir"></i>
@@ -46,7 +49,10 @@
 
 {<scripts}
 <script>
+    var win = $(window), h2;
     $('article .title').on('click touchstart', function(e) {
+        if (win.width() <= 500 && 'SECTION' == e.target.tagName)
+            return;
         stop(e);
         $(this).parent().toggleClass('expand').siblings().removeClass('expand');
     });
