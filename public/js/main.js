@@ -8,12 +8,13 @@ var stop = function(e) {
 /*
  Animated jump upward
  */
-if (!mobile) {
-    $('a.up').on('click touchstart touchend', function(e) {
+if (!mobile)
+    $('a.up').on('click', function(e) {
         stop(e);
-        $.scrll(0);
+        $(document.documentElement).animate({
+            scrollTop: 0
+        });
     });
-}
 
 /*
  Mobile navigation

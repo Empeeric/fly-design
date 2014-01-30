@@ -424,14 +424,15 @@ a.up
   padding-left 5px
   color pink
   line-height 31px
-  span
-    display none
-  &:hover
+  @media (min-width: 500px)
     span
-      display inline
-    .icon-up
-      background gray-light
-      color pink
+      display none
+    &:hover
+      span
+        display inline
+      .icon-up
+        background gray-light
+        color pink
   .icon-up
     margin-left 5px
     background pink
@@ -490,7 +491,7 @@ a.up
         -webkit-transition -webkit-transform .35s
     &.left .title
       padding-right 60%
-      background right top no-repeat
+      background white right top no-repeat
     @media (min-width: 500px)
       &:hover, &.expand
         .title

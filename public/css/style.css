@@ -649,15 +649,17 @@ a.up {
   color: #ef2d61;
   line-height: 31px;
 }
-a.up span {
-  display: none;
-}
-a.up:hover span {
-  display: inline;
-}
-a.up:hover .icon-up {
-  background: #cccecf;
-  color: #ef2d61;
+@media (min-width: 500px) {
+  a.up span {
+    display: none;
+  }
+  a.up:hover span {
+    display: inline;
+  }
+  a.up:hover .icon-up {
+    background: #cccecf;
+    color: #ef2d61;
+  }
 }
 a.up .icon-up {
   margin-left: 5px;
@@ -742,7 +744,7 @@ a.up .icon-up:before {
 }
 #items article.left .title {
   padding-right: 60%;
-  background: right top no-repeat;
+  background: #fff right top no-repeat;
 }
 @media (min-width: 500px) {
   #items article:hover .title,
