@@ -24,6 +24,14 @@ schema.methods.toString = function(){
     return this.title;
 };
 
+schema.statics.byURL = function(url, cb) {
+    return this.findOne()
+        .where('url', url)
+        .where('show', true)
+        .lean()
+        .exec(cb);
+};
+
 schema.statics.findRecursive = function(cb) {
     this.find({ show: true, menu: true })
         .select('order parent url title template')

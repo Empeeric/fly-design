@@ -901,20 +901,14 @@ a.up .icon-up:before {
   max-height: 600px;
   border-color: #b1b4b6;
 }
-#about {
-  padding-top: 10px;
-}
-#about h1 {
-  color: #95ce92;
-}
-#about hr {
+hr {
   height: 3px;
   margin-bottom: 40px;
   border: none;
   background: #8a8c8e;
   position: relative;
 }
-#about hr:before {
+hr:before {
   content: none;
   position: absolute;
   top: 100%;
@@ -928,9 +922,56 @@ a.up .icon-up:before {
   border-bottom-width: 0;
   border-top-color: #fff;
 }
-#about hr:before {
+hr:before {
   content: '';
   border-top-color: #8a8c8e;
+}
+.blog h2,
+.blog h3,
+.blog h4 {
+  color: #95ce92;
+}
+.blog h3 {
+  font-size: 120%;
+}
+.blog aside {
+  float: right;
+  width: 22%;
+  margin-left: 3%;
+  padding: 10px 20px;
+  background: #e0e1e2;
+}
+.blog .box {
+  float: right;
+  width: 75%;
+}
+.blog article {
+  margin-bottom: 30px;
+  padding: 20px;
+  border: 1px solid #e0e1e2;
+}
+.blog article img.thumb {
+  float: right;
+  margin: -20px -20px -20px 20px;
+}
+.blog .more {
+  float: left;
+}
+.blog .more span {
+  text-decoration: underline;
+}
+.blog .img-responsive {
+  width: 100%;
+}
+.blog nav a {
+  color: #95ce92;
+  font-size: 150%;
+}
+#about {
+  padding-top: 10px;
+}
+#about h1 {
+  color: #95ce92;
 }
 #about .col {
   float: right;

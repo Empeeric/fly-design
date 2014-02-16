@@ -14,7 +14,7 @@
         if (!cb && 'function' == typeof speed)
             cb = speed, speed = $.scrll.speed;
 
-        if ('string' == typeof to)
+        if ('number' != typeof to)
             to = $(to).offset().top;
 
         doc.animate({

@@ -21,58 +21,39 @@ var config = models.config.middleware(),
      res.locals.page
  */
 var getByUrl = function(req, res, next) {
-    var params = req.params[0];
+    var url = req.params[0];
 
-    models.posts.findOne()
-        .where('url', params)
-        .where('show', true)
-        .populate('navigation')
-        .lean()
-        .exec(function (err, post) {
+    models.navigation.byURL(url, function(err, page) {
+        if (err) return next(err);
+
+        if (page) {
+            res.locals.page = page;
+            return next(err);
+        }
+
+        models.posts.byURL(url, function(err, post) {
             if (err) return next(err);
 
             if (post && post.navigation) {
                 res.locals.page = post.navigation;
-                res.locals.page.post = _.omit(post, 'navigation');
-//                res.locals.page.title = res.locals.page.post.title;
-
-                return next(err);
+                res.locals.post = _.omit(post, 'navigation');
             }
-
-            models.navigation
-                .findOne()
-                .where('url', params)
-                .where('show', true)
-                .lean()
-                .exec(function (err, page) {
-                    if (page && page.text) {
-                        dust.loadSource(dust.compile(page.text, 'posts_template'));
-                        dust.render('posts_template', req.config, function (err, text) {
-                            page.text = text;
-                        });
-                    }
-                    res.locals.page = page;
-                    next(err);
-                });
-        });
+            next(err);
+        })
+    });
 };
 
-var pageModels = function(req, res, next){
+var pageModels = function(req, res, next) {
     var arr = [],
         page = res.locals.page;
-
-    //for all pages
-//    arr.push(models.videos.latest());
-//    arr.push(models.instructions.latest());
-//    arr.push(models.side_text.fetch());
 
     if (page) {
         switch (page.template){
             case 'index':
                 arr.push(models.homepage.fetch());
                 break;
-            case 'posts':
-                arr.push(models.posts.byNavigationId());
+            case 'blog':
+                arr.push(models.posts.middleware());
                 break;
             case 'projects':
                 arr.push(models.projects.byNavigationId());

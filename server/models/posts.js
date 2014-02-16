@@ -18,6 +18,28 @@ schema.methods.toString = function(){
     return this.title;
 };
 
+schema.statics.middleware = function() {
+    var posts = this;
+    return function(res, next) {
+        posts.find({ show: true })
+            .lean()
+            .exec(function(err, results) {
+                if (err) return next(err);
+                res.locals.posts = results;
+                next();
+            });
+    };
+};
+
+schema.statics.byURL = function(url, cb) {
+    return this.findOne()
+        .where('url', new RegExp('^' + url))
+        .where('show', true)
+        .populate('navigation')
+        .lean()
+        .exec(cb);
+};
+
 schema.pre('validate', function(next) {
     var url = this.url;
 
@@ -52,24 +74,6 @@ schema.path('url').validate(function(v, callback){
         callback(!err);
     });
 }, 'url already exists');
-
-schema.statics.byNavigationId = function(){
-    var posts = this;
-    return function(res, cb){
-        var page = res.locals.page;
-
-        posts
-            .find()
-            .where('navigation', page._id)
-            .where('show', 1)
-            .sort({'order': 1})
-            .lean()
-            .exec(function(err, results){
-                if(results.length) res.locals.page.posts = {items :results};
-                cb(err);
-            })
-    }
-};
 
 schema.formage = {
     list: ['navigation', 'title', 'picture', 'url', 'show'],
