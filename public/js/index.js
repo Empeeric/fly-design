@@ -54,18 +54,20 @@ var shuffle = function(v){
     for (var j, x, i = v.length; i; j = parseInt(Math.random() * i), x = v[--i], v[i] = v[j], v[j] = x);
     return v;
 };
-var files = [],
-    pics = [],
+var pics = [],
     i;
-$('#pictures ul li img').each(function(){
-    files.push($(this).attr('src'));
+$(function() {
+    $('#pictures img').each(function(i) {
+        this.src = files[i];
+    });
+
+    setInterval(function() {
+        if (!pics.length)
+            pics = shuffle($('#pictures img').get());
+
+        if (!i)
+            i = files.length;
+
+        pics.pop().src = files[--i];
+    }, 1000);
 });
-setInterval(function() {
-    if (!pics.length)
-        pics = shuffle($('#pictures img').get());
-
-    if (!i)
-        i = files.length;
-
-    pics.pop().src = files[--i];
-}, 1000);

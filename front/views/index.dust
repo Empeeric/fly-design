@@ -68,9 +68,14 @@
 
     <section id="pictures">
         <ul class="inline">
-            {#customers_pictures}
-            <li><img src="{@picture width="395" height="259" fit="crop" /}"/></li>
-            {/customers_pictures}
+            <li><img /></li>
+            <li><img /></li>
+            <li><img /></li>
+            <li><img /></li>
+            <li><img /></li>
+            <li><img /></li>
+            <li><img /></li>
+            <li><img /></li>
         </ul>
     </section>
 
@@ -184,6 +189,13 @@
 {<footer}{/footer}
 
 {<scripts}
+    <script>
+        var files = [
+            {#page.homepage.customers_pictures}
+                '{@picture width="395" height="259" fit="crop" /}'{@sep},{/sep}
+            {/page.homepage.customers_pictures}
+        ];
+    </script>
     <script src="/js/elevator.js"></script>
     <script src="/js/index.js"></script>
 {/scripts}
