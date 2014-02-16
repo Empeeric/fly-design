@@ -1,0 +1,62 @@
+{>layout/}
+
+{<content}
+    <div class="blog container cf">
+        {^post}
+            <h2>{page.title}</h2>
+        {:else}
+            <h2><a href="{page.url}">{page.title}</a></h2>
+        {/post}
+
+        <hr />
+
+        <aside>
+            <h4>
+                רשומות אחרונות:
+            </h4>
+            <ul>
+                {#posts}
+                    <li><a href="{url}">{title}</a></li>
+                {/posts}
+            </ul>
+        </aside>
+
+        {#post}
+            <div class="box">
+                {?picture}
+                    <img class="img-responsive" src="{@picture width="600" height="220" fit="crop" /}" alt=""/>
+                {/picture}
+
+                <h2>{title}</h2>
+                {text|s}
+
+                {!<nav>
+                    <a href="{prev}">
+                        הרשומה הקודמת
+                        <i class="icon-right-dir"></i>
+                    </a>
+                    <a href="{next}">
+                        <i class="icon-left-dir"></i>
+                        הרשומה הבאה
+                    </a>
+                </nav>!}
+            </div>
+        {:else}
+            <div class="box">
+            {#posts}
+                <article class="cf">
+                    <img class="thumb" src="{@picture width="280" height="280" crop="crop" /}" alt="{title}" />
+
+                    <h3><a href="{url}">{title}</a></h3>
+                    <p>{@truncate length="300"}{text|st}{/truncate}</p>
+
+                    <a href="{url}" class="more">
+                        <span>למאמר המלא</span>
+                        <i class="icon-left-dir"></i>
+                    </a>
+                </article>
+            {/posts}
+            </div>
+        {/post}
+    </div>
+{/content}
