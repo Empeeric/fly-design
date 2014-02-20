@@ -7,12 +7,13 @@
     <section id="slider" class="container">
         <ul class="slider">
             {#banners}
-
             <li>
-                <h3>
-                    {description|br|s}
-                </h3>
-                <img src="{@picture width="652" height="400" fit="crop" /}"/>
+                {?url}<a href="{url}">{/url}
+                    <h3>
+                        {description|br|s}
+                    </h3>
+                    <img src="{@picture width="652" height="400" fit="crop" /}"/>
+                {?url}</a>{/url}
             </li>
             {/banners}
         </ul>

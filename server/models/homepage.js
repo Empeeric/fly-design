@@ -8,7 +8,8 @@ var schema = new mongoose.Schema({
         url: String,
         banners: [{
             picture: {type: Types.Filepicker, widget: 'FilepickerPictureWidget'},
-            description: Types.Text
+            description: Types.Text,
+            url: String
         }]
     },
     about: {

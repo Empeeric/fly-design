@@ -3,7 +3,7 @@ V   mobile resizing     10m
 V   altext              10m
 
 home
-    link sliders (1)    10m
+V   link sliders (1)    10m
     big icons (2)       10m
     random links        10m
     banner lining       10m
@@ -20,6 +20,7 @@ blog
     r-align title       5m
     comments            2h
     mobile              1h
+    paginate            30m
 
 about
     image fix           5m
