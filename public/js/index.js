@@ -56,18 +56,21 @@ var shuffle = function(v){
 };
 var pics = [],
     i;
+
+var putPic = function(i) {
+    $(this).attr('href', files[i].url || '#pictures')
+        .find('img').attr('src', files[i].src);
+};
 $(function() {
-    $('#pictures img').each(function(i) {
-        this.src = files[i];
-    });
+    $('#pictures a').each(putPic);
 
     setInterval(function() {
         if (!pics.length)
-            pics = shuffle($('#pictures img').get());
+            pics = shuffle($('#pictures a').get());
 
         if (!i)
             i = files.length;
 
-        pics.pop().src = files[--i];
+        putPic.call(pics.pop(), --i);
     }, 1000);
 });

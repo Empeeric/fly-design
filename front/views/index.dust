@@ -67,14 +67,14 @@
 
     <section id="pictures">
         <ul class="inline">
-            <li><img /></li>
-            <li><img /></li>
-            <li><img /></li>
-            <li><img /></li>
-            <li><img /></li>
-            <li><img /></li>
-            <li><img /></li>
-            <li><img /></li>
+            <li><a href="#pictures"><img src="" alt=""/></a></li>
+            <li><a href="#pictures"><img src="" alt=""/></a></li>
+            <li><a href="#pictures"><img src="" alt=""/></a></li>
+            <li><a href="#pictures"><img src="" alt=""/></a></li>
+            <li><a href="#pictures"><img src="" alt=""/></a></li>
+            <li><a href="#pictures"><img src="" alt=""/></a></li>
+            <li><a href="#pictures"><img src="" alt=""/></a></li>
+            <li><a href="#pictures"><img src="" alt=""/></a></li>
         </ul>
     </section>
 
@@ -191,7 +191,10 @@
     <script>
         var files = [
             {#page.homepage.customers_pictures}
-                '{@picture width="395" height="259" fit="crop" /}'{@sep},{/sep}
+                {
+                    src: '{@picture width="395" height="259" fit="crop" /}',
+                    url: '{link}'
+                }{@sep},{/sep}
             {/page.homepage.customers_pictures}
         ];
     </script>

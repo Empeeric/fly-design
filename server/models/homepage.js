@@ -23,7 +23,10 @@ var schema = new mongoose.Schema({
         text: Types.Text,
         url: String
     }],
-    customers_pictures: [{type: Types.Filepicker, widget: 'FilepickerPictureWidget'}],
+    customers_pictures: [{
+        link: String,
+        picture: { type: Types.Filepicker, widget: 'FilepickerPictureWidget' }
+    }],
     how_it_works: {
         title: String,
         list: [{
