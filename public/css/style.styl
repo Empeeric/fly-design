@@ -232,6 +232,8 @@ section
     padding 0 15px
   h2
     text bold white
+  a:hover h2
+    color pink
   .big
     display inline-block
     size 198px
@@ -239,11 +241,12 @@ section
     background-size contain
   for noun in key eye hand
     image = '/img/icons/'+ noun +'.png'
-    hover = '/img/icons/'+ noun +'-hover.png'
+    hovr = '/img/icons/'+ noun +'-hover.png'
     .{noun}
       background-image url(image)
-      &:hover
-        background-image url(hover)
+    a:hover
+      .{noun}
+        background-image url(hovr)
 
 #pictures
   padding 0

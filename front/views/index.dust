@@ -57,11 +57,9 @@
                     <span class="big {icon}"></span>
                     <h2>{title}</h2>
                 </a>
-
                 <p>
                     {text}
                 </p>
-                <a href="{url}" class="icon-plus"></a>
             </li>
             {/boxes}
         </ul>

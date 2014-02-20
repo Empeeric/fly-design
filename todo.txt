@@ -4,7 +4,7 @@ V   altext              10m
 
 home
 V   link sliders (1)    10m
-    big icons (2)       10m
+V   big icons (2)       10m
     random links        10m
     banner lining       10m
 

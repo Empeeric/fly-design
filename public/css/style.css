@@ -325,6 +325,9 @@ section:before {
   font-weight: bold;
   color: #fff;
 }
+#features a:hover h2 {
+  color: #ef2d61;
+}
 #features .big {
   display: inline-block;
   width: 198px;
@@ -335,19 +338,19 @@ section:before {
 #features .key {
   background-image: url("/img/icons/key.png");
 }
-#features .key:hover {
+#features a:hover .key {
   background-image: url("/img/icons/key-hover.png");
 }
 #features .eye {
   background-image: url("/img/icons/eye.png");
 }
-#features .eye:hover {
+#features a:hover .eye {
   background-image: url("/img/icons/eye-hover.png");
 }
 #features .hand {
   background-image: url("/img/icons/hand.png");
 }
-#features .hand:hover {
+#features a:hover .hand {
   background-image: url("/img/icons/hand-hover.png");
 }
 #pictures {
