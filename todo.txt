@@ -6,7 +6,7 @@ home
 V   link sliders (1)    10m
 V   big icons (2)       10m
 V   random links        10m
-    banner lining       10m
+V   banner lining       10m
 
 projects
     anchors             20m
