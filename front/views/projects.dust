@@ -15,7 +15,7 @@
 {#page.projects}
 <section id="items" class="container">
     {#items}
-    <article class="{@if cond="({$idx} + 1) % 2 == 0"}left{/if}">
+    <article id="{name|seo}" class="{@if cond="({$idx} + 1) % 2 == 0"}left{/if}">
         <section class="title" style="background-image: url({@picture width="300" height="128" fit="crop"/})">
             <h2>
                 {name}
@@ -54,7 +54,9 @@
         if (win.width() <= 500 && 'SECTION' == e.target.tagName)
             return;
         stop(e);
-        $(this).parent().toggleClass('expand').siblings().removeClass('expand');
+        var parent = $(this).parent();
+//        document.location.hash = parent.attr('id') + '/';
+        parent.toggleClass('expand').siblings().removeClass('expand');
     });
 
     $('.slider ul').responsiveSlides({
