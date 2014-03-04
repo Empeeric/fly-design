@@ -31,3 +31,23 @@ $(document).on('click touchstart', function(e) {
     if (!nav.find(e.target).length)
         nav.removeClass('open');
 });
+
+$('article .title').on('click touchstart', function(e) {
+    if (win.width() <= 500 && 'SECTION' == e.target.tagName)
+        return;
+    stop(e);
+    var parent = $(this).parent();
+//        document.location.hash = parent.attr('id') + '/';
+    parent.toggleClass('expand');
+    if(parent.hasClass('expand')){
+        var siblings = parent.siblings('.expand').first(),
+            siblings_height = siblings.length > 0 ? siblings.height() : 0,
+            sibling_offset = siblings.length > 0 ? siblings.offset().top : 0,
+            parent_offset = parent.offset().top;
+        $('html, body').animate({
+            scrollTop: parent_offset - 200 - (siblings_height && (parent_offset > sibling_offset) ? siblings_height - 130 : 0)
+        }, 400, 'linear', function(){
+            parent.siblings().removeClass('expand');
+        });
+    }
+});

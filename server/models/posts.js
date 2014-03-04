@@ -9,6 +9,8 @@ var schema = new Schema({
     title: { type: String },
     picture: {type: Types.Filepicker, widget: 'FilepickerPictureWidget'},
     text: { type: Types.Html },
+    author: String,
+    date: String,
     url: { type: String, trim: true, lowercase: true },
     order: { type: Number, editable: false, default: 0 },
     show: { type: Boolean, 'default': true }

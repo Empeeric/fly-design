@@ -50,14 +50,7 @@
 {<scripts}
 <script>
     var win = $(window), h2;
-    $('article .title').on('click touchstart', function(e) {
-        if (win.width() <= 500 && 'SECTION' == e.target.tagName)
-            return;
-        stop(e);
-        var parent = $(this).parent();
-//        document.location.hash = parent.attr('id') + '/';
-        parent.toggleClass('expand').siblings().removeClass('expand');
-    });
+
 
     $('.slider ul').responsiveSlides({
         nav: true,

@@ -1,7 +1,7 @@
 {#menu}
     {#items}
         {@if cond="'{template}' == 'projects' "}
-        <a {?dock}class="active"{:else}href="javascript:;"{/dock}>{title}</a>
+        <a {?dock}class="active"{:else}href="{#sub.items[0]}{url}{/sub.items[0]}"{/dock}>{title}</a>
 
         <nav class="second {^dock}hide{/dock}">
             <div class="container">

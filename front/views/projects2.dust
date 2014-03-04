@@ -14,7 +14,7 @@
 </div>
 
 <div id="items" class="third container">
-    {#page.customers}
+    {#page.projects}
     {#items}
     <a class="thumb" href="#{$idx}" >
         <img src="{@picture width="287" height="161" fit="crop"/}" alt="CLIENT" />
@@ -51,7 +51,7 @@
         </div>
     </article>
     {/items}
-    {/page.customers}
+    {/page.projects}
 
 </div>
 <br class="clear"/>

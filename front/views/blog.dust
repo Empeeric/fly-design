@@ -24,10 +24,11 @@
         {#post}
             <div class="box">
                 {?picture}
-                    <img class="img-responsive" src="{@picture width="600" height="220" fit="crop" /}" alt=""/>
+                    <img class="img-responsive" src="{@picture width="600" height="220" fit="crop" /}" alt="{title}"/>
                 {/picture}
 
                 <h2>{title}</h2>
+                <p>מאת: {author}, תאריך: {date}</p>
                 {text|s}
 
                 {!<nav>
@@ -48,7 +49,8 @@
                     <img class="thumb" src="{@picture width="280" height="280" fit="crop" /}" alt="{title}" />
 
                     <h3><a href="{url}">{title}</a></h3>
-                    <p>{@truncate length="300"}{text|st}{/truncate}</p>
+                    <p>מאת: {author}, תאריך: {date}</p>
+                    <p>{@truncate length="300"}{text|s}{/truncate}</p>
 
                     <a href="{url}" class="more">
                         <span>למאמר המלא</span>
