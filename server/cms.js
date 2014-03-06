@@ -53,14 +53,15 @@ var pageModels = function(req, res, next) {
                 arr.push(models.homepage.fetch());
                 break;
             case 'blog':
-                arr.push(models.posts.middleware());
+                page = req.query.page || 0;
+                arr.push(models.posts.middleware(10, page));
                 break;
             case 'projects':
-                arr.push(models.projects.byNavigationId());
+                arr.push(models.projects.byNavigationId(false));
                 arr.push(models.content.byNavigationId());
                 break;
             case 'projects2':
-                arr.push(models.projects.byNavigationId());
+                arr.push(models.projects.byNavigationId(true));
                 arr.push(models.content.byNavigationId());
                 break;
             case 'clients':

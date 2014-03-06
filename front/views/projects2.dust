@@ -16,41 +16,44 @@
 <div id="items" class="third container">
     {#page.projects}
     {#items}
-    <a class="thumb" href="#{$idx}" >
-        <img src="{@picture width="287" height="161" fit="crop"/}" alt="CLIENT" />
-        <h2>
-            {name}
-            <i class="icon-left-dir"></i>
-        </h2>
-    </a>
+        {#.}
+            <a class="thumb {@if cond="({$idx} + 1) % 3 == 0"}last{/if}" href="#{index}" >
+                <img src="{@picture width="300" height="170" fit="crop"/}" alt="CLIENT" />
+                <h2>
+                    {name}
+                    <i class="icon-left-dir"></i>
+                </h2>
+            </a>
+        {/.}
+        {#.}
+            <article id="{index}" class="{@if cond="({index} + 1) % 2 == 0"}left{/if}">
+                <section class="title">
+                    <h2>{name}</h2>
+                    <p>
+                        {description}
+                        <i class="icon-left-dir"></i>
+                    </p>
+                    <i class="icon-left-dir big"></i>
+                    <a href="#" class="icon-close"></a>
+                </section>
+                <div class="content cf">
+                    <div class="slider">
+                        <ul>
+                            {#slides}
+                                <li><img src="{@picture width="649" height="398" fit="crop"/}"/></li>
+                            {/slides}
+                        </ul>
+                    </div>
+                    <div class="inner">
+                        <h3>{title}</h3>
+                        {text|s}
+                    </div>
+                </div>
+            </article>
+        {/.}
     {/items}
 
-    {#items}
-    <article id="{$idx}" class="{@if cond="({$idx} + 1) % 2 == 0"}left{/if}">
-        <section class="title">
-            <h2>{name}</h2>
-            <p>
-                {description}
-                <i class="icon-left-dir"></i>
-            </p>
-            <i class="icon-left-dir big"></i>
-            <a href="#" class="icon-close"></a>
-        </section>
-        <div class="content cf">
-            <div class="slider">
-                <ul>
-                    {#slides}
-                        <li><img src="{@picture width="649" height="398" fit="crop"/}"/></li>
-                    {/slides}
-                </ul>
-            </div>
-            <div class="inner">
-                <h3>{title}</h3>
-                {text|s}
-            </div>
-        </div>
-    </article>
-    {/items}
+
     {/page.projects}
 
 </div>

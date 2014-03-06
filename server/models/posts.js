@@ -2,7 +2,8 @@ var mongoose = require('mongoose'),
     Schema = mongoose.Schema,
     Types = Schema.Types,
     async = require('async'),
-    dust = require('dustjs-linkedin');
+    dust = require('dustjs-linkedin'),
+    _ = require('lodash');
 
 var schema = new Schema({
     navigation: { type: Types.ObjectId, ref: 'navigation' },
@@ -20,14 +21,23 @@ schema.methods.toString = function(){
     return this.title;
 };
 
-schema.statics.middleware = function() {
+schema.statics.middleware = function(records, page) {
     var posts = this;
+    var query = posts.find({ show: true }).lean();
     return function(res, next) {
-        posts.find({ show: true })
-            .lean()
-            .exec(function(err, results) {
+        posts.paginate(query, page, records, function(err, results, count, pages){
                 if (err) return next(err);
+                var paging = {
+                    current : page,
+                    previous : (page - 1) >= 0 ? page : null,
+                    next : (page + 2) < pages ? (page + 2) : null,
+                    last : pages == page ? null : pages,
+                    range : _.range(1, pages + 1),
+                    total : count,
+                    pages : pages
+                };
                 res.locals.posts = results;
+                res.locals.paging = paging;
                 next();
             });
     };

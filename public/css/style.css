@@ -786,6 +786,7 @@ a.up .icon-up:before {
   position: absolute;
   bottom: 0px;
   right: 71%;
+  text-align: right;
 }
 #items .content .inner p {
   margin-left: 5px;
@@ -891,7 +892,6 @@ a.up .icon-up:before {
   max-height: 0;
   margin-bottom: 0;
   border-color: transparent;
-  border-left-color: #b1b4b6;
   border-right-color: #b1b4b6;
   -webkit-transition: margin-bottom 1s, max-height 1s;
 }
@@ -1044,3 +1044,58 @@ hr:before {
   filter: url("data:image/svg+xml;utf8,<svg xmlns=\'http://www.w3.org/2000/svg\'><filter id=\'grayscale\'><feColorMatrix type=\'matrix\' values=\'1 0 0 0 0, 0 1 0 0 0, 0 0 1 0 0, 0 0 0 1 0\'/></filter></svg>#grayscale");
   -webkit-filter: grayscale(0%);
 }
+
+ul.slider.rslides.rslides1 a{
+    color: #636466;
+}
+ul.slider.rslides.rslides1 a:hover{
+    color: #ef2d61;
+}
+
+/*pagination*/
+.paginate {
+    border-top: 5px solid #95ce92;
+    text-align: center;
+}
+ul.paging {
+    list-style: none;
+    margin: 32px auto 40px;
+}
+ul.paging h3,
+ul.paging li {
+    display: inline;
+    font-size: 18px;
+    color: #636466;
+    border-left: 1px solid #636466;
+    padding:  0 10px 0 13px;
+}
+ul.paging li:last-child {
+    border-left: none;
+}
+ul.paging li.active {
+    color: #95ce92;
+}
+ul.paging li a {
+    color: #636466;
+}
+ul.paging li.title {
+    color: #95ce92;
+    font-weight: bold;
+    font-size: 18px;
+    margin-left: 20px;
+    border-left: none;
+}
+ul.paging li.arrow {
+    border-top: 20px solid #95ce92;
+    border-left: transparent 18px solid;
+    border-right: transparent 18px solid;
+    width: 0;
+    padding: 0;
+    position: relative;
+    left: -53px;
+    top: -16px;
+}
+.social {
+    text-align: left;
+}
+

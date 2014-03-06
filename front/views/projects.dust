@@ -52,6 +52,7 @@
     var win = $(window), h2;
 
 
+
     $('.slider ul').responsiveSlides({
         nav: true,
         pager: true,

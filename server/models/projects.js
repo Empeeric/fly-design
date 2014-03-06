@@ -1,6 +1,8 @@
 var mongoose = require('mongoose'),
     Schema = mongoose.Schema,
-    Types = Schema.Types;
+    Types = Schema.Types,
+    _ = require('lodash'),
+    contrib = require('lodash-contrib');
 
 var schema = new Schema({
     navigation: { type: Types.ObjectId, ref: 'navigation' },
@@ -18,7 +20,7 @@ schema.methods.toString = function(){
     return this.title;
 };
 
-schema.statics.byNavigationId = function(){
+schema.statics.byNavigationId = function(partition){
     var projects = this;
     return function(res, cb){
         var page = res.locals.page;
@@ -30,9 +32,17 @@ schema.statics.byNavigationId = function(){
             .sort({'order': 1})
             .lean()
             .exec(function(err, results){
-                if(results.length) res.locals.page.projects = {items :results};
+                if(partition){
+                    var new_res =  _.forEach(results, function(obj, i){
+                        obj.index = i;
+                    });
+                   var parts = _.partitionAll(new_res, 3, null);
+                    res.locals.page.projects = {items :parts};
+                } else {
+                    if(results.length) res.locals.page.projects = {items :results};
+                }
                 cb(err);
-            })
+            });
     }
 };
 

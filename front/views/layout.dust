@@ -26,6 +26,14 @@
     <link rel="stylesheet" href="/css/mobile.css"/>
 </head>
 <body>
+<div id="fb-root"></div>
+<script>(function(d, s, id) {
+    var js, fjs = d.getElementsByTagName(s)[0];
+    if (d.getElementById(id)) return;
+    js = d.createElement(s); js.id = id;
+    js.src = "//connect.facebook.net/en_GB/all.js#xfbml=1&appId=1415708678678514";
+    fjs.parentNode.insertBefore(js, fjs);
+}(document, 'script', 'facebook-jssdk'));</script>
 
 <header class="cf">
     <div class="top container">
@@ -59,6 +67,7 @@
 
 {+content/}
 
+
 {+footer}
 <div class="container">
     <a href="#" class="up">
@@ -69,6 +78,8 @@
     </a>
 </div>
 {/footer}
+
+{+paginate/}
 
 <!-- scripts -->
 <script src="/components/jquery/jquery.min.js"></script>
