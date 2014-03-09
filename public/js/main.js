@@ -52,3 +52,10 @@ $('article .title').on('click touchstart', function(e) {
         });
     }
 });
+
+$(document).ready(function(){
+    var hash = window.location.hash;
+    if(hash && hash != ""){
+        $(hash + ' .title').click();
+    }
+});
