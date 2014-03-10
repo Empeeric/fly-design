@@ -10,6 +10,10 @@ var schema = new Schema({
     description: { type: String },
     picture: {type: Types.Filepicker, widget: 'FilepickerPictureWidget'},
     slides: [{type: Types.Filepicker, widget: 'FilepickerPictureWidget'}],
+//    slides: [{
+//        picture: {type: Types.Filepicker, widget: 'FilepickerPictureWidget'},
+//        screen: Boolean
+//    }],
     title: { type: String },
     text: { type: Types.Html },
     order: { type: Number, editable: false },

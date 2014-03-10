@@ -555,6 +555,22 @@ a.up
           background pink
     .rslides_here a
       background text-color
+  .screen
+    background: url(img/screen.png)
+    width: 649px;
+    height: 398px;
+    position: absolute;
+    left: 0; top: 0;
+    background-size: 100% 100%;
+  .screen-img
+    position: absolute;
+    left: 89px;
+    top: 52px;
+    width: 471px;
+    height: 273px;
+    -webkit-animation: screenScroll 5s infinite ease-in-out;
+    -moz-animation: screenScroll 5s infinite ease-in-out;
+    -o-animation: screenScroll 5s infinite ease-in-out;
 
   &.third
     padding-top 20px
@@ -603,6 +619,25 @@ a.up
         margin-bottom 30px
         max-height 600px
         border-color gray-dark
+
+@-webkit-keyframes screenScroll {
+  0% { background-position: 0 0; }
+  10% { background-position: 0 0; }
+  80% { background-position: 0 100%; }
+  100% { background-position: 0 0; }
+}
+@-moz-keyframes screenScroll {
+  0% { background-position: 0 0; }
+  10% { background-position: 0 0; }
+  80% { background-position: 0 100%; }
+  100% { background-position: 0 0; }
+}
+@-o-keyframes screenScroll {
+  0% { background-position: 0 0; }
+  10% { background-position: 0 0; }
+  80% { background-position: 0 100%; }
+  100% { background-position: 0 0; }
+}
 
 hr
   height 3px

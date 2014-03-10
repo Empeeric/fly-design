@@ -31,9 +31,16 @@
         <div class="content cf">
             <div class="slider">
                 <ul>
-                    {#slides}
-                    <li><img src="{@picture width="649" height="398" fit="crop"/}"/></li>
-                    {/slides}
+                {#slides}
+                    <li>
+                        {^screen}
+                            <img src="{@picture width="649" height="398" fit="crop"/}"/>
+                        {:else}
+                            <div class="screen-img" style="background-image: url({@picture width="474" fit="limit"/})"></div>
+                            <div class="screen"></div>
+                        {/screen}
+                    </li>
+                {/slides}
                 </ul>
             </div>
             <div class="inner">
