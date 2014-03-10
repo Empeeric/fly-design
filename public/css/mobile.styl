@@ -12,12 +12,18 @@
     z-index 100
 
 @media (max-width: 800px)
+  #slider nav
+    margin-right 20px
   #steps li
     col(3)
   .container
     padding-left 20px
     padding-right 20px
-
+  .blog
+    aside
+      display none
+    .box
+      width 100%
 
 @media (max-width: 650px)
   header p
@@ -45,6 +51,14 @@
         -webkit-transform translateY(0)
   #about .clients img
     col(3)
+  .blog article
+    overflow hidden
+    img.thumb
+      display block
+      float none
+      width 140%
+      margin -400px -20px 20px
+      border-bottom 1px solid #E0E1E2
 
 @media (max-width: 600px)
   #slider

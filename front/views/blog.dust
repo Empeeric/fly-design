@@ -33,7 +33,6 @@
                 <h2>{title}</h2>
                 <p>מאת: {author}, תאריך: {date}</p>
                 {text|s}
-
                 {!<nav>
                     <a href="{prev}">
                         הרשומה הקודמת
@@ -44,8 +43,8 @@
                         הרשומה הבאה
                     </a>
                 </nav>!}
-                <div class="fb-comments" data-href="http://fly-design.herokuapp.com{url}" data-width="729" data-numposts="5" data-colorscheme="light"></div>            </div>
-
+                <div class="fb-comments" data-href="http://fly-design.herokuapp.com{url}" data-width="729" data-numposts="5" data-colorscheme="light"></div>
+            </div>
         {:else}
             <div class="box">
             {#posts}
