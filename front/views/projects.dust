@@ -37,7 +37,7 @@
                             <img src="{@picture width="649" height="398" fit="crop"/}"/>
                         {:else}
                             <div class="screen-img" style="background-image: url({@picture width="474" fit="limit"/})"></div>
-                            <div class="screen"></div>
+                            <img src="/img/screen.png" />
                         {/screen}
                     </li>
                 {/slides}
@@ -57,8 +57,6 @@
 {<scripts}
 <script>
     var win = $(window), h2;
-
-
 
     $('.slider ul').responsiveSlides({
         nav: true,
