@@ -223,6 +223,7 @@ section:before {
 }
 #slider .slider li.rslides1_on h3 {
   opacity: 1;
+    color: #636466;
 }
 #slider nav {
   position: absolute;
@@ -235,13 +236,18 @@ section:before {
   width: 40px;
   height: 40px;
   font-size: 30px;
-  color: #fff;
+  color: #636466;
   text-align: center;
   background: #95ce92;
 }
 #slider nav a:hover {
   background: #ef2d61;
 }
+#slider .slider li a:hover,
+#slider .slider li a:hover h3 {
+    color: #ef2d61;
+}
+
 #slider nav a:before {
   line-height: 40px;
 }
