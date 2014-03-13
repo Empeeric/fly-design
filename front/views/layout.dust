@@ -38,9 +38,8 @@
 <header class="cf">
     <div class="top container">
         <h1>
-            <a href="/">{#config.site.logo}<img src="{@picture width="193" height="50" fit="crop" /}" alt="{config.site.name}"/>{/config.site.logo}</a>
+            <a href="/">{#config.site.logo}<img src="{@picture width="193" height="50" fit="clip" /}" alt="{config.site.name}"/>{/config.site.logo}</a>
         </h1>
-
         <p>
             לפרטים ופגישת ייעוץ
             <strong>
