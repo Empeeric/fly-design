@@ -9,7 +9,7 @@
  */
 
 (function($) {
-    var doc = $(document.documentElement);
+    var doc = $(document.body);
     $.scrll = function(to, speed, cb) {
         if (!cb && 'function' == typeof speed)
             cb = speed, speed = $.scrll.speed;

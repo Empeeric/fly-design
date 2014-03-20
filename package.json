@@ -3,7 +3,7 @@
   "version": "0.2.0",
   "private": true,
   "dependencies": {
-    "express": "",
+    "express": "< 4.0.0",
     "mongoose": "",
     "dustjs-linkedin": "",
     "dustjs-helpers": "",
