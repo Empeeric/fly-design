@@ -1,8 +1,7 @@
 var mongoose = require('mongoose'),
     Schema = mongoose.Schema,
     Types = Schema.Types,
-    _ = require('lodash'),
-    contrib = require('lodash-contrib');
+    _ = require('lodash-contrib');
 
 var schema = new Schema({
     navigation: { type: Types.ObjectId, ref: 'navigation' },
@@ -37,10 +36,10 @@ schema.statics.byNavigationId = function(partition){
             .lean()
             .exec(function(err, results){
                 if(partition){
-                    var new_res =  _.forEach(results, function(obj, i){
+                    var parts =  _(results).map(function(obj, i){
                         obj.index = i;
-                    });
-                   var parts = _.partitionAll(new_res, 3, null);
+                        return obj;
+                    }).chunkAll(3).valueOf();
                     res.locals.page.projects = {items :parts};
                 } else {
                     if(results.length) res.locals.page.projects = {items :results};
