@@ -4,15 +4,15 @@
 {#page.homepage}
 <div id="body">
     {#slider}
-    <section id="slider" class="container">
-        <ul class="slider">
+    <section id="slider" class="container" style="height:400;">
+        <ul class="slider" hidden>
             {#banners}
             <li>
                 {?url}<a href="{url}">{/url}
                     <h3>
                         {description|br|s}
                     </h3>
-                    <img src="{@picture width="652" height="400" fit="crop" /}"/>
+                    <img width=652 height=400 src="{@picture width="652" height="400" fit="crop" /}"/>
                 {?url}</a>{/url}
             </li>
             {/banners}
@@ -197,6 +197,9 @@
                 }{@sep},{/sep}
             {/page.homepage.customers_pictures}
         ];
+        $(function () {
+            $("ul.slider").fadeIn();
+        });
     </script>
     <script src="/js/elevator.js"></script>
     <script src="/js/index.js"></script>
