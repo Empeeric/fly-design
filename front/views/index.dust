@@ -4,7 +4,7 @@
 {#page.homepage}
 <div id="body">
     {#slider}
-    <section id="slider" class="container" style="height:400px;">
+    <section id="slider" class="container" style="height:460px;">
         <ul class="slider" hidden>
             {#banners}
             <li>
