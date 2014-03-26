@@ -148,17 +148,23 @@
                 <input type="text" name="email" placeholder="דוא&quot;ל"/>
                 <textarea name="massage" placeholder="הודעה"></textarea>
                 <button type="submit">
-                    שלח
+שלח
                     <i class="icon-left"></i>
                 </button>
             </form>
             <div class="col">
-                <img src="{@picture path="map" width="188" height="267" /}" class="map"/>
+                <a href="https://goo.gl/maps/lp0F3" target="_blank">
+                    <img src="{@picture path="map" width="188" height="267" /}" class="map"/>
+                </a>
 
                 <p>
-                    {text}<br>
-                    טלפון: <strong>{phone}</strong><br/>
-                    או למייל: {email}
+                    {text}
+                    <br/>
+טלפון:
+                    <a href="tel:{phone}">{phone}</a>
+                    <br/>
+או למייל:
+                    <a href="mailto:{email}">{email}</a>
                     <br />
                     <a href="{facebook}" class="icon-fb"></a>
                 </p>
@@ -175,7 +181,7 @@
         <a href="#" class="up">
             <i class="icon-up"></i>
             <span>
-                חזרה לראש העמוד
+חזרה לראש העמוד
             </span>
         </a>
     </div>
