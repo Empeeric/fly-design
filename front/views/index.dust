@@ -114,7 +114,7 @@
 
     {#us}
     <section id="we">
-        <img src="{@picture width="1583" height="557" fit="crop" /}" class="cover"/>
+        <img src="{picture.url}" class="cover"/>
         <h2>
             {title}
         </h2>

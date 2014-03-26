@@ -4,12 +4,13 @@
 {#page.about}
 <section id="about">
     {#picture}
-    <h1>
-        {title}
-    </h1>
+    <h1>{title}</h1>
+
     <hr />
 
-    <img src="{@picture width="800" height="604" fit="crop" /}" class="container"/>
+    <center>
+        <img width=800 height=600 src="{@picture width="800" height="600" fit="crop" /}" />
+    </center>
     {/picture}
 
     {#text}
