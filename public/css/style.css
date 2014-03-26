@@ -1,7 +1,6 @@
 * {
   box-sizing: border-box;
 }
-
 .cf,
 section {
   zoom: 1;
@@ -916,6 +915,9 @@ a.up .icon-up:before {
   margin-bottom: 30px;
   max-height: 600px;
   border-color: #b1b4b6;
+}
+#items.third .inner {
+  text-align: right;
 }
 @-webkit-keyframes screenScroll {
   0% {
