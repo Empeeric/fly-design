@@ -1,6 +1,7 @@
 * {
   box-sizing: border-box;
 }
+
 .cf,
 section {
   zoom: 1;
@@ -223,7 +224,6 @@ section:before {
 }
 #slider .slider li.rslides1_on h3 {
   opacity: 1;
-    color: #636466;
 }
 #slider nav {
   position: absolute;
@@ -236,18 +236,13 @@ section:before {
   width: 40px;
   height: 40px;
   font-size: 30px;
-  color: #636466;
+  color: #fff;
   text-align: center;
   background: #95ce92;
 }
 #slider nav a:hover {
   background: #ef2d61;
 }
-#slider .slider li a:hover,
-#slider .slider li a:hover h3 {
-    color: #ef2d61;
-}
-
 #slider nav a:before {
   line-height: 40px;
 }
@@ -852,7 +847,7 @@ a.up .icon-up:before {
   position: absolute;
   left: 13.6%;
   top: 13%;
-  width: 72.5%;
+  width: 72.7%;
   height: 68.6%;
   background-size: 100%;
   -webkit-animation: screenScroll 5s infinite ease-in-out;

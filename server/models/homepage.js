@@ -56,7 +56,7 @@ var schema = new mongoose.Schema({
 schema.statics.fetch = function(){
     var homepage = this;
     return function(res, cb){
-        homepage.findOne().exec(function(err, result){
+        homepage.findOne().lean().exec(function(err, result){
             if(result) res.locals.page.homepage = result;
             cb(err);
         })

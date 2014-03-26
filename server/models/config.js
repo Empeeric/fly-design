@@ -1,3 +1,4 @@
+'use strict';
 var mongoose = require('mongoose'),
     Schema = mongoose.Schema,
     Types = Schema.Types;
@@ -28,8 +29,9 @@ var schema = new Schema({
  */
 schema.statics.middleware = function() {
     var config = this;
+    var homepage = this.base.models.homepage;
     return function(req, res, next) {
-        config.findOne().lean().exec(function(err, config) {
+        config.findOne().lean().exec().then(function(config) {
 
             res.locals.http_params = {
                 query: req.query,
@@ -40,9 +42,13 @@ schema.statics.middleware = function() {
             };
 
             res.locals.config = config;
-            next(err);
-        });
-    }
+
+            return homepage.findOne().lean().exec();
+        }).then(function (homepageDoc) {
+            res.locals.contact = homepageDoc.contact;
+            next();
+        }).end();
+    };
 };
 
 schema.formage = {
