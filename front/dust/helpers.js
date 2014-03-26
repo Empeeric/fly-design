@@ -7,11 +7,9 @@ var dust = require('dustjs-helpers'),
 // path is assumed to be picture in the current context
 // {@picture [ path="photo", width="150" height="150" crop="fill" ] /}
 dust.helpers.picture = function (chunk, ctx, bodies, params) {
-    params || (params = {});
+    params = params || {};
 
-    ctx = params.path
-        ? ctx.get(params.path)
-        : ctx.current();
+    ctx = params.path ? ctx.get(params.path) : ctx.current();
 
     if (ctx.picture)
         ctx = ctx.picture;
@@ -19,16 +17,14 @@ dust.helpers.picture = function (chunk, ctx, bodies, params) {
     if (!ctx || !ctx.url)
         return chunk;
 
-    var format = ctx.mimetype.split('/')[1] == 'png' ? 'png' : 'jpg';
 
-    var filepicker_url = ctx.url + '/convert?';
+    var filepicker_url = ctx.url;
     var sizeparams = [];
-    sizeparams.push('format=' + format);
     if (params.width) sizeparams.push('w=' + params.width);
     if (params.height) sizeparams.push('h=' + params.height);
     if (params.fit) sizeparams.push('fit=' + params.fit);
     if (params.align) sizeparams.push('align=' + params.align);
-    filepicker_url += sizeparams.join('&');
+    if (sizeparams.length) filepicker_url = filepicker_url + '/convert?quality=85&' + sizeparams.join('&');
     return chunk.write(filepicker_url);
 };
 
