@@ -8,6 +8,7 @@ var schema = new Schema({
         logo: {type: Types.Filepicker, widget: 'FilepickerPictureWidget'},
         icon: {type: Types.Filepicker, widget: 'FilepickerPictureWidget'},
         name: String,
+        url: String,
         homepage: String
     },
     contact: {

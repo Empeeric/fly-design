@@ -6,14 +6,14 @@
 
     <title>{config.site.name} - {page.title}</title>
     {#page.meta}
-    <meta name="{name}" content="{content}"/>
+        <meta name="{name}" content="{content}"/>
     {/page.meta}
     {#config.site.icon}
-    <link rel="icon" type="image/png" href="{@picture width="16" height="16" fit="clip"/}">
-    <link rel="apple-touch-icon" href="{@picture width="57" height="57" fit="clip"/}">
-    <link rel="apple-touch-icon" sizes="114x114" href="{@picture width="114" height="114" fit="clip"/}">
-    <link rel="apple-touch-icon" sizes="72x72" href="{@picture width="72" height="72" fit="clip"/}">
-    <link rel="apple-touch-icon" sizes="144x144" href="{@picture width="144" height="144" fit="clip"/}">
+        <link rel="icon" type="image/png" href="{@picture width="16" height="16" fit="clip"/}">
+        <link rel="apple-touch-icon" href="{@picture width="57" height="57" fit="clip"/}">
+        <link rel="apple-touch-icon" sizes="114x114" href="{@picture width="114" height="114" fit="clip"/}">
+        <link rel="apple-touch-icon" sizes="72x72" href="{@picture width="72" height="72" fit="clip"/}">
+        <link rel="apple-touch-icon" sizes="144x144" href="{@picture width="144" height="144" fit="clip"/}">
     {/config.site.icon}
 
     <link rel="stylesheet" href="http://fonts.googleapis.com/css?family=Merriweather+Sans:400,300"/>
@@ -27,29 +27,34 @@
 </head>
 <body>
 <div id="fb-root"></div>
-<script>(function(d, s, id) {
+<script>(function (d, s, id) {
     var js, fjs = d.getElementsByTagName(s)[0];
     if (d.getElementById(id)) return;
-    js = d.createElement(s); js.id = id;
+    js = d.createElement(s);
+    js.id = id;
     js.src = "//connect.facebook.net/en_GB/all.js#xfbml=1&appId=1415708678678514";
     fjs.parentNode.insertBefore(js, fjs);
 }(document, 'script', 'facebook-jssdk'));</script>
 
 <header class="cf">
     <div class="top container" itemscope itemtype="http://data-vocabulary.org/LocalBusiness">
-        <h1>
-            <a itemtype="url" href="/">{#config.site.logo}<img src="{@picture width="193" height="50" fit="clip" /}" alt="{config.site.name}"/>{/config.site.logo}</a>
-        </h1>
+        <a id="logolink" itemtype="url" href="{config.site.url}" title="{config.site.name}">
+            {#config.site.logo}
+                <img id="logo" itemprop="logo" src="{@picture /}" alt="{config.site.name}"/>
+            {/config.site.logo}
+        </a>
+
         <p>
             לפרטים ופגישת ייעוץ
             <strong>
-התקשרו
+                התקשרו
                 <a itemtype="telephone" href="tel:{config.contact.phone}">{config.contact.phone}</a>
             </strong>
             לפניה
             <strong>
                 <a href="/#mail">
-                במייל<i class="icon-left-dir"></i>
+במייל
+                    <i class="icon-left-dir"></i>
                 </a>
             </strong>
         </p>
@@ -65,30 +70,30 @@
     </div>
 </header>
 
-{+content/}
+    {+content/}
 
 
-{+footer}
-<div class="container">
-    <a href="#" class="up">
-        <i class="icon-up"></i>
+    {+footer}
+    <div class="container">
+        <a href="#" class="up">
+            <i class="icon-up"></i>
             <span>
                 חזרה לראש העמוד
             </span>
-    </a>
-</div>
-{/footer}
+        </a>
+    </div>
+    {/footer}
 
-{+paginate/}
+    {+paginate/}
 
 <!-- scripts -->
 <script src="/components/jquery/jquery.min.js"></script>
 <script src="/components/resp-slides/responsiveslides.js"></script>
 <script src="/js/jquery.scrll.js"></script>
 <script src="/js/main.js"></script>
-{! var p = {page|js|s}; !}
+    {! var p = {page|js|s}; !}
 
-{+scripts/}
+    {+scripts/}
 
 </body>
 </html>

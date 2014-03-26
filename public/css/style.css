@@ -96,15 +96,10 @@ header .top {
   height: 100px;
   padding: 10px;
 }
-header h1 {
+header a#logolink {
   float: left;
   margin: 15px;
-}
-header h1 a {
   display: block;
-/*background url(../img/logo.png)*/
-  width: 193px;
-  height: 50px;
   font-size: 0;
 }
 header p {
@@ -1039,8 +1034,10 @@ hr:before {
 #about {
   padding-top: 10px;
 }
-#about h1 {
+#about h2 {
   color: #95ce92;
+  font-size: 2em;
+  margin: 0.67em 0;
 }
 #about .col {
   float: right;

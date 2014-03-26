@@ -1,49 +1,49 @@
 {>layout/}
 
 {<content}
-{#page.about}
-<section id="about">
-    {#picture}
-    <h1>{title}</h1>
+    {#page.about}
+        <section id="about">
+            {#picture}
+                <h2>{title}</h2>
 
-    <hr />
+                <hr/>
 
-    <center>
-        <img width=800 height=600 src="{@picture width="800" height="600" fit="crop" /}" />
-    </center>
-    {/picture}
+                <center>
+                    <img width=800 height=600 src="{@picture width="800" height="600" fit="crop" /}"/>
+                </center>
+            {/picture}
 
-    {#text}
-    <h1>
-    {title}
-    </h1>
-    <hr/>
+            {#text}
+                <h2>
+                    {title}
+                </h2>
+                <hr/>
 
-    <div class="container cf">
-        <div class="col">
-            {text_col_1|s}
-        </div>
-        <div class="col">
-            {text_col_2|s}
-        </div>
-    </div>
-    {/text}
+                <div class="container cf">
+                    <div class="col">
+                        {text_col_1|s}
+                    </div>
+                    <div class="col">
+                        {text_col_2|s}
+                    </div>
+                </div>
+            {/text}
 
-    {#list}
-    <h1>
-    {title}
-    </h1>
-    <hr/>
+            {#list}
+                <h2 id="{title}">
+                    {title}
+                </h2>
+                <hr/>
 
-    <ol class="container chess cf">
-        {#list}
-        <li>
-            <h3>{@math key="{$idx}" method="add" operand="1"/}.</h3>
-            {.|br|s}
-        </li>
-        {/list}
-    </ol>
-    {/list}
-</section>
-{/page.about}
+                <ol class="container chess cf">
+                    {#list}
+                        <li>
+                            <h3>{@math key="{$idx}" method="add" operand="1"/}.</h3>
+                            {.|br|s}
+                        </li>
+                    {/list}
+                </ol>
+            {/list}
+        </section>
+    {/page.about}
 {/content}
