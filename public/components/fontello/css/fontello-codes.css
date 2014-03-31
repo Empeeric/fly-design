@@ -1,6 +1,8 @@
 
 .icon-left-dir:before { content: '\e802'; } /* '' */
 .icon-fb:before { content: '\e800'; } /* '' */
+.icon-gplus-squared:before { content: '\e803'; } /* '' */
+.icon-youtube-squared:before { content: '\e804'; } /* '' */
 .icon-close:before { content: '\e801'; } /* '' */
 .icon-plus:before { content: '\e809'; } /* '' */
 .icon-down:before { content: '\e805'; } /* '' */
