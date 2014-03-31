@@ -166,7 +166,9 @@
 או למייל:
                     <a href="mailto:{email}">{email}</a>
                     <br />
-                    <a href="{facebook}" class="icon-fb"></a>
+                    <a href="{facebook}" class="icon-fb icon-fontello"></a>
+                    <a href="{youtube}" class="icon-gplus-squared icon-fontello"></a>
+                    <a href="{googleplus}" class="icon-youtube-squared icon-fontello"></a>
                 </p>
 
                 <p class="bottom">
