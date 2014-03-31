@@ -21,7 +21,7 @@
   body {
     padding-top: 163px;
   }
-  header {
+  body > header {
     position: fixed;
     top: 0;
     right: 0;
@@ -48,10 +48,10 @@
   }
 }
 @media (max-width: 650px) {
-  header p {
+  body > header p {
     font-size: 14px;
   }
-  header p strong {
+  body > header p strong {
     font-size: 12px;
   }
   #slider img {
@@ -92,7 +92,7 @@
     display: block;
     float: none;
     width: 140%;
-    margin: -250px -20px 20px;
+    margin: -400px -20px 20px;
     border-bottom: 1px solid #e0e1e2;
   }
 }
@@ -111,35 +111,35 @@
   .head-box {
     margin-top: 100px;
   }
-  header {
+  body > header {
     margin-bottom: 45px;
   }
-  header .top {
+  body > header .top {
     height: auto;
   }
-  header p {
+  body > header p {
     padding: 0;
     clear: both;
   }
-  header .navs {
+  body > header .navs {
     width: 100%;
     position: absolute;
     right: 0;
     top: 100%;
   }
-  header .navs.open nav a {
+  body > header .navs.open nav a {
     display: block;
   }
-  header nav .container {
+  body > header nav .container {
     padding: 0;
   }
-  header nav a {
+  body > header nav a {
     display: none;
   }
-  header nav a.active {
+  body > header nav a.active {
     display: block;
   }
-  header nav .icon-left-dir {
+  body > header nav .icon-left-dir {
     display: block;
     position: absolute;
     left: 3px;
@@ -147,10 +147,10 @@
     font-size: 30px;
     -webkit-transform: rotate(-90deg);
   }
-  header nav.second {
+  body > header nav.second {
     position: static;
   }
-  header nav.second a {
+  body > header nav.second a {
     padding: 10px 20px;
   }
   #quote {

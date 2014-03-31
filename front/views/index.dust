@@ -24,9 +24,9 @@
 
         {?title}
         <div class="banner">
-            <h4>
+            <header>
                 {title}
-            </h4>
+            </header>
 
             <p>{lead}</p>
             <a href="{url}" class="icon-plus"></a>

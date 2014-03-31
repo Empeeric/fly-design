@@ -86,74 +86,74 @@ img.container {
   position: relative;
   z-index: 2;
 }
-header {
+body > header {
   width: 100%;
   background: #fff;
   position: relative;
   z-index: 40;
 }
-header .top {
+body > header .top {
   height: 100px;
   padding: 10px;
 }
-header a#logolink {
+body > header a#logolink {
   float: left;
   margin: 15px;
   display: block;
   font-size: 0;
 }
-header p {
+body > header p {
   margin: 0;
   padding: 30px 0 10px;
   font-size: 18px;
 }
-header p strong {
+body > header p strong {
   font-size: 16px;
 }
-header nav {
+body > header nav {
   background: #cccecf;
   position: relative;
 }
-header nav .icon-left-dir {
+body > header nav .icon-left-dir {
   display: none;
 }
-header nav a {
+body > header nav a {
   display: inline-block;
   padding: 10px 20px;
   line-height: 20px;
   color: #636466;
 }
-header nav a.active {
+body > header nav a.active {
   font-size: 12px;
   line-height: 20px;
   font-weight: bold;
   color: #ef2d61;
 }
-header nav a.hover {
+body > header nav a.hover {
   color: #ef2d61;
 }
-header nav a:hover + nav.second,
-header nav nav:hover {
+body > header nav a:hover + nav.second,
+body > header nav nav:hover {
   display: block !important;
 }
-header nav.second {
+body > header nav.second {
   background: #636466;
 }
 @media (min-width: 500px) {
-  header nav.second {
+  body > header nav.second {
     position: absolute;
     top: 100%;
     right: 0;
     left: 0;
   }
 }
-header nav.second a {
+body > header nav.second a {
   padding: 10px 15px;
   line-height: 13px;
   color: #fff;
 }
-header nav.second a.active,
-header nav.second a:hover {
+body > header nav.second a.active,
+body > header nav.second a:hover {
   background: #ef2d61;
   font-size: 16px;
   font-weight: normal;
@@ -253,7 +253,7 @@ section:before {
   text-align: center;
   border-radius: 50%;
 }
-#slider .banner h4,
+#slider .banner header,
 #slider .banner p {
   margin: 0;
   padding: 0;
@@ -992,7 +992,7 @@ hr:before {
 }
 .blog h2,
 .blog h3,
-.blog h4 {
+.blog header {
   color: #95ce92;
 }
 .blog h3 {

@@ -7,9 +7,9 @@
 @media (min-height: 700px) and (min-width: 500px)
   body
     padding-top 163px
-  header
-    fixed top right
-    z-index 100
+    > header
+      fixed top right
+      z-index 100
 
 @media (max-width: 800px)
   #slider nav
@@ -26,7 +26,7 @@
       width 100%
 
 @media (max-width: 650px)
-  header p
+  body > header p
     text 14px
     strong
       text 12px
@@ -72,7 +72,7 @@
 @media (max-width: 500px)
   .head-box
     margin-top 100px
-  header
+  body > header
     margin-bottom 45px
     .top
       height auto

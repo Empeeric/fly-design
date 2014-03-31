@@ -11,9 +11,9 @@
         <hr />
 
         <aside>
-            <h4>
+            <header>
                 רשומות אחרונות:
-            </h4>
+            </header>
             <ul>
                 {#posts}
                     <li><a href="{url}">{title}</a></li>
