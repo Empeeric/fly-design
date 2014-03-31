@@ -618,14 +618,14 @@ section:before {
   float: right;
   font-size: 16px;
 }
-#contact a.icon-fb {
+#contact a.icon-fontello {
   font-size: 28px;
   color: #636466;
 }
-#contact a.icon-fb:hover {
+#contact a.icon-fontello:hover {
   color: #fff;
 }
-#contact a.icon-fb:before {
+#contact a.icon-fontello:before {
   margin: 0;
 }
 footer {
