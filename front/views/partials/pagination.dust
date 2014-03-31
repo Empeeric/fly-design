@@ -21,30 +21,5 @@
         </li>
     </ul>
     {/paging}
-</div>
 
-{!{@paging count=count records=records}!}
-    {!<ul>!}
-    {!{?previous}!}
-            {!<li>!}
-                {!<a href="{prelink}{previous}"><span class="icon-double-angle-left"></span></a>!}
-            {!</li>!}
-    {!{/previous}!}
-    {!{#range}!}
-{!{@eq key=current type="number" value=.}!}
-    {!<li class="current">!}
-        {!<span class="page-number">{.}</span>!}
-    {!</li>!}
-{!{:else}!}
-    {!<li>!}
-        {!<a href="{prelink}{.}"><span class="page-number">{.}</span></a>!}
-    {!</li>!}
-{!{/eq}!}
-{!{/range}!}
-{!{?next}!}
-    {!<li>!}
-        {!<a href="{prelink}{next}"><span class="page-number icon-double-angle-right"></span></a>!}
-    {!</li>!}
-{!{/next}!}
-{!</ul>!}
-{!{/paging}!}
+</div>
