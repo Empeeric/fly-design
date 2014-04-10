@@ -1153,3 +1153,7 @@ ul.paging li.arrow {
   border-top: 5px solid #95ce92;
   text-align: center;
 }
+#about center img {
+  width: 800px;
+  height: 600px;
+}
