@@ -39,7 +39,7 @@ var getByUrl = function(req, res, next) {
                 res.locals.post = _.omit(post, 'navigation');
             }
             next(err);
-        })
+        });
     });
 };
 

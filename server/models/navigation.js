@@ -70,16 +70,14 @@ schema.statics.crumbs = function() {
 
         var parent = function(id) {
             nav.findById(id)
-                .select('parent url title')
+                .select('parent url title menu')
                 .lean()
                 .exec(function(err, page) {
                     if (err) return next(err);
-                    if (page) {
-                        crumbs.push(page);
-                        return parent(page.parent);
-                    }
+                    if (page) crumbs.push(page);
+                    if (!page.menu) return parent(page.parent);
                     res.locals.crumbs = crumbs.reverse();
-                    next();
+                    return next();
                 });
         };
 
