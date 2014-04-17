@@ -1,5 +1,6 @@
-var registry = require('./global'),
-    app = require.main.exports.app,
+'use strict';
+
+var app = require.main.exports.app,
     models = require('./models'),
     dust = require('dustjs-linkedin'),
     async = require('async'),
@@ -97,16 +98,17 @@ app.get('*', [ config, getByUrl, crumbs, menu, pageModels], function (req, res, 
     res.render(res.locals.page.template || 'index');
 });
 
-app.use(function (req, res) {
-    res.locals.page || (res.locals.page = {});
+app.use(function (err, req, res, next) {
+    console.log(err);
 
-    if(res.locals.config&&res.locals.config._404){
+    res.locals.page = res.locals.page || {};
+    if(res.locals.config && res.locals.config._404) {
         res.locals.page.title = res.locals.config._404.title;
         res.locals.page.content = res.locals.config._404.content;
-    }else{
+    } else {
         res.locals.page.title = 'Page not found';
-        res.locals.page.content = 'The page you are looking for no longer exists.'
+        res.locals.page.content = 'The page you are looking for no longer exists.';
     }
 
-    res.status(404).render('404');
+    return res.status(404).render('404');
 });
