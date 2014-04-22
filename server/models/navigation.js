@@ -8,7 +8,8 @@ var _ = require('lodash'),
 
 var schema = new Schema({
     parent: { type: Types.ObjectId, ref: 'navigation' },
-    title: { type: String, required: true, trim: true },
+    title: { type: String, trim: true },
+    menu_label: { type: String, required: true, trim: true },
     url: { type: String, trim: true, lowercase: true, unique: true },
     template: { type:  String, enum: views, default: 'index' },
     order: { type: Number, editable: false, default: 0 },
@@ -34,14 +35,14 @@ schema.statics.byURL = function(url, cb) {
 
 schema.statics.findRecursive = function(cb) {
     this.find({ show: true, menu: true })
-        .select('order parent url title template')
+        .select('order parent url title menu_label template')
         .sort({ parent: -1, order: 1 })
         .lean()
         .exec(function(err, items) {
-            if (err) cb(err);
-
+            if (err) return cb(err);
             var o = {};
             items.forEach(function(item) {
+                item.menu_label = item.menu_label || item.title || 'XXX';
                 item.sub = {items: []};
                 o[item._id] = item;
             });
@@ -110,15 +111,15 @@ schema.statics.menu = function(){
             menu.forEach(function(item, i){
                 item.dock = (crumbs&&crumbs[0]&&crumbs[0]._id.toString() === item._id.toString());
                 item.sub.items.forEach(function(sub, index){
-                    sub.dock = (res.locals.page&&res.locals.page._id == sub._id.toString());
+                    sub.dock = (res.locals.page&&res.locals.page._id === sub._id.toString());
                 });
-                item.last = (i + 1 == menu.length);
+                item.last = (i + 1 === menu.length);
             });
 
-            if(menu) res.locals.menu = {items: menu};
+            if (menu) res.locals.menu = {items: menu};
             next(err);
         });
-    }
+    };
 };
 
 schema.pre('validate', function(next) {

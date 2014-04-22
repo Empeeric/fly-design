@@ -4,7 +4,7 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
-    <title>{config.site.name} - {page.title}</title>
+    <title>{config.site.name} - {?page.title}{page.title}{:else}{?page.menu_label}{page.menu_label}{/page.menu_label}{/page.title}</title>
     {#page.meta}
         <meta name="{name}" content="{content}"/>
     {/page.meta}
