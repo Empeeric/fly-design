@@ -74,11 +74,12 @@ schema.statics.crumbs = function() {
                 .lean()
                 .exec(function(err, page) {
                     if (err) return next(err);
-                    if (!page) return next(new Error("not found"));
-                    if (page) crumbs.push(page);
-                    if (!page.menu) return parent(page.parent);
+                    if (page) {
+                        crumbs.push(page);
+                        return parent(page.parent);
+                    }
                     res.locals.crumbs = crumbs.reverse();
-                    return next();
+                    next();
                 });
         };
 
