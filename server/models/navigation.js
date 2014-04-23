@@ -69,7 +69,11 @@ schema.statics.crumbs = function() {
         var crumbs = [];
 
         var parent = function(id, depth) {
-            if (depth > 3) return;
+            if (depth > 2) {
+                res.locals.crumbs = crumbs.reverse();
+                next();
+                return;
+            }
             nav.findById(id)
                 .select('parent url title menu')
                 .lean()
