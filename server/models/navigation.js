@@ -68,7 +68,8 @@ schema.statics.crumbs = function() {
     return function(req, res, next) {
         var crumbs = [];
 
-        var parent = function(id) {
+        var parent = function(id, depth) {
+            if (depth > 3) return;
             nav.findById(id)
                 .select('parent url title menu')
                 .lean()
@@ -76,7 +77,7 @@ schema.statics.crumbs = function() {
                     if (err) return next(err);
                     if (page) {
                         crumbs.push(page);
-                        return parent(page.parent);
+                        return parent(page.parent, depth + 1);
                     }
                     res.locals.crumbs = crumbs.reverse();
                     next();
@@ -89,7 +90,7 @@ schema.statics.crumbs = function() {
 
         if (res.locals.page) {
             crumbs.push(res.locals.page);
-            parent(res.locals.page.parent);
+            parent(res.locals.page.parent, 1);
         }
         else next();
     }
