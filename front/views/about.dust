@@ -38,7 +38,7 @@
                 <ol class="container chess cf">
                     {#list}
                         <li>
-                            <h3>{@math key="{$idx}" method="add" operand="1"/}.</h3>
+                            <strong>{@math key="{$idx}" method="add" operand="1"/}.</strong>
                             {.|br|s}
                         </li>
                     {/list}

@@ -719,16 +719,16 @@ a.up .icon-up:before {
   right: 95%;
   border-width: 20px;
 }
-#items article .title h2,
+#items article .title header,
 #items article .title p {
   margin: 0;
 }
-#items article .title h2 {
+#items article .title header {
   font-size: 40px;
   text-align: right;
   font-weight: normal;
 }
-#items article .title h2 i {
+#items article .title header i {
   display: none;
   float: left;
   margin-left: -10px;
@@ -779,7 +779,7 @@ a.up .icon-up:before {
 }
 #items .content .inner {
   position: absolute;
-  bottom: 0px;
+  top: 0px;
   right: 71%;
 }
 #items .content .inner p {
@@ -990,13 +990,9 @@ hr:before {
   content: '';
   border-top-color: #8a8c8e;
 }
-.blog h2,
-.blog h3,
+.blog h1,
 .blog header {
   color: #95ce92;
-}
-.blog h3 {
-  font-size: 120%;
 }
 .blog aside {
   float: right;
@@ -1017,6 +1013,9 @@ hr:before {
 .blog article img.thumb {
   float: right;
   margin: -20px -20px -20px 20px;
+}
+.blog article header {
+  font-size: 120%;
 }
 .blog .more {
   float: left;
@@ -1049,11 +1048,6 @@ hr:before {
 #about .col:last-child {
   padding-right: 20px;
 }
-#about h3 {
-  margin: 0;
-  color: #95ce92;
-  font-size: 16px;
-}
 #about .chess {
   padding: 0;
   list-style: none;
@@ -1085,8 +1079,10 @@ hr:before {
 #about .chess li:hover {
   background: #fff;
 }
-#about .chess h3 {
+#about .chess strong {
+  margin: 0;
   font-size: 35px;
+  font-weight: normal;
   color: #636466;
 }
 #about .clients {

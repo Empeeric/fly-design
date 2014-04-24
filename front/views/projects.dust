@@ -17,10 +17,10 @@
     {#items}
     <article id="{name|seo}" class="{@if cond="({$idx} + 1) % 2 == 0"}left{/if}">
         <section class="title" style="background-image: url({@picture width="300" height="128" fit="crop"/})">
-            <h2>
+            <header>
                 {name}
                 <i class="icon-left-dir"></i>
-            </h2>
+            </header>
             <p>
                 {description}
                 <i class="icon-left-dir"></i>
@@ -44,7 +44,7 @@
                 </ul>
             </div>
             <div class="inner">
-                <h3>{title}</h3>
+                {?title}<header>{title}</header>{/title}
                 {text|s}
             </div>
         </div>
