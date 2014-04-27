@@ -1,3 +1,4 @@
+/*global $,window */
 /*
     elevator.js 0.1
     -- scrolling animations and parallaxes
@@ -15,7 +16,7 @@
     0 pixels from top,   opacity: 0
     500 pixels from top, opacity: 1
  */
-
+'use strict';
 (function() {
     var listeners = [],
         w = $(window).scroll(function() {
@@ -36,10 +37,6 @@
         return this;
     };
 
-    var num = function(num) {
-        return num.match(/-?\d+/);
-    };
-
     var animation = function(prop, start, end) {
         if (start.top > end.top || start.bottom < end.bottom) {
             var temp = start;
@@ -47,35 +44,25 @@
             end = temp;
         }
 
-//        var unit = '';
-//        if ('string' == typeof start.val) {
-//            unit = start.val.match(/\D+/);
-//            start.val = num(start.val);
-//            end.val = num(end.val);
-//        }
-
         return function(scroll_top, window_height) {
             var offset = this.offset().top,
                 distance = offset - scroll_top,
                 c;
 
-            if (start.top == undefined)
-                start.top = window_height - start.bottom;
-            if (end.top == undefined)
-                end.top = window_height - end.bottom;
+            if (!('top' in start)) start.top = window_height - start.bottom;
+            if (!('top' in end)) end.top = window_height - end.bottom;
 
             if (distance < start.top)
                 c = start.val;
             else if (distance > end.top)
                 c = end.val;
             else
-                c = (distance - start.top)
-                    / (end.top - start.top)
-                    * (end.val - start.val)
-                    + start.val;
-//                    + unit;
+                c = (distance - start.top) /
+                    (end.top - start.top) *
+                    (end.val - start.val) +
+                    start.val;
 
             this.css(prop, c);
-        }
+        };
     };
 })();

@@ -132,68 +132,9 @@
     {/us}
 </div>
 
-<footer>
-    {#contact}
-    <section id="contact">
-        <div class="container">
-            <h2>
-                {title}
-            </h2>
-
-            <form action="/thank-you" method="post">
-                <input type="text" name="name" placeholder="שם"/>
-                <input type="text" name="company" placeholder="חברה"/>
-                <input type="text" name="address" placeholder="כתובת"/>
-                <input type="text" name="phone" placeholder="טלפון"/>
-                <input type="text" name="email" placeholder="דוא&quot;ל"/>
-                <textarea name="massage" placeholder="הודעה"></textarea>
-                <button type="submit">
-שלח
-                    <i class="icon-left"></i>
-                </button>
-            </form>
-            <div class="col">
-                <a href="https://goo.gl/maps/lp0F3" target="_blank">
-                    <img src="{@picture path="map" width="188" height="267" /}" class="map"/>
-                </a>
-
-                <p>
-                    {text}
-                    <br/>
-טלפון:
-                    <a href="tel:{phone}">{phone}</a>
-                    <br/>
-או למייל:
-                    <a href="mailto:{email}">{email}</a>
-                    <br />
-                    <a href="{facebook}" class="icon-fb icon-fontello"></a>
-                    <a href="{youtube}" class="icon-gplus-squared icon-fontello"></a>
-                    <a href="{googleplus}" class="icon-youtube-squared icon-fontello"></a>
-                </p>
-
-                <p class="bottom">
-                    {address}
-                </p>
-            </div>
-        </div>
-    </section>
-    {/contact}
-
-    <div class="container">
-        <a href="#" class="up">
-            <i class="icon-up"></i>
-            <span>
-חזרה לראש העמוד
-            </span>
-        </a>
-    </div>
-</footer>
-
-<div class="footer-padding" id="mail"></div>
 {/page.homepage}
 {/content}
 
-{<footer}{/footer}
 
 {<scripts}
     <script>
