@@ -23,7 +23,7 @@ schema.methods.toString = function(){
 
 schema.statics.middleware = function(records, page) {
     var posts = this;
-    var query = posts.find({ show: true }).lean();
+    var query = posts.find({ show: true }).sort({order: 1}).lean();
     return function(res, next) {
         posts.paginate(query, page, records, function(err, results, count, pages){
                 if (err) return next(err);

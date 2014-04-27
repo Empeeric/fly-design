@@ -109,6 +109,7 @@ schema.statics.menu = function(){
         console.log();
         navigation.findRecursive(function(err, menu) {
             menu.forEach(function(item, i){
+                item.menu_label = item.menu_label || item.title;
                 item.dock = (crumbs&&crumbs[0]&&crumbs[0]._id.toString() === item._id.toString());
                 item.sub.items.forEach(function(sub, index){
                     sub.dock = (res.locals.page&&res.locals.page._id === sub._id.toString());
