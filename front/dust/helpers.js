@@ -18,7 +18,7 @@ dust.helpers.picture = function (chunk, ctx, bodies, params) {
         return chunk;
 
 
-    var filepicker_url = ctx.url;
+    var filepicker_url = ctx.url.replace('www.filepicker.io', 'cdn.empeeric.com');
     var sizeparams = [];
     if (params.width) sizeparams.push('w=' + params.width);
     if (params.height) sizeparams.push('h=' + params.height);
