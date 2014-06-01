@@ -254,7 +254,7 @@ section:before {
   text-align: center;
   border-radius: 50%;
 }
-#slider .banner header,
+#slider .banner h3,
 #slider .banner p {
   margin: 0;
   padding: 0;
