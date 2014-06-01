@@ -129,9 +129,9 @@
                         או למייל:
                         <a href="mailto:{email}">{email}</a>
                         <br/>
-                        <a href="{facebook}" class="icon-fb icon-fontello"></a>
-                        <a href="{youtube}" class="icon-gplus-squared icon-fontello"></a>
-                        <a href="{googleplus}" class="icon-youtube-squared icon-fontello"></a>
+                        <a href="{facebook}" class="icon-fb icon-fontello" target="_blank"></a>
+                        <a href="{youtube}" class="icon-gplus-squared icon-fontello" target="_blank"></a>
+                        <a href="{googleplus}" class="icon-youtube-squared icon-fontello" target="_blank"></a>
                     </p>
 
                     <p class="bottom">
