@@ -43,8 +43,8 @@
                         הרשומה הבאה
                     </a>
                 </nav>!}
-                <div class="fb-comments" data-href="http://www.flybranding.co.il/{url}" data-width="729" data-numposts="5" data-colorscheme="light"></div>
-            </div>
+                <div class="fb-comments wide" data-href="http://www.flybranding.co.il/{url}" data-width="729" data-numposts="5" data-colorscheme="light"></div>
+                </div>
         {:else}
             <div class="box">
             {#posts}

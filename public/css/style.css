@@ -203,7 +203,7 @@ section:before {
   content: '';
   border-top-color: #fff;
 }
-#slider header {
+#slider header.description {
   position: absolute;
   right: 0;
   top: 0;
@@ -254,7 +254,12 @@ section:before {
   text-align: center;
   border-radius: 50%;
 }
-#slider .banner h3,
+#slider .banner header.branding {
+    font-size: 19px;
+    opacity: 1;
+    font-weight: bold;
+}
+#slider .banner header,
 #slider .banner p {
   margin: 0;
   padding: 0;
@@ -1169,3 +1174,6 @@ ul.paging li.arrow {
   width: 800px;
   height: 600px;
 }
+.fb_iframe_widget,
+.fb_iframe_widget span,
+.fb_iframe_widget iframe[style]  {width: 100% !important;}

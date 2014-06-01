@@ -8,7 +8,7 @@ var stop = function(e) {
 /*
  Animated jump upward
  */
-if (!mobile)
+
     $('a.up').on('click', function(e) {
         stop(e);
         $('html, body').animate({
@@ -38,6 +38,12 @@ $('article .title').on('click touchstart', function(e) {
     stop(e);
     var parent = $(this).parent();
 
+    if(!parent.hasClass('expand')){
+        var content_height = Math.max(parent.find('.content.cf').height(), parent.find('.content .inner').height());
+        parent.css({'max-height': content_height + 170, 'height' : content_height + 170});
+    } else {
+        parent.css({'max-height': '130px'});
+    }
     parent.toggleClass('expand');
     if(parent.hasClass('expand')){
         window.location.hash = $(parent).attr('id');

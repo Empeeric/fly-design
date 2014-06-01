@@ -1,0 +1,25 @@
+{#items}
+<article id="{index}" class="{?left}left{/left}">
+    <section class="title">
+        <header>{name}</header>
+        <p>
+            {description}
+            <i class="icon-left-dir"></i>
+        </p>
+        <i class="icon-left-dir big"></i>
+        <a href="#" class="icon-close"></a>
+    </section>
+    <div class="content cf">
+        <div class="slider">
+            <ul>
+                {#slides}
+                    <li><img src="{picture.url}/convert?w=649&h=398&fit=crop"/></li>
+                {/slides}
+            </ul>
+        </div>
+        <div class="inner">
+            {text|s}
+        </div>
+    </div>
+</article>
+{/items}

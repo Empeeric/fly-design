@@ -24,7 +24,7 @@ dust.helpers.picture = function (chunk, ctx, bodies, params) {
     if (params.height) sizeparams.push('h=' + params.height);
     if (params.fit) sizeparams.push('fit=' + params.fit);
     if (params.align) sizeparams.push('align=' + params.align);
-    if (sizeparams.length) filepicker_url = filepicker_url + '/convert?quality=85&' + sizeparams.join('&');
+    if (sizeparams.length) filepicker_url = filepicker_url + '/convert?' + sizeparams.join('&');
     return chunk.write(filepicker_url);
 };
 

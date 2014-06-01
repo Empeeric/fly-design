@@ -1,0 +1,9 @@
+{#items}
+<a class="thumb {?last}last{/last}" href="#{index}" >
+    <img src="{picture.url}/convert?w=300&h=170&fit=crop" alt="CLIENT" />
+    <header>
+        {name}
+        <i class="icon-left-dir"></i>
+    </header>
+</a>
+{/items}

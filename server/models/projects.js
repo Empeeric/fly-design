@@ -23,7 +23,7 @@ schema.methods.toString = function(){
     return this.title;
 };
 
-schema.statics.byNavigationId = function(partition){
+schema.statics.byNavigationId = function(){
     var projects = this;
     return function(res, cb){
         var page = res.locals.page;
@@ -35,15 +35,7 @@ schema.statics.byNavigationId = function(partition){
             .sort({'order': 1})
             .lean()
             .exec(function(err, results){
-                if(partition){
-                    var parts =  _(results).map(function(obj, i){
-                        obj.index = i;
-                        return obj;
-                    }).chunkAll(3).valueOf();
-                    res.locals.page.projects = {items :parts};
-                } else {
-                    if(results.length) res.locals.page.projects = {items :results};
-                }
+                if(results.length) res.locals.page.projects = {items :results};
                 cb(err);
             });
     }

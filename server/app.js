@@ -40,6 +40,7 @@ formage.init(app, express, models, {
 
 require('../front/dust/helpers');
 require('../front/dust/filters');
+require('../front/compile_templates');
 require('./mongoose/helpers');
 require('./routes');
 require('./cms');

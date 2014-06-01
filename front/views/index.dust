@@ -9,7 +9,7 @@
             {#banners}
             <li>
                 {?url}<a href="{url}">{/url}
-                    <header>
+                    <header class="description">
                         {description|br|s}
                     </header>
                     <img width=652 height=400 src="{@picture width="652" height="400" fit="crop" /}"/>
@@ -24,9 +24,9 @@
 
         {?title}
         <div class="banner">
-            <h3>
+            <header class="branding">
                 {title}
-            </h3>
+            </header>
 
             <p>{lead}</p>
             <a href="{url}" class="icon-plus"></a>

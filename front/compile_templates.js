@@ -2,7 +2,7 @@ var dust = require('dustjs-linkedin'),
     path = require('path'),
     fs = require('fs');
 
-var dir = path.join(__dirname, 'views', 'client'),
+var dir = path.join(__dirname, 'views', 'templates'),
     writer = fs.createWriteStream(path.join(__dirname, '..', 'public', 'js', 'templates.js')),
     files = fs.readdirSync(dir);
 
