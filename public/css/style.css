@@ -203,7 +203,7 @@ section:before {
   content: '';
   border-top-color: #fff;
 }
-#slider h3 {
+#slider header {
   position: absolute;
   right: 0;
   top: 0;
@@ -211,12 +211,13 @@ section:before {
   -webkit-transition: opacity 0.9s 1.1s;
   font-size: 30px;
   font-weight: normal;
+    margin: 30px 0;
 }
 #slider .slider li img {
   width: auto;
   max-height: 400px;
 }
-#slider .slider li.rslides1_on h3 {
+#slider .slider li.rslides1_on header {
   opacity: 1;
 }
 #slider nav {
@@ -278,6 +279,9 @@ section:before {
 #how .about strong {
   color: #95ce92;
 }
+#quote h1 {
+    font-weight: normal;
+}
 .big-quote {
   direction: ltr;
   font-size: 30px;
@@ -317,11 +321,13 @@ section:before {
   width: 33.333333333333336%;
   padding: 0 15px;
 }
-#features h2 {
+#features header {
   font-weight: bold;
   color: #fff;
+    margin: 20px 0;
+    font-size: 24px;
 }
-#features a:hover h2 {
+#features a:hover header {
   color: #ef2d61;
 }
 #features .big {
@@ -368,13 +374,13 @@ section:before {
   -o-transition: height 0.1s;
   transition: height 0.1s;
 }
-#how h2 {
+#how header {
   margin: 0;
   padding: 30px 0;
   font-size: 250%;
   font-weight: normal;
 }
-#how h2 strong {
+#how header strong {
   color: #95ce92;
 }
 #steps {
@@ -399,10 +405,11 @@ section:before {
   -o-transition: top 0.1s;
   transition: top 0.1s;
 }
-#steps li h3 {
+#steps li header {
   font-size: 16px;
   font-weight: bold;
   height: 50px;
+    margin: 16px 0;
 }
 #steps li .number {
   font-size: 150px;
@@ -513,7 +520,7 @@ section:before {
   content: '';
   border-top-color: #fff;
 }
-#we h2 {
+#we header.we {
   color: #fff;
   font-size: 100px;
   line-height: 100px;
@@ -526,9 +533,10 @@ section:before {
   -o-transition: top 0.2s;
   transition: top 0.2s;
 }
-#we h3 {
+#we header {
   font-size: 24px;
   font-weight: normal;
+    margin: 24px 0;
 }
 #we .container {
   z-index: 4;
@@ -543,7 +551,7 @@ section:before {
   background: #95ce92;
 /*box-shadow 0 3px 5px #ccc*/
 }
-#contact h2 {
+#contact header {
   margin: 10px 0;
   font-size: 60px;
   font-weight: normal;
@@ -863,7 +871,7 @@ a.up .icon-up:before {
 #items.third .thumb.last {
   margin-left: 0;
 }
-#items.third .thumb h2 {
+#items.third .thumb header {
   position: absolute;
   left: 0;
   right: 0;
@@ -877,17 +885,18 @@ a.up .icon-up:before {
   -webkit-transform: translateY(40px);
   -webkit-transform-origin: bottom left;
   -webkit-transition: -webkit-transform 0.2s;
+    font-size: 24px;
 }
-#items.third .thumb h2 i {
+#items.third .thumb header i {
   float: left;
   -webkit-transform: rotateZ(0);
   -webkit-transition: -webkit-transform 0.2s;
 }
-#items.third .thumb:hover h2,
-#items.third .thumb.selected h2 {
+#items.third .thumb:hover header,
+#items.third .thumb.selected header {
   -webkit-transform: translateY(0);
 }
-#items.third .thumb.selected h2 i {
+#items.third .thumb.selected header i {
   -webkit-transform: rotateZ(-90deg);
 }
 #items.third article {
@@ -991,6 +1000,13 @@ hr:before {
 .blog header {
   color: #95ce92;
 }
+.blog header {
+    margin: 20px 0;
+    text-align: center;
+    color: #636466;
+    font-size: 24px;
+    font-weight: bold;
+}
 .blog aside {
   float: right;
   width: 22%;
@@ -1030,11 +1046,14 @@ hr:before {
 #about {
   padding-top: 10px;
 }
-#about h2 {
+#about header {
   color: #95ce92;
   font-size: 2em;
   margin: 0.67em 0;
+    text-align: center;
+    font-weight: bold;
 }
+
 #about .col {
   float: right;
   width: 50%;

@@ -9,9 +9,9 @@
             {#banners}
             <li>
                 {?url}<a href="{url}">{/url}
-                    <h3>
+                    <header>
                         {description|br|s}
-                    </h3>
+                    </header>
                     <img width=652 height=400 src="{@picture width="652" height="400" fit="crop" /}"/>
                 {?url}</a>{/url}
             </li>
@@ -38,6 +38,7 @@
     {#about}
     <section id="quote">
         <div class="container">
+            <h1>FLY - חברת מיתוג עסקי מובילה!</h1>
             <p class="big-quote">
                 {quote|br|s}
                 <small>{signature}</small>
@@ -55,7 +56,7 @@
             <li>
                 <a href="{url}">
                     <span class="big {icon}"></span>
-                    <h2>{title}</h2>
+                    <header>{title}</header>
                 </a>
                 <p>
                     {text}
@@ -80,10 +81,10 @@
 
     {#how_it_works}
     <section id="how">
-        <h2>
+        <header>
             {title}
             <strong>?</strong>
-        </h2>
+        </header>
     </section>
 
     <section id="steps">
@@ -94,9 +95,9 @@
                     {@math key="{$idx}" method="add" operand="1" /}
                 </span>
 
-                <h3>
+                <header>
                     {title}
-                </h3>
+                </header>
 
                 <p>
                     {text}
@@ -115,13 +116,13 @@
     {#us}
     <section id="we">
         <img src="{picture.url}" class="cover"/>
-        <h2>
+        <header class="we">
             {title}
-        </h2>
+        </header>
         <div class="container">
-            <h3>
+            <header>
                 {text}
-            </h3>
+            </header>
 
             <p>
                 {sub_text}

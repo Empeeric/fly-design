@@ -4,7 +4,7 @@
     {#page.about}
         <section id="about">
             {#picture}
-                <h2>{title}</h2>
+                <header>{title}</header>
 
                 <hr/>
 
@@ -14,9 +14,9 @@
             {/picture}
 
             {#text}
-                <h2>
+                <header>
                     {title}
-                </h2>
+                </header>
                 <hr/>
 
                 <div class="container cf">
@@ -30,9 +30,9 @@
             {/text}
 
             {#list}
-                <h2 id="{title}">
+                <header id="{title}">
                     {title}
-                </h2>
+                </header>
                 <hr/>
 
                 <ol class="container chess cf">

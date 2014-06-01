@@ -19,7 +19,7 @@ if (!mobile)
 /*
  Scrolling effects
  */
-$('#we h2').elevator('top',
+$('#we header.we').elevator('top',
     { bottom: 50, val: 100 },
     { bottom: 200, val: 0 }
 );

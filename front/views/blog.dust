@@ -30,7 +30,7 @@
                     <div class="fb-like" data-href="http://http://www.flybranding.co.il/{url}" data-layout="standard" data-action="like" data-show-faces="true" data-share="true"></div>
                 </div>
 
-                <h2>{title}</h2>
+                <header>{title}</header>
                 <p>מאת: {author}, תאריך: {date}</p>
                 {text|s}
                 {!<nav>
@@ -43,7 +43,7 @@
                         הרשומה הבאה
                     </a>
                 </nav>!}
-                <div class="fb-comments" data-href="http://http://www.flybranding.co.il/{url}" data-width="729" data-numposts="5" data-colorscheme="light"></div>
+                <div class="fb-comments" data-href="http://www.flybranding.co.il/{url}" data-width="729" data-numposts="5" data-colorscheme="light"></div>
             </div>
         {:else}
             <div class="box">

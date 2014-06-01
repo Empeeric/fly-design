@@ -19,16 +19,16 @@
         {#.}
             <a class="thumb {@if cond="({$idx} + 1) % 3 == 0"}last{/if}" href="#{index}" >
                 <img src="{@picture width="300" height="170" fit="crop"/}" alt="CLIENT" />
-                <h2>
+                <header>
                     {name}
                     <i class="icon-left-dir"></i>
-                </h2>
+                </header>
             </a>
         {/.}
         {#.}
             <article id="{index}" class="{@if cond="({index} + 1) % 2 == 0"}left{/if}">
                 <section class="title">
-                    <h2>{name}</h2>
+                    <header>{name}</header>
                     <p>
                         {description}
                         <i class="icon-left-dir"></i>
@@ -45,7 +45,6 @@
                         </ul>
                     </div>
                     <div class="inner">
-                        <h3>{title}</h3>
                         {text|s}
                     </div>
                 </div>

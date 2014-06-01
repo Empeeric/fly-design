@@ -99,9 +99,9 @@
     {#contact}
         <section id="contact">
             <div class="container">
-                <h2>
+                <header>
                     {title}
-                </h2>
+                </header>
 
                 <form action="/thank-you" method="post">
                     <input type="text" name="name" placeholder="שם"/>
