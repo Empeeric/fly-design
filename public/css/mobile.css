@@ -53,8 +53,8 @@
     width: 100%;
   }
   #about center img {
-    width: 400px;
-    height: 300px;
+      width: 100%;
+      height: auto;
   }
 }
 @media (max-width: 730px) {
