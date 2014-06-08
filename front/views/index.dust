@@ -38,7 +38,6 @@
     {#about}
     <section id="quote">
         <div class="container">
-            <h1>FLY - חברת מיתוג עסקי מובילה!</h1>
             <p class="big-quote">
                 {quote|br|s}
                 <small>{signature}</small>

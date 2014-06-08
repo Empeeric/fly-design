@@ -292,6 +292,12 @@
     }
 }
 @media (max-width: 350px) {
+    #slider header.description {
+        display: none;
+    }
+    #how {
+        height: 155px !important;
+    }
   #how h2 {
     font-size: 190%;
   }
