@@ -121,6 +121,7 @@
     max-width: 100%;
     max-height: none;
   }
+
 }
 @media (max-width: 500px) {
   .head-box {
@@ -297,6 +298,9 @@
     }
     #how {
         height: 155px !important;
+    }
+    .social {
+        display: none;
     }
   #how h2 {
     font-size: 190%;
