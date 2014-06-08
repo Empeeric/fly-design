@@ -302,6 +302,9 @@
     .social {
         display: none;
     }
+    #items article .title header {
+        display: none;
+    }
   #how h2 {
     font-size: 190%;
   }
