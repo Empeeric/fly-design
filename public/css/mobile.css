@@ -304,4 +304,7 @@
     #items.third .thumb {
         width: 100%;
     }
+    .blog header {
+        margin: 70px 0 20px 0;
+    }
 }
