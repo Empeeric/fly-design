@@ -50,9 +50,16 @@ $('article .title').on('click touchstart', function(e) {
         var siblings = parent.siblings('.expand').first(),
             siblings_height = siblings.length > 0 ? siblings.height() : 0,
             sibling_offset = siblings.length > 0 ? siblings.offset().top : 0,
-            parent_offset = parent.offset().top;
+            parent_offset = parent.offset().top,
+            offset = 0;
+
+        if(win.width() <= 500){
+            offset = parent_offset - 20;
+        } else {
+            offset =  parent_offset - 200 - (siblings_height && (parent_offset > sibling_offset) ? (siblings_height - 130) : 0)
+        }
         $('html, body').animate({
-            scrollTop: parent_offset - 200 - (siblings_height && (parent_offset > sibling_offset) ? (siblings_height - 130) : 0)
+            scrollTop: offset
         }, 400, 'linear', function(){
             parent.siblings().css({'max-height': '130px'});
             parent.siblings().removeClass('expand');
