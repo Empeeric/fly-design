@@ -58,12 +58,14 @@ $('article .title').on('click touchstart', function(e) {
         } else {
             offset =  parent_offset - 200 - (siblings_height && (parent_offset > sibling_offset) ? (siblings_height - 130) : 0)
         }
-        $('html, body').animate({
-            scrollTop: offset
-        }, 400, 'linear', function(){
-            parent.siblings().css({'max-height': '130px'});
-            parent.siblings().removeClass('expand');
-        });
+        parent.siblings().css({'max-height': '130px'});
+        parent.siblings().removeClass('expand');
+        setTimeout(function(){
+            $('html, body').animate({
+                scrollTop: offset
+            }, 400, 'linear');
+        }, 400);
+
     }
 });
 
