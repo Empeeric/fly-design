@@ -248,6 +248,9 @@
   #items article .title p {
     visibility: hidden;
   }
+    #items article.expand .title p {
+        visibility: visible;
+    }
   #items article .title h2 {
     position: absolute;
     bottom: 0;
@@ -261,15 +264,35 @@
   #items article.expand {
     max-height: initial;
   }
+    #items article .title {
+        padding: 0 !important;
+    }
+    #items article header {
+        padding: 30px;
+    }
+    #items article.expand header {
+        background: #636466;
+        color: white;
+        padding: 30px;
+        height: 100%;
+        font-size: 25px;
+    }
 
   #items article .title h2 i {
     display: inline-block;
   }
-  #items article .title:before {
-    border-width: 0;
-  }
+    #items article .title:before {
+        border-width: 0;
+        right: 88%;
+    }
+    #items article.expand .title:before {
+        border-width: 18px;
+    }
   #items article.expand .title p {
-    visibility: hidden;
+    visibility: visible;
+      color: white;
+      margin-top: -90px;
+      padding: 30px;
   }
   #items article .content {
     height: auto;
@@ -315,7 +338,17 @@
     }
     #items article .title header {
         opacity: 0;
+        padding: 30px;
+        font-size: 25px;
     }
+    #items article.expand header {
+        background: #636466;
+        color: white;
+        padding: 30px;
+        height: 100%;
+        opacity: 1;
+    }
+
   #how h2 {
     font-size: 190%;
   }
