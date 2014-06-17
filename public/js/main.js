@@ -54,6 +54,7 @@ $('article .title').on('click touchstart', function(e) {
         $('html, body').animate({
             scrollTop: parent_offset - 200 - (siblings_height && (parent_offset > sibling_offset) ? (siblings_height - 130) : 0)
         }, 400, 'linear', function(){
+            parent.siblings().css({'max-height': '130px'});
             parent.siblings().removeClass('expand');
         });
     }

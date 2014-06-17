@@ -307,6 +307,12 @@
     .social {
         display: none;
     }
+    #items article .title {
+        padding: 0 !important;
+    }
+    #items article .title header {
+        height: 100%;
+    }
     #items article .title header {
         opacity: 0;
     }
