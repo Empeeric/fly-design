@@ -54,9 +54,9 @@ $('article .title').on('click touchstart', function(e) {
             offset = 0;
 
         if(win.width() <= 500){
-            offset = parent_offset - 20;
+            offset = parent_offset - 20 - (siblings_height && (parent_offset > sibling_offset) ? (siblings_height - 130) : 0);
         } else {
-            offset =  parent_offset - 200 - (siblings_height && (parent_offset > sibling_offset) ? (siblings_height - 130) : 0)
+            offset =  parent_offset - 200 - (siblings_height && (parent_offset > sibling_offset) ? (siblings_height - 130) : 0);
         }
         parent.siblings().css({'max-height': '130px'});
         parent.siblings().removeClass('expand');
