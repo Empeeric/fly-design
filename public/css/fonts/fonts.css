@@ -2,23 +2,23 @@
     font-family: 'MeodedPashut';
     font-style: normal;
     font-weight: normal;
-    src: url('meodedpashut.eot');
-    src: url('meodedpashut.woff') format('woff'),
-    url('meodedpashut.svg#webfontgkJbe0mS') format('svg');
+    src: url('/css/fonts/meodedpashut.eot');
+    src: url('/css/fonts/meodedpashut.woff') format('woff'),
+    url('/css/fonts/meodedpashut.svg#webfontgkJbe0mS') format('svg');
 }
 @font-face {
     font-family: 'MeodedPashut';
     font-style: normal;
     font-weight: 200;
-    src: url('meodedpashut_light.eot');
-    src: url('meodedpashut_light.woff') format('woff'),
-    url('meodedpashut_light.svg#webfontgkJbe0mS') format('svg');
+    src: url('/css/fonts/meodedpashut_light.eot');
+    src: url('/css/fonts/meodedpashut_light.woff') format('woff'),
+    url('/css/fonts/meodedpashut_light.svg#webfontgkJbe0mS') format('svg');
 }
 @font-face {
     font-family: 'MeodedPashut';
     font-style: normal;
     font-weight: bold;
-    src: url('meodedpashut_bold.eot');
-    src: url('meodedpashut_bold.woff') format('woff'),
-    url('meodedpashut_bold.svg#webfontgkJbe0mS') format('svg');
+    src: url('/css/fonts/meodedpashut_bold.eot');
+    src: url('/css/fonts/meodedpashut_bold.woff') format('woff'),
+    url('/css/fonts/meodedpashut_bold.svg#webfontgkJbe0mS') format('svg');
 }

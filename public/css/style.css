@@ -56,7 +56,6 @@ a:hover {
 }
 img.cover {
   width: 100%;
-    height: auto;
 }
 ul.inline,
 #items .slider .rslides_tabs {
@@ -204,7 +203,7 @@ section:before {
   content: '';
   border-top-color: #fff;
 }
-#slider header.description {
+#slider h3 {
   position: absolute;
   right: 0;
   top: 0;
@@ -212,13 +211,12 @@ section:before {
   -webkit-transition: opacity 0.9s 1.1s;
   font-size: 30px;
   font-weight: normal;
-    margin: 30px 0;
 }
 #slider .slider li img {
   width: auto;
   max-height: 400px;
 }
-#slider .slider li.rslides1_on header {
+#slider .slider li.rslides1_on h3 {
   opacity: 1;
 }
 #slider nav {
@@ -255,11 +253,6 @@ section:before {
   text-align: center;
   border-radius: 50%;
 }
-#slider .banner header.branding {
-    font-size: 19px;
-    opacity: 1;
-    font-weight: bold;
-}
 #slider .banner header,
 #slider .banner p {
   margin: 0;
@@ -284,9 +277,6 @@ section:before {
 #quote .about strong,
 #how .about strong {
   color: #95ce92;
-}
-#quote h1 {
-    font-weight: normal;
 }
 .big-quote {
   direction: ltr;
@@ -327,13 +317,11 @@ section:before {
   width: 33.333333333333336%;
   padding: 0 15px;
 }
-#features header {
+#features h2 {
   font-weight: bold;
   color: #fff;
-    margin: 20px 0;
-    font-size: 24px;
 }
-#features a:hover header {
+#features a:hover h2 {
   color: #ef2d61;
 }
 #features .big {
@@ -380,13 +368,13 @@ section:before {
   -o-transition: height 0.1s;
   transition: height 0.1s;
 }
-#how header {
+#how h2 {
   margin: 0;
   padding: 30px 0;
   font-size: 250%;
   font-weight: normal;
 }
-#how header strong {
+#how h2 strong {
   color: #95ce92;
 }
 #steps {
@@ -411,11 +399,10 @@ section:before {
   -o-transition: top 0.1s;
   transition: top 0.1s;
 }
-#steps li header {
+#steps li h3 {
   font-size: 16px;
   font-weight: bold;
   height: 50px;
-    margin: 16px 0;
 }
 #steps li .number {
   font-size: 150px;
@@ -526,7 +513,7 @@ section:before {
   content: '';
   border-top-color: #fff;
 }
-#we header.we {
+#we h2 {
   color: #fff;
   font-size: 100px;
   line-height: 100px;
@@ -539,10 +526,9 @@ section:before {
   -o-transition: top 0.2s;
   transition: top 0.2s;
 }
-#we header {
+#we h3 {
   font-size: 24px;
   font-weight: normal;
-    margin: 24px 0;
 }
 #we .container {
   z-index: 4;
@@ -557,7 +543,7 @@ section:before {
   background: #95ce92;
 /*box-shadow 0 3px 5px #ccc*/
 }
-#contact header {
+#contact h2 {
   margin: 10px 0;
   font-size: 60px;
   font-weight: normal;
@@ -877,7 +863,7 @@ a.up .icon-up:before {
 #items.third .thumb.last {
   margin-left: 0;
 }
-#items.third .thumb header {
+#items.third .thumb h2 {
   position: absolute;
   left: 0;
   right: 0;
@@ -891,18 +877,17 @@ a.up .icon-up:before {
   -webkit-transform: translateY(40px);
   -webkit-transform-origin: bottom left;
   -webkit-transition: -webkit-transform 0.2s;
-    font-size: 24px;
 }
-#items.third .thumb header i {
+#items.third .thumb h2 i {
   float: left;
   -webkit-transform: rotateZ(0);
   -webkit-transition: -webkit-transform 0.2s;
 }
-#items.third .thumb:hover header,
-#items.third .thumb.selected header {
+#items.third .thumb:hover h2,
+#items.third .thumb.selected h2 {
   -webkit-transform: translateY(0);
 }
-#items.third .thumb.selected header i {
+#items.third .thumb.selected h2 i {
   -webkit-transform: rotateZ(-90deg);
 }
 #items.third article {
@@ -930,15 +915,12 @@ a.up .icon-up:before {
   0% {
     background-position: 0 0;
   }
-
   10% {
     background-position: 0 0;
   }
-
   80% {
     background-position: 0 100%;
   }
-
   100% {
     background-position: 0 0;
   }
@@ -947,15 +929,12 @@ a.up .icon-up:before {
   0% {
     background-position: 0 0;
   }
-
   10% {
     background-position: 0 0;
   }
-
   80% {
     background-position: 0 100%;
   }
-
   100% {
     background-position: 0 0;
   }
@@ -964,15 +943,12 @@ a.up .icon-up:before {
   0% {
     background-position: 0 0;
   }
-
   10% {
     background-position: 0 0;
   }
-
   80% {
     background-position: 0 100%;
   }
-
   100% {
     background-position: 0 0;
   }
@@ -1005,13 +981,6 @@ hr:before {
 .blog h1,
 .blog header {
   color: #95ce92;
-}
-.blog header {
-    margin: 20px 0;
-    text-align: center;
-    color: #636466;
-    font-size: 24px;
-    font-weight: bold;
 }
 .blog aside {
   float: right;
@@ -1052,14 +1021,11 @@ hr:before {
 #about {
   padding-top: 10px;
 }
-#about header {
+#about h2 {
   color: #95ce92;
   font-size: 2em;
   margin: 0.67em 0;
-    text-align: center;
-    font-weight: bold;
 }
-
 #about .col {
   float: right;
   width: 50%;
@@ -1175,6 +1141,3 @@ ul.paging li.arrow {
   width: 800px;
   height: 600px;
 }
-.fb_iframe_widget,
-.fb_iframe_widget span,
-.fb_iframe_widget iframe[style]  {width: 100% !important;}
