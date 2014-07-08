@@ -41,10 +41,10 @@
         ga('create', 'UA-22988039-1', 'flybranding.co.il');
         ga('require', 'displayfeatures');
         ga('send', 'pageview');
-        ga('create', 'UA-15378843-22', 'flybranding.co.il', {'name': 'Tracker2'});
+        ga('create', 'UA-15378843-22', 'flybranding.co.il', { 'name': 'Tracker2' });
         ga('Tracker2.require', 'displayfeatures');
         ga('Tracker2.send', 'pageview');
-        ga('create', 'UA-49134070-1', 'flybranding.co.il', {'name': 'Tracker3'});
+        ga('create', 'UA-49134070-1', 'flybranding.co.il', { 'name': 'Tracker3' });
         ga('Tracker3.require', 'displayfeatures');
         ga('Tracker3.send', 'pageview');
     </script>
