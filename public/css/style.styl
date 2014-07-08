@@ -21,7 +21,7 @@ body
   min-width 320px
   font-size 16px
   color text-color
-  -webkit-font-smoothing antialiased
+  font-smoothing antialiased
 
 body, h1, h2, h3, h4, h5, input, textarea, button
   font-family 'MeodedPashut', 'Merriweather Sans', arial, sans-serif
@@ -41,6 +41,7 @@ a, a:hover
 
 img.cover
   width 100%
+  height auto
 
 ul.inline
   list-style none
@@ -156,17 +157,18 @@ section
   padding-bottom 30px
   position relative
   triangle()
-  h3
+  header.description
     absolute right top
     opacity 0
-    -webkit-transition opacity .9s 1.1s
+    transition opacity .9s 1.1s
     text 30px normal
+    margin 30px 0
   .slider li
     img
       width auto
       max-height 400px
     &.rslides1_on
-      h3
+      header
         opacity 1
   nav
     absolute right bottom 30px
@@ -188,6 +190,12 @@ section
     background green
     text white center
     border-radius 50%
+
+    header.branding
+      font-size: 19px;
+      opacity: 1;
+      font-weight: bold;
+
     header, p
       margin 0
       padding 0
@@ -201,6 +209,9 @@ section
   triangle()
   .about strong
     color green
+
+#quote h1
+  font-weight normal
 
 .big-quote
   direction ltr
@@ -229,9 +240,11 @@ section
   li
     col(3)
     padding 0 15px
-  h2
+  header
     text bold white
-  a:hover h2
+    margin: 20px 0;
+    font-size: 24px;
+  a:hover header
     color pink
   .big
     display inline-block
@@ -258,12 +271,8 @@ section
   height 123px
   padding 0
   text center
-  -webkit-transition: height .1s;
-  -moz-transition: height .1s;
-  -ms-transition: height .1s;
-  -o-transition: height .1s;
   transition: height .1s;
-  h2
+  header
     margin 0
     padding 30px 0
     text 250% normal
@@ -280,14 +289,11 @@ section
     margin 30px 0 0
     padding 0 15px
     position relative
-    -webkit-transition: top .1s
-    -moz-transition: top .1s
-    -ms-transition: top .1s
-    -o-transition: top .1s
     transition: top .1s
-    h3
+    header
       text 16px bold
       height 50px
+      margin: 16px 0
     .number
       text 150px 100px
     for color, i in colors
@@ -327,18 +333,15 @@ section
   padding 0 0 30px
   text center
   triangle()
-  h2
+  header.we
     color white
     text 100px 100px bold
     margin -86px 0 10px 0
     position relative
-    -webkit-transition: top .2s;
-    -moz-transition: top .2s;
-    -ms-transition: top .2s;
-    -o-transition: top .2s;
     transition: top .2s;
-  h3
+  header
     text 24px normal
+    margin: 24px 0
   .container
     z-index 4
     position relative
@@ -350,7 +353,7 @@ section
   font-size 18px
   background green
   /*box-shadow 0 3px 5px #ccc*/
-  h2
+  header
     margin 10px 0
     text 60px normal text-color right
   form
@@ -457,7 +460,7 @@ a.up
     overflow hidden
     position relative
     max-height 130px
-    -webkit-transition max-height .5s
+    transition max-height .5s
     &:last-child
       margin-bottom 0
     .title
@@ -465,15 +468,15 @@ a.up
       padding 30px
       cursor pointer
       background white left top no-repeat
-      -webkit-transition padding .35s
+      transition padding .35s
       position relative
       z-index 10
       triangle(text-color)
       .icon-close
         absolute left 5px top 5px
         text 25px white
-        -webkit-transform translateX(-100px)
-        -webkit-transition -webkit-transform .35s
+        transform translateX(-100px)
+        transition transform .35s
       &:before
         right 95%
         border-width 20px
@@ -488,8 +491,8 @@ a.up
       .big.icon-left-dir
         absolute left top 10px
         font-size 100px
-        -webkit-transform translateX(-100px)
-        -webkit-transition -webkit-transform .35s
+        transform translateX(-100px)
+        transition transform .35s
     &.left .title
       padding-right 60%
       background white right top no-repeat
@@ -502,15 +505,15 @@ a.up
           p .icon-left-dir
             display none
         .big.icon-left-dir
-          -webkit-transform translateX(0)
+          transform translateX(0)
     &.expand
       max-height 600px
       .title
         padding-right 30px
       .big.icon-left-dir
-        -webkit-transform translateX(-100px)
+        transform translateX(-100px)
       .icon-close
-        -webkit-transform translateX(0)
+        transform translateX(0)
   .content
     padding 20px
     position relative
@@ -561,9 +564,7 @@ a.up
     width 72.7%
     height 68.6%
     background-size 100%
-    -webkit-animation screenScroll 5s infinite ease-in-out
-    -moz-animation screenScroll 5s infinite ease-in-out
-    -o-animation screenScroll 5s infinite ease-in-out
+    animation screenScroll 5s infinite ease-in-out
 
   &.third
     padding-top 20px
@@ -579,32 +580,33 @@ a.up
       overflow hidden
       &.last
         margin-left 0
-      h2
+      header
         absolute left right bottom
         margin 0
         padding 5px 15px 5px 10px
         background text-color
         text white normal right
-        -webkit-transform translateY(40px)
-        -webkit-transform-origin bottom left
-        -webkit-transition -webkit-transform .2s
+        font-size: 24px
+        transform: translateY(40px)
+        transform-origin: bottom left
+        transition: transform .2s
         i
           float left
-          -webkit-transform rotateZ(0)
-          -webkit-transition -webkit-transform .2s
+          transform rotateZ(0)
+          transition transform .2s
       &:hover, &.selected
-        h2
-          -webkit-transform translateY(0)
+        header
+          transform translateY(0)
       &.selected
-        h2 i
-          -webkit-transform rotateZ(-90deg)
+        header i
+          transform rotateZ(-90deg)
     article
       max-height 0
       margin-bottom 0
       border-color transparent
       border-left-color gray-dark
       border-right-color gray-dark
-      -webkit-transition margin-bottom 1s, max-height 1s
+      transition margin-bottom 1s, max-height 1s
       .title
         text white right
         background text-color !important
@@ -615,7 +617,7 @@ a.up
     .inner
       text right
 
-@-webkit-keyframes screenScroll {
+@keyframes screenScroll {
   0% { background-position: 0 0; }
   10% { background-position: 0 0; }
   80% { background-position: 0 100%; }
@@ -645,6 +647,12 @@ hr
 .blog
   h1, header
     color green
+  header
+    margin: 20px 0;
+    text-align: center;
+    color: #636466;
+    font-size: 24px;
+    font-weight: bold;
   aside
     float right
     width 22%
@@ -675,10 +683,12 @@ hr
 
 #about
   padding-top 10px
-  h2
+  header
     color green
     font-size: 2em;
     margin: 0.67em 0;
+    text-align: center;
+    font-weight: bold;
   .col
     col(2)
     &:first-child
@@ -701,10 +711,6 @@ hr
           background #E4E5E6
         &:nth-child(2n+5)
           background #F0F0F1
-      -webkit-transition: background .3s
-      -moz-transition: background .3s
-      -ms-transition: background .3s
-      -o-transition: background .3s
       transition: background .3s
       &:hover
         background white
@@ -719,11 +725,11 @@ hr
       col(5)
       filter: url("data:image/svg+xml;utf8,<svg xmlns=\'http://www.w3.org/2000/svg\'><filter id=\'grayscale\'><feColorMatrix type=\'matrix\' values=\'0.3333 0.3333 0.3333 0 0 0.3333 0.3333 0.3333 0 0 0.3333 0.3333 0.3333 0 0 0 0 0 1 0\'/></filter></svg>#grayscale"); /* Firefox 10+, Firefox on Android */
       filter: gray; /* IE6-9 */
-      -webkit-filter: grayscale(100%)
-      -webkit-transition: -webkit-filter .3s
+      filter: grayscale(100%)
+      transition: filter .3s
       &:hover
         filter: url("data:image/svg+xml;utf8,<svg xmlns=\'http://www.w3.org/2000/svg\'><filter id=\'grayscale\'><feColorMatrix type=\'matrix\' values=\'1 0 0 0 0, 0 1 0 0 0, 0 0 1 0 0, 0 0 0 1 0\'/></filter></svg>#grayscale");
-        -webkit-filter: grayscale(0%)
+        filter: grayscale(0%)
 
 
 ul
@@ -776,3 +782,8 @@ ul
     img
       width 800px
       height 600px
+
+.fb_iframe_widget,
+.fb_iframe_widget span,
+.fb_iframe_widget iframe[style]
+  width 100% !important

@@ -11,11 +11,16 @@
       fixed top right
       z-index 100
 
+@media (max-width: 915px)
+  .head-box
+    margin-top: 60px;
+
 @media (max-width: 800px)
   #slider nav
     margin-right 20px
   #steps li
     col(3)
+    height 312px
   .container
     padding-left 20px
     padding-right 20px
@@ -27,8 +32,12 @@
   #about
     center
       img
-        width 400px
-        height 300px
+        width 100%
+        height auto
+
+@media (max-width: 730px)
+  .head-box
+    margin-top 100px
 
 @media (max-width: 650px)
   body > header p
@@ -53,7 +62,7 @@
     .thumb
       margin-left 0
       h2
-        -webkit-transform translateY(0)
+        transform translateY(0)
   #about .clients img
     col(3)
   .blog article
@@ -77,38 +86,49 @@
 @media (max-width: 500px)
   .head-box
     margin-top 100px
-  body > header
-    margin-bottom 45px
-    .top
-      height auto
-    p
-      padding 0
-      clear both
-    .navs
-      width 100%
-      absolute right top 100%
-      &.open nav a
-        display block
-    nav
-      .container
+
+  body
+    overflow-x hidden
+    & > header
+      margin-bottom 45px
+      .top
+        height auto
+      p
         padding 0
-      a
-        display none
-      a.active
-        display block
-      .icon-left-dir
-        display block
-        absolute left 3px top 3px
-        text 30px
-        -webkit-transform rotate(-90deg)
-    nav.second
-      position static
-      a
-        padding 10px 20px
+        clear both
+      .navs
+        width 100%
+        position absolute
+        right 0
+        top 100%
+        &.open
+          nav
+            a
+              display block
+      nav
+        .container
+          padding 0
+        a
+          display none
+          &.active
+            display block
+        .icon-left-dir
+          display block
+          position absolute
+          left 3px
+          top 3px
+          font-size 30px
+          transform rotate(-90deg)
+        &.second
+          position static
+          a
+            padding 10px 20px
+
   #quote
     padding 10px 0
     .big-quote
       display none
+
   #features
     padding-bottom 0
     li
@@ -118,59 +138,97 @@
       padding-right 130px
       position relative
       .big
-        absolute top right 10px
-        size 100px
+        position absolute
+        top 0
+        right 10px
+        width 100px
+        height 100px
         padding 0
+
     h2, p, .icon-plus
       margin 0 0 10px
-      text right
+      text-align right
+
   #pictures
-    li:nth-child(n+5)
+    li:nth-child(n + 5)
       display none
     img
-      col(2)
-  #how h2
-    text 220%
+      float right
+      width 50%
+
+  #how
+    h2
+      font-size 220%
+
   #steps
     li
       width 100%
       .number
         float right
-        size 100px 100%
-        text center
+        width 100px
+        height 100%
+        text-align center
       h3
         height auto
         margin-top 0
+
   footer
     position static
     padding 0
+
   .footer-padding
     height 1px
+
+
   #contact
     h2, form, .col
       width 100%
       padding 10px
+
     .map
       display none
+
   #items
     article
       .title
-        padding-right 30px !important
         background-size cover !important
+        padding 0 !important
+        padding-right 30px !important
         p
           visibility hidden
         h2
-          absolute bottom right left
+          position absolute
+          bottom 0
+          right 0
+          left 0
           padding 10px 20px
-          text 18px white
+          font-size 18px
+          color #fff
           background #636466
           i
             display inline-block
         &:before
-          border-width: 0;
+          border-width 0
+          right 88%
       &.expand
-        .title p
-            visibility hidden
+        max-height initial
+        .title
+          p
+            visibility visible
+            color white
+            margin-top -90px
+            padding 30px
+          &:before
+            border-width 18px
+            margin-top -2px
+        header
+          background #636466
+          color white
+          padding 30px
+          height 100%
+          font-size 25px
+      header
+        padding 30px
       .content
         height auto
         .slider
@@ -178,12 +236,62 @@
           width 100%
         .inner
           position static
-  #about .clients img
-    col(2)
-    filter: url("data:image/svg+xml;utf8,<svg xmlns=\'http://www.w3.org/2000/svg\'><filter id=\'grayscale\'><feColorMatrix type=\'matrix\' values=\'1 0 0 0 0, 0 1 0 0 0, 0 0 1 0 0, 0 0 0 1 0\'/></filter></svg>#grayscale");
-    -webkit-filter: grayscale(0%)
 
-@media (max-width: 350px)
-  #how h2
-    font-size 190%
+  #about
+    .clients
+      img
+        float right
+        width 50%
+        filter url("data:image/svg+xml;utf8,<svg xmlns=\'http://www.w3.org/2000/svg\'><filter id=\'grayscale\'><feColorMatrix type=\'matrix\' values=\'1 0 0 0 0, 0 1 0 0 0, 0 0 1 0 0, 0 0 0 1 0\'/></filter></svg>#grayscale");
+        filter grayscale(0%)
 
+
+  .fb_iframe_widget
+    float left
+    margin-bottom 20px
+
+
+@media (max-width: 501px) {
+  #steps li {
+    height: 215px;
+  }
+}
+@media (max-width: 350px) {
+  #slider header.description {
+    display: none;
+  }
+  #how {
+    height: 155px !important;
+  }
+  .social {
+    display: none;
+  }
+  #items article .title {
+    padding: 0 !important;
+  }
+  #items article .title header {
+    height: 100%;
+  }
+  #items article .title header {
+    opacity: 0;
+    padding: 30px;
+    font-size: 25px;
+  }
+  #items article.expand header {
+    background: #636466;
+    color: white;
+    padding: 30px;
+    height: 100%;
+    opacity: 1;
+  }
+
+  #how h2 {
+    font-size: 190%;
+  }
+  #items.third .thumb {
+    width: 100%;
+  }
+  .blog header {
+    margin: 70px 0 20px 0;
+  }
+}
