@@ -3,7 +3,7 @@
         {@if cond="'{template}' == 'projects' "}
         <a {?dock} class="active" {:else} href="{#sub.items[0]}{url}{/sub.items[0]}" {/dock}>{menu_label}</a>
 
-        <nav class="second {^dock}hide{/dock}">
+        <nav class="second">
             <div class="container">
                 {#sub.items}
                     <a href="{url}" {?dock}class="active"{/dock}>{menu_label}</a>

@@ -268,9 +268,15 @@ section:before {
   border-radius: 50%;
 }
 #slider .banner header.branding {
+<<<<<<< HEAD
   font-size: 19px;
   opacity: 1;
   font-weight: bold;
+=======
+    font-size: 17px;
+    opacity: 1;
+    font-weight: bold;
+>>>>>>> 98ae034... fixes
 }
 #slider .banner header,
 #slider .banner p {

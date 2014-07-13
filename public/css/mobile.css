@@ -29,6 +29,7 @@
   }
 }
 @media (max-width: 915px) {
+<<<<<<< HEAD
   .head-box {
     margin-top: 60px;
   }
@@ -56,6 +57,44 @@
     width: 100%;
     height: auto;
   }
+=======
+    .head-box {
+        margin-top: 60px;
+    }
+    #body {
+        margin-top: 30px;
+    }
+}
+@media (max-width: 800px) {
+    #slider nav {
+        margin-right: 20px;
+    }
+    #steps li {
+        float: right;
+        width: 33.333333333333336%;
+        height: 312px;
+    }
+    .container {
+        padding-left: 20px;
+        padding-right: 20px;
+    }
+    .blog aside {
+        display: none;
+    }
+    .blog .box {
+        width: 100%;
+    }
+    #about center img {
+        width: 100%;
+        height: auto;
+    }
+    #body {
+        margin-top: 65px;
+    }
+    #slider header.description {
+        display: none;
+    }
+>>>>>>> 98ae034... fixes
 }
 @media (max-width: 730px) {
   .head-box {
@@ -125,14 +164,32 @@
     max-width: 100%;
     max-height: none;
   }
+<<<<<<< HEAD
+=======
+    #body {
+        margin-top: 140px;
+    }
+>>>>>>> 98ae034... fixes
 }
 @media (max-width: 500px) {
+    #features header {
+        text-align: right;
+    }
   .head-box {
     margin-top: 100px;
   }
+<<<<<<< HEAD
   body {
     overflow-x: hidden;
   }
+=======
+    #body {
+        margin-top: 20px;
+    }
+    body {
+        overflow-x: hidden;
+    }
+>>>>>>> 98ae034... fixes
   body > header {
     margin-bottom: 45px;
   }
@@ -323,6 +380,7 @@
   }
 }
 @media (max-width: 350px) {
+<<<<<<< HEAD
   #slider header.description {
     display: none;
   }
@@ -350,6 +408,42 @@
     height: 100%;
     opacity: 1;
   }
+=======
+    #how {
+        display: none;
+    }
+    #steps {
+        display: none;
+    }
+    #slider header.description {
+        display: none;
+    }
+    #how {
+        height: 155px !important;
+    }
+    .social {
+        display: none;
+    }
+    #items article .title {
+        padding: 0 !important;
+    }
+    #items article .title header {
+        height: 100%;
+    }
+    #items article .title header {
+        opacity: 0;
+        padding: 30px;
+        font-size: 25px;
+    }
+    #items article.expand header {
+        background: #636466;
+        color: white;
+        padding: 30px;
+        height: 100%;
+        opacity: 1;
+    }
+
+>>>>>>> 98ae034... fixes
   #how h2 {
     font-size: 190%;
   }
