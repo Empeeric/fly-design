@@ -32,6 +32,9 @@
   .head-box {
     margin-top: 60px;
   }
+    #body {
+        margin-top: 40px;
+    }
 }
 @media (max-width: 800px) {
     .head-box {
@@ -125,19 +128,18 @@
   }
 }
 @media (max-width: 600px) {
-  #slider h3,
-  #slider .banner {
-    display: none;
-  }
-  #slider .slider img {
-    width: 100%;
-    max-width: 100%;
-    max-height: none;
-  }
-
-    #body {
-        margin-top: 140px;
+    #slider h3,
+    #slider .banner {
+        display: none;
     }
+    #slider .slider img {
+        width: 100%;
+        max-width: 100%;
+        max-height: none;
+    }
+    #body {
+         margin-top: 140px;
+     }
 }
 @media (max-width: 500px) {
     #features header {
@@ -352,12 +354,10 @@
     padding: 0 !important;
   }
   #items article .title header {
-    height: 100%;
-  }
-  #items article .title header {
     opacity: 0;
     padding: 30px;
     font-size: 25px;
+      height: 100%;
   }
   #items article.expand header {
     background: #636466;

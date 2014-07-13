@@ -18,7 +18,6 @@
 
     <link rel="stylesheet" href="http://fonts.googleapis.com/css?family=Merriweather+Sans:400,300"/>
     <link rel="stylesheet" href="/generated/build.min.css"/>
-
     <script>
         (function (i, s, o, g, r, a, m) {
             i['GoogleAnalyticsObject'] = r;
