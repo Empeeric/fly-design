@@ -74,6 +74,7 @@ ul.inline li,
   max-width: 972px;
   min-width: 320px;
   margin: 0 auto;
+  box-sizing: border-box;
 }
 ul.container {
   padding: 0;
@@ -203,7 +204,6 @@ section:before {
 #slider {
   padding-bottom: 30px;
   position: relative;
-    box-sizing: border-box;
 }
 #slider:before {
   content: '';
@@ -222,9 +222,6 @@ section:before {
   font-size: 30px;
   font-weight: normal;
   margin: 30px 0;
-}
-#slider ul {
-    list-style-type: none;
 }
 #slider .slider li img {
   width: auto;
@@ -257,7 +254,6 @@ section:before {
 #slider .banner {
   width: 110px;
   height: 110px;
-  box-sizing: border-box;
   position: absolute;
   left: 40px;
   top: 40px;
@@ -273,9 +269,9 @@ section:before {
   border-radius: 50%;
 }
 #slider .banner header.branding {
-    font-size: 17px;
-    opacity: 1;
-    font-weight: bold;
+  font-size: 19px;
+  opacity: 1;
+  font-weight: bold;
 }
 #slider .banner header,
 #slider .banner p {
@@ -343,7 +339,6 @@ section:before {
   float: right;
   width: 33.333333333333336%;
   padding: 0 15px;
-    box-sizing: border-box;
 }
 #features header {
   font-weight: bold;
@@ -421,7 +416,6 @@ section:before {
   float: right;
   width: 16.666666666666668%;
   margin: 30px 0 0;
-    box-sizing: border-box;
   padding: 0 15px;
   position: relative;
   -webkit-transition: top 0.1s;

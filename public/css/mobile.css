@@ -32,46 +32,48 @@
   .head-box {
     margin-top: 60px;
   }
-    #body {
-        margin-top: 40px;
-    }
+  #body {
+    margin-top: 30px;
+  }
+  #slider header.description {
+    display: none;
+  }
 }
 @media (max-width: 800px) {
-    .head-box {
-        margin-top: 60px;
-    }
-    #slider nav {
-        margin-right: 20px;
-    }
-    #steps li {
-        float: right;
-        width: 33.333333333333336%;
-        height: 312px;
-    }
-    .container {
-        padding-left: 20px;
-        padding-right: 20px;
-    }
-    .blog aside {
-        display: none;
-    }
-    .blog .box {
-        width: 100%;
-    }
-    #about center img {
-        width: 100%;
-        height: auto;
-    }
-    #body {
-        margin-top: 65px;
-    }
-    #slider header.description {
-        display: none;
-    }
+  #slider nav {
+    margin-right: 20px;
+  }
+  #steps li {
+    float: right;
+    width: 33.333333333333336%;
+    height: 312px;
+  }
+  .container {
+    padding-left: 20px;
+    padding-right: 20px;
+  }
+  .blog aside {
+    display: none;
+  }
+  .blog .box {
+    width: 100%;
+  }
+  #about center img {
+    width: 100%;
+    height: auto;
+  }
+}
+@media (max-width: 750px) {
+  #body {
+    margin-top: 30px;
+  }
 }
 @media (max-width: 730px) {
   .head-box {
     margin-top: 100px;
+  }
+  #body {
+    margin-top: 70px;
   }
 }
 @media (max-width: 650px) {
@@ -128,32 +130,29 @@
   }
 }
 @media (max-width: 600px) {
-    #slider h3,
-    #slider .banner {
-        display: none;
-    }
-    #slider .slider img {
-        width: 100%;
-        max-width: 100%;
-        max-height: none;
-    }
-    #body {
-         margin-top: 140px;
-     }
+  #slider h3,
+  #slider .banner {
+    display: none;
+  }
+  #slider .slider img {
+    width: 100%;
+    max-width: 100%;
+    max-height: none;
+  }
+  #body {
+    margin-top: 105px;
+  }
 }
 @media (max-width: 500px) {
-    #features header {
-        text-align: right;
-    }
   .head-box {
     margin-top: 100px;
   }
-    #body {
-        margin-top: 20px;
-    }
-    body {
-        overflow-x: hidden;
-    }
+  #features header {
+    text-align: right;
+  }
+  body {
+    overflow-x: hidden;
+  }
   body > header {
     margin-bottom: 45px;
   }
@@ -347,6 +346,12 @@
   #slider header.description {
     display: none;
   }
+  #how {
+    display: none;
+  }
+  #steps {
+    display: none;
+  }
   .social {
     display: none;
   }
@@ -354,10 +359,12 @@
     padding: 0 !important;
   }
   #items article .title header {
+    height: 100%;
+  }
+  #items article .title header {
     opacity: 0;
     padding: 30px;
     font-size: 25px;
-      height: 100%;
   }
   #items article.expand header {
     background: #636466;
@@ -366,12 +373,6 @@
     height: 100%;
     opacity: 1;
   }
-    #how {
-        display: none;
-    }
-    #steps {
-        display: none;
-    }
   #how h2 {
     font-size: 190%;
   }
