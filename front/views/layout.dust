@@ -83,7 +83,6 @@
             <div class="container">
                 <i class="icon-left-dir"></i>
                 {>"partials/menu.dust"/}
-                <a href="#mail" >צור קשר</a>
             </div>
         </nav>
     </div>

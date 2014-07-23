@@ -2,16 +2,20 @@
     {#items}
         {@if cond="'{template}' == 'projects' "}
         <a {?dock} class="active" {:else} href="{#sub.items[0]}{url}{/sub.items[0]}" {/dock}>{menu_label}</a>
-
-        <nav class="second">
-            <div class="container">
-                {#sub.items}
-                    <a href="{url}" {?dock}class="active"{/dock}>{menu_label}</a>
-                {/sub.items}
-            </div>
-        </nav>
         {:else}
         <a href="{url}"{?dock} class="active"{/dock}>{menu_label}</a>
+        {/if}
+    {/items}
+        <a href="#mail" >צור קשר</a>
+    {#items}
+        {@if cond="'{template}' == 'projects' "}
+            <nav class="second">
+                <div class="container">
+                    {#sub.items}
+                        <a href="{url}" {?dock}class="active"{/dock}>{menu_label}</a>
+                    {/sub.items}
+                </div>
+            </nav>
         {/if}
     {/items}
 {/menu}
