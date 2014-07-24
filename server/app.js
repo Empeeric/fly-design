@@ -18,7 +18,7 @@ app.set('site', 'Fly Design');
 app.engine('dust', consolidate.dust);
 app.set('view engine', 'dust');
 app.set('views', path.join(__dirname, '..', 'front', 'views'));
-dust.optimizers.format = function(ctx, node) { return node };
+dust.optimizers.format = function(ctx, node) { return node; };
 
 app.use(nodestrum.domain_wrapper_middleware);
 app.use(express.compress());

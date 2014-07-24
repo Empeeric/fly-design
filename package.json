@@ -1,58 +1,57 @@
 {
-    "dependencies": {
-        "async": "",
-        "cloudinary": "",
-        "consolidate": "",
-        "dustjs-helpers": "",
-        "dustjs-linkedin": "",
-        "express": "< 4.0.0",
-        "formage": "3.0.3",
-        "lodash": "",
-        "lodash-contrib": "",
-        "mongoose": "",
-        "nodemailer": "",
-        "nodestrum": "",
-        "sugar": "1.4.x"
+  "dependencies": {
+    "async": "",
+    "cloudinary": "",
+    "consolidate": "",
+    "dustjs-linkedin": "",
+    "express": "< 4.0.0",
+    "formage": "3.0.3",
+    "lodash": "",
+    "lodash-contrib": "",
+    "mongoose": "",
+    "nodemailer": "",
+    "nodestrum": "",
+    "sugar": "1.4.x"
+  },
+  "devDependencies": {
+    "grunt": "latest",
+    "grunt-contrib-cssmin": "latest",
+    "grunt-contrib-concat": "latest",
+    "grunt-contrib-uglify": "latest",
+    "mocha": "latest"
+  },
+  "jshintConfig": {
+    "esnext": true,
+    "expr": true,
+    "forin": true,
+    "freeze": true,
+    "globals": {
+      "after": true,
+      "before": true,
+      "describe": true,
+      "expect": true,
+      "it": true,
+      "Promise": false
     },
-    "devDependencies": {
-        "grunt": "latest",
-        "grunt-contrib-cssmin": "latest",
-        "grunt-contrib-concat": "latest",
-        "grunt-contrib-uglify": "latest",
-        "mocha": "latest"
-    },
-    "jshintConfig": {
-        "esnext": true,
-        "expr": true,
-        "forin": true,
-        "freeze": true,
-        "globals": {
-            "after": true,
-            "before": true,
-            "describe": true,
-            "expect": true,
-            "it": true,
-            "Promise": false
-        },
-        "immed": true,
-        "maxdepth": 4,
-        "newcap": true,
-        "noarg": true,
-        "node": true,
-        "noempty": true,
-        "nonew": true,
-        "scripturl": true,
-        "sub": true,
-        "supernew": true,
-        "trailing": true,
-        "undef": true,
-        "unused": true
-    },
-    "name": "fly-design",
-    "private": true,
-    "scripts": {
-        "start": "node server/app.js",
-        "test": "mocha"
-    },
-    "version": "0.2.2"
+    "immed": true,
+    "maxdepth": 4,
+    "newcap": true,
+    "noarg": true,
+    "node": true,
+    "noempty": true,
+    "nonew": true,
+    "scripturl": true,
+    "sub": true,
+    "supernew": true,
+    "trailing": true,
+    "undef": true,
+    "unused": true
+  },
+  "name": "fly-design",
+  "private": true,
+  "scripts": {
+    "start": "node server/app.js",
+    "test": "mocha"
+  },
+  "version": "0.2.2"
 }

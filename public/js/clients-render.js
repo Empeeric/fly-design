@@ -1,3 +1,5 @@
+'use strict';
+/*globals _,$,document,window,dust */
 var mobile = (/Android|iPhone|iPad|iPod|BlackBerry/i).test(navigator.userAgent || navigator.vendor || window.opera);
 
 $(document).ready(function(){
@@ -5,8 +7,12 @@ $(document).ready(function(){
         width = $(document).width(),
         parts = _(projects).map(function(obj, i){
             obj.picture.url = obj.picture.url.replace('https', 'http').replace('www.filepicker.io', 'cdn.empeeric.com');
+            $.each(obj.slides, function (i, slide) {
+              if (!slide || !slide.picture || !slide.picture.url) return;
+              slide.picture.url = slide.picture.url.replace('https', 'http').replace('www.filepicker.io', 'cdn.empeeric.com');
+            });
             obj.index = i;
-            if((i + 1) % 2 == 0) {
+            if((i + 1) % 2 === 0) {
                 obj.left = true;
             }
             return obj;
@@ -28,6 +34,7 @@ $(document).ready(function(){
         dust.render('thumb', {items: part}, function(err, html){
             if(err) return;
             $('#items').append(html);
+
             dust.render('article',  {items: part},function(err, html){
                 if(err) return;
                 $('#items').append(html);

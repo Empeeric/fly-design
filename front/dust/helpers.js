@@ -1,4 +1,4 @@
-var dust = require('dustjs-helpers'),
+var dust = require('dustjs-linkedin'),
     models = require('../../server/models'),
     cloudinary = require('cloudinary'),
     _ = require('lodash');

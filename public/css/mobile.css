@@ -104,15 +104,16 @@
     width: 100%;
     height: auto;
   }
-  #items.third .thumb {
-    margin-left: 0;
+  #items.third.container a {
+    display: none;
   }
-  #items.third .thumb h2 {
-    -webkit-transform: translateY(0);
-    -moz-transform: translateY(0);
-    -ms-transform: translateY(0);
-    -o-transform: translateY(0);
-    transform: translateY(0);
+  #items.third.container article {
+    max-height: initial;
+    height: 650px;
+  }
+  #items.third.container article .icon-left-dir.big,
+  #items.third.container article .icon-left-dir {
+    display: none;
   }
   #about .clients img {
     float: right;
